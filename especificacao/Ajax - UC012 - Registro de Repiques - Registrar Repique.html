@@ -1,0 +1,199 @@
+<meta charset="utf-8">
+<style>
+    .ui-datepicker {z-index: 1051 !important;}
+    .bootstrap-timepicker-widget {z-index: 1051 !important;}
+</style>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Registrar Repique</h4>
+</div>
+<div class="modal-body">
+    <form role="form">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="contatos" checked> Telefônico
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="contatos" checked> Pessoal
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="contatos" checked> via E-mail
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="contatos" checked> via SMS
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label>Data e horário</label>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control datepicker" type="text" placeholder="Dia">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control timepicker" type="text" placeholder="às">
+                        <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">
+                    Descrição</label><textarea class="form-control" id="textarea" name="textarea"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="radio-active">
+                    <label>
+                        <input type="radio" class="style-0" checked="checked" name="style-0">
+                        <span>Agendar Próximo Contato</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control datepicker radio-desactive" type="text" placeholder="Dia">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control timepicker radio-desactive" type="text" placeholder="às">
+                        <span class="input-group-addon"><i class="fa fa-clock-o"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label>Meio de Contato</label>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <select name="meio" class="form-control radio-desactive">
+                        <option value="1">
+                            Telefone
+                        </option>
+                        <option value="2">
+                            Atendimento Pessoal
+                        </option>
+                        <option value="3">
+                            E-mail
+                        </option>
+                        <option value="4">
+                            SMS
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="radio-active">
+                    <label>
+                        <input type="radio" class="style-0" name="style-0">
+                        <span>Solicitar Suspenção</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <select name="meio" class="form-control radio-desactive">
+                        <option>
+                            Motivo
+                        </option>
+                        <option value="1">
+                            Motivo 1
+                        </option>
+                        <option value="2">
+                            Motivo 2
+                        </option>
+                        <option value="3">
+                            Motivo 3
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Salvar
+    </button>
+</div>
+<script type="text/javascript">
+    
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+    
+    // pagefunction
+    
+    var pagefunction = function() {
+
+        /*
+         * TIMEPICKER
+         */
+    
+         //Load time picker script
+    
+        loadScript("js/plugin/bootstrap-timepicker/bootstrap-timepicker.min.js", runTimePicker);
+    
+        function runTimePicker() {
+            $('.timepicker').timepicker({showMeridian: false, defaultTime: false, minuteStep: 30 });
+        }
+    };
+    
+    // end pagefunction
+    
+    // run pagefunction
+
+    pagefunction();    
+
+</script>

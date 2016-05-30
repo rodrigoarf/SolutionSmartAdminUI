@@ -1,0 +1,541 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Cartão<span>>  Controle de Créditos</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-3">
+                                        <label class="label">Tipo</label>
+                                        <label class="select">
+                                            <select>
+                                                <option>Ambos</option>
+                                                <option>Crédito</option>
+                                                <option>Débito</option>
+                                            </select><i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Operadora</label>
+                                        <label class="select">
+                                            <select>
+                                                <option>Ambos</option>
+                                                <option>Crédito</option>
+                                                <option>Débito</option>
+                                            </select><i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Nome do Portador</label>
+                                        <label class="input">
+                                            <input type="text" name="name">
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Número do Recibo</label>
+                                        <label class="input">
+                                            <input type="text" name="name">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">Data do Pagamento</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input />
+                                                </label>
+
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input />
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Valor</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input placeholder="Mínimo" />
+                                                </label>
+
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input placeholder="Máximo" />
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Situação</label>
+                                        <label class="select">
+                                            <select></select><i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Registro(s) encontrados</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="smart-form">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-inline">
+                                            <i></i>
+                                        </label>
+                                    </th>
+                                    <th>Nº Cartão</th>
+                                    <th>Operadora</th>
+                                    <th data-class="expand">Titular</th>
+                                    <th>Tipo</th>
+                                    <th>Data Pgto</th>
+                                    <th class="text-right">Valor Pago</th>
+                                    <th>Situação</th>
+                                    <th>Conta Creditada</th>
+                                    <th class="text-center" width="180">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="smart-form">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-inline">
+                                            <i></i>
+                                        </label>
+                                    </td>
+                                    <td>3456</td>
+                                    <td>CIELO</td>
+                                    <td>José da Silva Oliveira Pinto</td>
+                                    <td><span class="label bg-color-blue">Crédito</span></td>
+                                    <td>10/10/2014</td>
+                                    <td class="text-right">1.000,00</td>
+                                    <td><span class="label bg-color-greenLight">Creditado</span></td>
+                                    <td>Conta Corrente</td>
+                                    <td class="text-center">
+                                        <div class="td-acao">
+                                            <a data-toggle="modal" href="#modal-detalhe" rel="tooltip" data-original-title="Detalhes" data-placement="top" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-search"></i></a>
+                                            <a data-toggle="modal" href="#modal-devolver" rel="tooltip" data-original-title="Estorno" data-placement="top" class="btn btn-xs btn-default"><i class="fa fa-ban"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- widget footer -->
+                    <div class="widget-footer text-right">
+                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal"
+                                data-target="#modal-depositar">
+                            <i class="fa fa-check"></i> Baixar selecionado(s)
+                        </button>
+                    </div>
+                    <!-- end widget footer -->
+
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<div class="modal fade" id="modal-depositar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Informar dados do Crédito</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Data da baixa</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    <input type="text" name="startdate" id="startdate" placeholder="Data">
+                                </label>
+                            </section>
+
+                            <section class="col col-8">
+                                <label class="label">Conta Creditada</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Taxa</label>
+                                <label class="input">
+                                    <span class="icon-append">%</span>
+                                    <input type="text" name="startdate" id="startdate">
+                                </label>
+                            </section>
+
+                            <section class="col col-8">
+                                <label class="label">Valor Líquido</label>
+                                <label class="label">
+                                    R$ 100,00
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-compensar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Informar data de compensação</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Data da compensação</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    <input type="text" name="startdate" id="startdate" placeholder="Data">
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-devolver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Estorno de Crédito</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Data do estorno</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    <input type="text" name="startdate" id="startdate" placeholder="Data">
+                                </label>
+                            </section>
+
+                            <section class="col col-8">
+                                <label class="label">Motivo</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-detalhe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Detalhe do Pagamento</h4>
+            </div>
+            <div class="modal-body no-padding">
+
+                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-sobre-turma" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false">
+                    <header>
+                        <ul id="widget-tab-1" class="nav nav-tabs pull-right">
+                            <li class="active">
+                                <a data-toggle="tab" href="#hr1"><span class="hidden-mobile hidden-tablet">Sobre o Pagamento</span></a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#hr2"><span class="hidden-mobile hidden-tablet">Lançamentos</span></a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div>
+                        <!-- widget content -->
+                        <div class="widget-body no-padding">
+                            <div class="tab-content padding-10">
+                                <div class="tab-pane fade in active" id="hr1">
+
+                                    <table id="user" class="table table-bordered table-striped" style="clear: both">
+                                        <tbody>
+                                            <tr>
+                                                <td>Tipo</td>
+                                                <td><span class="label bg-color-red">Débito</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:35%;">Operadora</td>
+                                                <td style="width:65%">CIELO</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cartão</td>
+                                                <td>1145</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Titular</td>
+                                                <td>Nome do Correntista</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Data do Pgto</td>
+                                                <td>01/06/2014</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Situação</td>
+                                                <td><span class="label bg-color-greenLight">Creditado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Creditado em</td>
+                                                <td>01/06/2014</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Conta Creditada</td>
+                                                <td>Nome da Conta</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor Pago</td>
+                                                <td class="text-right">100,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Taxa</td>
+                                                <td class="text-right">10,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Valor Líquido</td>
+                                                <td class="text-right">90,00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="hr2">
+                                    <table id="datatable_tabletools" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nº Parc.</th>
+                                                <th>Data Venc.</th>
+                                                <th>Descrição</th>
+                                                <th>Categoria</th>
+                                                <th class="text-right">Valor Pago</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>01/01/2000</td>
+                                                <td>Contrato 1234</td>
+                                                <td>Parcela</td>
+                                                <td class="text-right">1.000,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>01/01/2000</td>
+                                                <td>Contrato 1234</td>
+                                                <td>Parcela</td>
+                                                <td class="text-right">1.000,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>01/01/2000</td>
+                                                <td>Contrato 1234</td>
+                                                <td>Parcela</td>
+                                                <td class="text-right">1.000,00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end widget content -->
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        $('#select-forma-pagamento').change(function () {
+
+            $('.div-forma-pgto').hide();
+
+            var a = $(this).val();
+            if (a == 1) // Dinheiro
+            {
+                $('.div-dinheiro').show();
+            }
+            else if (a == 2)// Cheque
+            {
+                $('.div-cheque').show();
+            }
+            else if (a == 3)// Cartão de Crédito
+            {
+                $('.div-cartao').show();
+            }
+            else if (a == 4)// Cartão de Débito
+            {
+                $('.div-cartao').show();
+            }
+            else if (a == 5)// Multiplo
+            {
+                $('.div-pgto-multiplo').show();
+            }
+
+
+        });
+
+        $('.div-forma-pgto').hide();
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

@@ -1,0 +1,479 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Segunda Chamada <span>>  Agendamento de Segunda Chamada</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+                    <h2>Agendamento de Segunda Chamada</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                    </div>
+                    <!-- end widget edit box -->
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <div class="row">
+                            <form id="wizard-1" novalidate="novalidate">
+                                <div id="bootstrap-wizard-1" class="col-sm-12">
+                                    <div class="form-bootstrapWizard">
+                                        <ul class="bootstrapWizard form-wizard">
+                                            <li class="active" data-target="#step1" style="width:20%">
+                                                <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Dados</span> </a>
+                                            </li>
+                                            <li data-target="#step2" style="width:20%">
+                                                <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Professor / Turma</span> </a>
+                                            </li>
+                                            <li data-target="#step3" style="width:20%">
+                                                <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Alunos</span> </a>
+                                            </li>
+                                            <li data-target="#step4" style="width:20%">
+                                                <a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Sala</span> </a>
+                                            </li>
+                                            <li data-target="#step5" style="width:20%">
+                                                <a href="#tab5" data-toggle="tab"> <span class="step">5</span> <span class="title">Concluir</span> </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1">
+                                            <br>
+                                            <h3><strong>Passo 1</strong> - Dados Segunda Chamada</h3>
+
+                                            <div class="row">
+
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label>Data:</label>
+                                                        <div class="input-group">
+                                                            <input type="text" name="mydate" placeholder="Informe a data" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-8">
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <label>Select a date (range):</label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group">
+                                                                    <input class="form-control" id="clockpicker-inicio" name="clockpicker_inicio" type="text" placeholder="Início" data-autoclose="true">
+                                                                    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <div class="input-group">
+                                                                    <input class="form-control" id="clockpicker-termino" name="clockpicker_termino" type="text" placeholder="Término" data-autoclose="true">
+                                                                    <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <br>
+                                            <h3><strong>Passo 2</strong> - Escolha dos Professores / Turmas</h3>
+
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </th>
+                                                            <th>Turma</th>
+                                                            <th>Professor</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab3">
+                                            <br>
+                                            <h3><strong>Passo 3</strong> - Alunos para realizar segunda chamada</h3>
+
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </th>
+                                                            <th>Nome</th>
+                                                            <th>Curso</th>
+                                                            <th>Nível</th>
+                                                            <th>Estágio</th>
+                                                            <th>Turma</th>
+                                                            <th>Professor</th>
+                                                            <th>Avaliação</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Nome do aluno</td>
+                                                            <td>Inglês</td>
+                                                            <td>Basic</td>
+                                                            <td>B1</td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                            <td>Nome da Avaliação</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Nome do aluno</td>
+                                                            <td>Inglês</td>
+                                                            <td>Basic</td>
+                                                            <td>B1</td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                            <td>Nome da Avaliação</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Nome do aluno</td>
+                                                            <td>Inglês</td>
+                                                            <td>Basic</td>
+                                                            <td>B1</td>
+                                                            <td>Turma</td>
+                                                            <td>Nome do Professor</td>
+                                                            <td>Nome da Avaliação</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab4">
+                                            <br>
+                                            <h3><strong>Passo 4</strong> - Salas disponíveis</h3>
+
+
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </th>
+                                                            <th data-class="expand">Nome da Sala</th>
+                                                            <th>Lugares</th>
+                                                            <th data-class="expand">Observação</th>
+                                                            <th data-class="expand">Recursos</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Sala 458</td>
+                                                            <td>30</td>
+                                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                                            <td>Data Show / TV / Computador</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Sala 458</td>
+                                                            <td>30</td>
+                                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                                            <td>Data Show / TV / Computador</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>Sala 458</td>
+                                                            <td>30</td>
+                                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                                            <td>Data Show / TV / Computador</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="tab-pane" id="tab5">
+                                            <br>
+                                            <h3><strong>Passo 5</strong> - Resumo</h3>
+                                            <br>
+                                            <h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Agendamento concluído</strong></h1>
+                                            <br>
+                                            <br>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <ul class="pager wizard no-margin">
+                                                        <li class="previous disabled">
+                                                            <a href="javascript:void(0);" class="btn btn-lg btn-default"> Anterior </a>
+                                                        </li>
+                                                        <li class="next">
+                                                            <a href="javascript:void(0);" class="btn btn-lg txt-color-darken"> Próximo </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+        </article>
+        <!-- WIDGET END -->
+
+    </div>
+</section>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+
+
+    var pagefunction = function () {
+
+        // load bootstrap wizard
+
+        loadScript("js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js", runBootstrapWizard);
+
+        //Bootstrap Wizard Validations
+
+        function runBootstrapWizard() {
+
+            var $validator = $("#wizard-1").validate({
+
+                rules: {
+                    mydate: {
+                        required: true
+                    },
+                    clockpicker_inicio: {
+                        required: true
+                    },
+                    clockpicker_termino: {
+                        required: true
+                    }
+                },
+
+                messages: {
+                    mydate: "Informe a data da realização da segunda chamada",
+                    clockpicker_inicio: "Campo obrigatório",
+                    clockpicker_termino: "Campo obrigatório"
+                },
+
+                highlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                },
+                errorElement: 'span',
+                errorClass: 'help-block',
+                errorPlacement: function (error, element) {
+                    if (element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }
+            });
+
+            $('#bootstrap-wizard-1').bootstrapWizard({
+
+                'tabClass': 'form-wizard',
+                'onNext': function (tab, navigation, index) {
+                    var $valid = $("#wizard-1").valid();
+                    if (!$valid) {
+                        $validator.focusInvalid();
+                        return false;
+                    } else {
+                        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).addClass('complete');
+                        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).find('.step').html('<i class="fa fa-check"></i>');
+                    }
+                }
+            });
+
+        };
+
+        /*
+		 * CLOCKPICKER
+		 */
+
+        // load clockpicker script
+
+        loadScript("js/plugin/clockpicker/clockpicker.min.js", runClockPicker);
+
+        function runClockPicker() {
+            $('#clockpicker-inicio').clockpicker({
+                placement: 'top',
+                donetext: 'Done'
+            });
+
+            $('#clockpicker-termino').clockpicker({
+                placement: 'top',
+                donetext: 'Done'
+            });
+        }
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

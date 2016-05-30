@@ -1,0 +1,104 @@
+
+<h2 class="email-open-header">
+	Re: Relatório de Testes de Nivelamento <span class="label txt-color-white">Entrada</span>
+</h2>
+
+<div class="inbox-info-bar">
+	<div class="row">
+		<div class="col-sm-9">
+			<img src="img/avatars/5.png" alt="me" class="away">
+			<strong>Sadi Orlaf</strong>
+			<span class="hidden-mobile">&lt;sadi.orlaf&gt; para <strong>mim</strong> em <i>12 de Março de 2013 às 12:10</i></span> 
+		</div>
+		<div class="col-sm-3 text-right">
+			
+			<div class="btn-group text-left">
+				<button class="btn btn-primary btn-sm replythis">
+					<i class="fa fa-reply"></i> Responder
+				</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="inbox-message">
+	<p>
+		Hey James,
+	</p>
+	<p>
+		Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+	</p>	
+	
+	<p>
+		Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. <i class="fa fa-smile-o"></i> 
+	</p>
+	
+	<br>
+	<br>
+	Grata,<br> 
+	<strong>Sadi Orlaf</strong>
+</div>
+<script type="text/javascript">
+	
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 * 
+	 * var pagefunction = function() {
+	 *   ...
+	 * }
+	 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+	 * 
+	 * TO LOAD A SCRIPT:
+	 * var pagefunction = function (){ 
+	 *  loadScript(".../plugin.js", run_after_loaded);	
+	 * }
+	 * 
+	 * OR
+	 * 
+	 * loadScript(".../plugin.js", run_after_loaded);
+	 */
+	
+	
+	// PAGE RELATED SCRIPTS
+	
+	$(".table-wrap [rel=tooltip]").tooltip();
+
+	$(".replythis").click(function(){
+		loadURL("especificacao/Ajax - UC023 - Alertas Responder.html", $('#inbox-content > .table-wrap'));
+	})
+	
+</script>

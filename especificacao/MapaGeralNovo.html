@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<style>
+    html {
+        color: #000;
+        background: #FFF;
+    }
+
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    fieldset, img {
+        border: 0;
+    }
+
+    address, caption, cite, code, dfn, em, strong, th, var {
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    caption, th {
+        text-align: left;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+        font-weight: normal;
+    }
+
+    q:before, q:after {
+        content: '';
+    }
+
+    abbr, acronym {
+        border: 0;
+        font-variant: normal;
+    }
+
+    sup {
+        vertical-align: text-top;
+    }
+
+    sub {
+        vertical-align: text-bottom;
+    }
+
+    input, textarea, select {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    input, textarea, select {
+        * font-size: 100%;
+    }
+
+    legend {
+        color: #000;
+    }
+</style>
+<style>
+    .wc-grid-timeslot-header {
+        width: 6%;
+        background: #eee;
+    }
+
+
+    .wc-scrollable-grid {
+        overflow: auto;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+    }
+
+
+    table.wc-time-slots {
+        width: 100%;
+        table-layout: fixed;
+        cursor: default;
+    }
+
+    .wc-day-column {
+        border-left: 1px solid #ddd;
+        overflow: visible;
+        vertical-align: top;
+    }
+
+    .wc-day-column-inner {
+        width: 100%;
+        position: relative;
+    }
+
+    .wc-time-slot-wrapper {
+        position: relative;
+        height: 1px;
+        top: 1px;
+    }
+
+    .wc-time-slots {
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .wc-hour-header {
+        text-align: right;
+    }
+
+    .wc-hour-end, .wc-hour-header {
+        border-bottom: 1px solid #ccc;
+        color: #555;
+    }
+
+    .wc-business-hours {
+        background-color: #E6EEF1;
+        border-bottom: 1px solid #ccc;
+        color: #333;
+        font-size: 1.4em;
+    }
+
+    .wc-day-header-cell {
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    .wc-time-slot-header .wc-header-cell {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .wc-container .ui-draggable .wc-time {
+        cursor: move;
+    }
+
+    .wc-container .ui-resizable-s {
+        height: 10px;
+        bottom: -8px;
+    }
+
+
+    .wc-container .ui-draggable-dragging {
+        z-index: 1000;
+    }
+</style>
+
+<style>
+    .wc-container {
+        font-size: 10px;
+        font-family: arial, helvetica;
+    }
+
+        .wc-container table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+            .wc-container table td {
+                margin: 0;
+                padding: 0;
+            }
+
+    .wc-header {
+        background: #eee;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        width: 100%;
+    }
+
+        .wc-header .wc-scrollbar-shim {
+            width: 16px;
+        }
+
+        .wc-header td {
+            background-color: #eee;
+        }
+
+    .wc-column-sala {
+        width: 120px;
+    }
+
+    .wc-column-dia {
+        width: 100px;
+        text-align: center;
+    }
+
+    .wc-column-horario {
+        float: left;
+        position: relative;
+        text-align: center;
+    }
+
+    .wc-time-header-cell {
+        padding: 0px;
+        height: 20px; /* reference height */
+        text-align: center;
+    }
+
+    .wc-turma {
+        float: left;
+        background-color: #68a1e5;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        /*position: absolute;*/
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #00375f;
+        /*display: none;*/
+    }
+
+    .wc-sala {
+        border-bottom: 5px solid #ccc;
+        margin-top: 5px;
+    }
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script language="javascript">
+
+    $(document).ready(function () {
+
+        var $calendarContainer = $('.wc-container');
+
+        //$calendarContainer.find(".wc-time-header-cell").css({ height: 20, padding: 5 });
+
+        var calendarHeight = $(window).height() - $("h1").outerHeight() - 1;
+        var headerHeight = $calendarContainer.find(".wc-header").outerHeight();
+        var navHeight = $calendarContainer.find(".wc-nav").outerHeight();
+        $calendarContainer.find(".wc-scrollable-grid").height(calendarHeight - navHeight - headerHeight);
+
+        var calendarWidth = $calendarContainer.find(".wc-column-lista-horario").outerWidth() - 16;
+        console.log(calendarWidth);
+
+        var horaWidth = Math.floor((calendarWidth / 18), 0);
+        $calendarContainer.find(".wc-column-horario").width(horaWidth); //account for border
+
+        console.log(horaWidth);
+
+        /*
+            $('.wc-seg').toggle();
+            $('.wc-ter').toggle();
+            $('.wc-qua').toggle();
+            $('.wc-qui').toggle();
+
+            $('.sala-01').toggle();
+            $('.wc-sex').toggle();
+            $('.wc-sab').toggle();
+        */
+
+
+        $('.wc-turma').css('opacity', '0.2');
+        $('.prof-01').css('opacity', '1');
+    });
+
+</script>
+
+<body>
+    <h1></h1>
+
+
+    <div class="wc-container">
+
+        <table class="wc-header">
+            <tbody>
+                <tr>
+                    <td class="wc-column-sala"></td>
+                    <td class="wc-column-dia"></td>
+
+                    <td class="wc-column-lista-horario">
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-06">06</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-07">07</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-08">08</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-09">09</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-10">10</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-11">11</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-12">12</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-13">13</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-14">14</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-15">15</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-16">16</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-17">17</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-18">18</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-19">19</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-20">20</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-21">21</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-22">22</div>
+                        <div class="wc-column-horario wc-time-header-cell wc-hora-23">23</div>
+                    </td>
+
+                    <td class="wc-scrollbar-shim"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="wc-scrollable-grid">
+            <table class="wc-time-slots">
+                <tbody>
+                    <tr class="wc-sala sala-01">
+                        <td class="wc-grid-timeslot-header wc-column-sala">
+                            Nome da Sala
+                        </td>
+                        <td class="wc-grid-timeslot-header wc-column-dia">
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-seg">SEG</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-ter">TER</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-qua">QUA</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-qui">QUI</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-sex">SEX</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-sab">SÁB</div>
+                        </td>
+
+                        <td class="wc-column-lista-horario">
+                            <div class="wc-seg wc-time-header-cell">
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:200px;">115</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:500px;">115</div>
+                            </div>
+                            <div class="wc-ter wc-time-header-cell">
+                                <div class="wc-turma" style="width: 150px; margin-left:300px;">111</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:200px;">115</div>
+                            </div>
+                            <div class="wc-qua wc-time-header-cell">
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:200px;">115</div>
+                                <div class="wc-turma" style="width: 150px; margin-left:500px;">115</div>
+                            </div>
+                            <div class="wc-qui wc-time-header-cell">&nbsp;</div>
+                            <div class="wc-sex wc-time-header-cell">&nbsp;</div>
+                            <div class="wc-sab wc-time-header-cell">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr class="sala-02">
+                        <td class="wc-grid-timeslot-header wc-column-sala">
+                            Nome da Sala
+                        </td>
+                        <td class="wc-grid-timeslot-header wc-column-dia">
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-seg">SEG</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-ter">TER</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-qua">QUA</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-qui">QUI</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-sex">SEX</div>
+                            <div class="wc-hour-header wc-business-hours wc-time-header-cell wc-sab">SÁB</div>
+                        </td>
+
+                        <td class="wc-column-lista-horario">
+                            <div class="wc-seg wc-time-header-cell">
+                                <div class="wc-turma prof-01" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma prof-02" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma prof-01" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma prof-01" style="width: 150px; margin-left:200px;">115</div>
+                                <div class="wc-turma prof-01" style="width: 150px; margin-left:500px;">115</div>
+                            </div>
+                            <div class="wc-ter wc-time-header-cell">
+                                <div class="wc-turma prof-02" style="width: 150px; margin-left:300px;">111</div>
+                                <div class="wc-turma prof-01" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma prof-02" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma prof-02" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma prof-02" style="width: 150px; margin-left:200px;">115</div>
+                            </div>
+                            <div class="wc-qua wc-time-header-cell">
+                                <div class="wc-turma prof-03" style="width: 150px; margin-left:0px;">111</div>
+                                <div class="wc-turma prof-03" style="width: 150px; margin-left:50px;">113</div>
+                                <div class="wc-turma prof-03" style="width: 150px; margin-left:0px;">114</div>
+                                <div class="wc-turma prof-03" style="width: 150px; margin-left:200px;">115</div>
+                                <div class="wc-turma prof-04" style="width: 150px; margin-left:500px;">115</div>
+                            </div>
+                            <div class="wc-qui wc-time-header-cell">&nbsp;</div>
+                            <div class="wc-sex wc-time-header-cell">&nbsp;</div>
+                            <div class="wc-sab wc-time-header-cell">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wc-column-sala"></td>
+                        <td class="wc-column-dia"></td>
+
+                        <td class="wc-column-lista-horario">
+                            <div class="wc-time-slots">
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-06">06</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-07">07</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-08">08</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-09">09</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-10">10</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-11">11</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-12">12</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-13">13</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-14">14</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-15">15</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-16">16</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-17">17</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-18">18</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-19">19</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-20">20</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-21">21</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-22">22</div>
+                                <div class="wc-column-horario wc-time-header-cell wc-hora-23">23</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>

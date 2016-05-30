@@ -1,0 +1,533 @@
+﻿<meta charset="iso-8859-1">
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>Repiques
+            <span>> Acompanhamento da equipe de Divulgação</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+<section id="widget-grid" class="">
+    <!-- START ROW -->
+    <div class="row">
+        <!-- NEW COL START -->
+        <article class="col-lg-12">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-darken" id="">
+                <header>
+                    <span class="widget-icon">
+                        <i class="fa fa-info"></i>
+                    </span>
+                    <h2>Filtros</h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Período</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control datepicker" type="text" placeholder="Início">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control datepicker" type="text" placeholder="Término">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Divulgador(a)</label>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <select name="meio" class="form-control radio-desactive">
+                                            <option value="1">
+                                                Todos
+                                            </option>
+                                            <option value="2">
+                                                Maria José da Silva Oliveira
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right">
+                                    <a href="javascript:void(0);" class="btn btn-success pull-right header-btn"> Filtrar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+    <div class="row">
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="">
+                <header>
+                    <span class="widget-icon">
+                        <i class="fa fa-history"></i>
+                    </span>
+                    <h2>Número de matrículas por quantidade de atendimentos pessoais</h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col col-lg-12">
+                                <b>Período de 01/01/2014 até 31/01/2014</b>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-6">
+                                <div id="donut-graph" class="chart no-padding"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <table class="table table-bordered table-condensed font-lg">
+                                    <tr>
+                                        <th>Num. Atendimento(s)</th>
+                                        <th>Matrículas</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1º</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2º</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3º</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4º ou +</td>
+                                        <td>30</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- end widget content -->
+                    </div>
+                    <!-- end widget div -->
+                </div>
+                <!-- end widget -->
+        </article>
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="">
+                <header>
+                    <span class="widget-icon">
+                        <i class="fa fa-history"></i>
+                    </span>
+                    <h2>Índice de aproveitamento</h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col col-lg-12">
+                                <b>Período de 01/01/2014 até 31/01/2014</b>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <div class="easy-pie-chart txt-color-blue easyPieChart" data-percent="36" data-pie-size="180" data-size="230">
+                                    <span class="percent percent-sign txt-color-blue font-xl semi-bold">36</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="well font-xl">
+                                    <b>35</b> Matrículas
+                                </div>
+                                <br />
+                                <div class="well font-xl">
+                                    <b>100</b> Atendimentos Pessoais
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+
+    <h1><span class="semi-bold">Conversões</span> <small>Indices de conversões</small></h1>
+
+    <div class="row">
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="">
+                <header>
+                    <span class="widget-icon">
+                        <i class="fa fa-history"></i>
+                    </span>
+                    <h2>Atendimento telefônico</h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <ul class="vertical-bars">
+                                    <li>
+                                        Matrícula<br /><br />
+
+                                        <div class="bar-holder">
+                                            <div class="progress vertical bottom wide-bar" rel="tooltip" data-original-title="Matrícula" data-placement="top">
+                                                <div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        Atendimento Pessoal
+                                        <div class="bar-holder">
+                                            <div class="progress vertical bottom wide-bar" rel="tooltip" data-original-title="Atendimento Pessoal" data-placement="top">
+                                                <div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="well font-xl">
+                                    <b>3</b> Matrícula(s)
+                                </div>
+                                <br />
+                                <div class="well font-lg">
+                                    <b>15</b> Atendimento(s) Pessoal
+                                </div>
+                                <br />
+                                <div class="well font-lg">
+                                    <b>100</b> Atendimento(s) Telefônico(s)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-12">
+                                <b>Período de 01/01/2014 até 31/01/2014</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="">
+                <header>
+                    <span class="widget-icon">
+                        <i class="fa fa-history"></i>
+                    </span>
+                    <h2>Atendimento eletrônico</h2>
+                </header>
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <ul class="vertical-bars">
+                                    <li>
+                                        Matrícula<br /><br />
+
+                                        <div class="bar-holder">
+                                            <div class="progress vertical bottom wide-bar" rel="tooltip" data-original-title="Matrícula" data-placement="top">
+                                                <div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        Atendimento Pessoal
+                                        <div class="bar-holder">
+                                            <div class="progress vertical bottom wide-bar" rel="tooltip" data-original-title="Atendimento Pessoal" data-placement="top">
+                                                <div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <div class="well font-xl">
+                                    <b>3</b> Matrícula(s)
+                                </div>
+                                <br />
+                                <div class="well font-lg">
+                                    <b>15</b> Atendimento(s) Pessoal
+                                </div>
+                                <br />
+                                <div class="well font-lg">
+                                    <b>100</b> Atendimento(s) Eletrônico(s)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-lg-12">
+                                <b>Período de 01/01/2014 até 31/01/2014</b>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+
+
+    <div class="row">
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <h1><span class="semi-bold">Meio de Contato</span> <small>Conforme o primeiro contato com o prospect</small></h1>
+            <div class="well">
+                <!-- widget content -->
+                <div class="widget-body">
+                    <div class="row">
+                        <article class="col-lg-6">
+                            <div id="donut-graph-meio-contato" class="chart no-padding"></div>
+                        </article>
+                        <article class="col-lg-6">
+                            <table class="table table-bordered table-condensed font-lg">
+                                <tr>
+                                    <th>Meio de Contato</th>
+                                    <th>Matrículas</th>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Telefone</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>Pessoal</td>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                        </article>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-12">
+                            <b>Período de 01/01/2014 até 31/01/2014</b>
+                        </div>
+                    </div>
+                </div>
+                <!-- end widget content -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+        <article class="col-lg-6">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <h1><span class="semi-bold">Resumo</span> <small>Andamento dos repiques</small></h1>
+            <div class="well">
+                <!-- widget content -->
+                <div class="widget-body">
+                    <table class="table table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th rowspan="2"></th>
+                                <th colspan="3" class="text-center font-lg">Repiques Dia</th>
+                                <th colspan="3" class="text-center font-lg">Repiques Mês</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-color-teal txt-color-white">Realizados</th>
+                                <th class="text-center bg-color-teal txt-color-white">Previstos</th>
+                                <th class="text-center bg-color-teal txt-color-white">%</th>
+                                
+                                <th class="text-center bg-color-red txt-color-white">Realizados</th>
+                                <th class="text-center bg-color-red txt-color-white">Previstos</th>
+                                <th class="text-center bg-color-red txt-color-white">%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marcos Roberto Januário</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>75,00%</td>
+                                <td>100</td>
+                                <td>300</td>
+                                <td>33,33%</td>
+                            </tr>
+                            <tr>
+                                <td>Marcos Roberto Januário</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>75,00%</td>
+                                <td>100</td>
+                                <td>300</td>
+                                <td>33,33%</td>
+                            </tr>
+                            <tr>
+                                <td>Marcos Roberto Januário</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>75,00%</td>
+                                <td>100</td>
+                                <td>300</td>
+                                <td>33,33%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end widget content -->
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+
+</section>
+
+<script type="text/javascript">
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+    pageSetUp();
+    // pagefunction
+    var pagefunction = function () {
+
+        // donut
+        if ($('#donut-graph').length) {
+            Morris.Donut({
+                element: 'donut-graph',
+                data: [
+                  { value: 70, label: '1º' },
+                  { value: 15, label: '2º' },
+                  { value: 10, label: '3º' },
+                  { value: 5, label: '4º ou +' }
+                ],
+                formatter: function (x) { return x + "%" }
+            });
+        }
+
+        // donut meio de contato
+        if ($('#donut-graph-meio-contato').length) {
+            Morris.Donut({
+                element: 'donut-graph-meio-contato',
+                data: [
+                  { value: 70, label: 'E-mail' },
+                  { value: 15, label: 'Telefone' },
+                  { value: 10, label: 'Pessoal' }
+                ],
+                formatter: function (x) { return x + "%" }
+            });
+        }
+
+        // donut meio de contato
+        if ($('#donut-graph-meio-contato-qtd').length) {
+            Morris.Donut({
+                element: 'donut-graph-meio-contato-qtd',
+                data: [
+                  { value: 70, label: 'E-mail' },
+                  { value: 15, label: 'Telefone' },
+                  { value: 10, label: 'Pessoal' },
+                  { value: 5, label: 'Pré-Cadastro' }
+                ],
+                colors: [
+                '#0BA462',
+                '#39B580',
+                '#67C69D',
+                '#95D7BB'
+                ],
+                formatter: function (x) { return x }
+            });
+        }
+
+        // Use Morris.Bar
+        if ($('#normal-bar-graph').length) {
+
+            Morris.Bar({
+                element: 'normal-bar-graph',
+                data: [
+                  { x: 'Conversão Telefônica', y: 100, z: 15, a: 3 },
+                ],
+                xkey: 'x',
+                ykeys: ['y', 'z', 'a'],
+                labels: ['Telefonema(s)', 'Atendimento(s)', 'Matrícula(s)']
+            });
+        }
+
+        // Fill all progress bars with animation
+        $('.progress-bar').progressbar({
+            display_text: 'fill'
+        });
+
+
+
+    };
+    // end pagefunction
+
+    // Load morris dependencies and run pagefunction
+    loadScript("js/plugin/morris/raphael.min.js", function () {
+        loadScript("js/plugin/morris/morris.min.js", function () {
+            loadScript("js/plugin/bootstrap-progressbar/bootstrap-progressbar.min.js", pagefunction);
+        });
+    });
+</script>

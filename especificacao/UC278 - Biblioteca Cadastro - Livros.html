@@ -1,0 +1,505 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+        <!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Biblioteca <span>>  Cadastro de Livros</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-livro-cadastro" class="btn btn-success btn-lg pull-right header-btn hidden-mobile">
+            <i class="fa fa-plus"></i> Adicionar Livro
+        </a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+
+
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Nome/Código</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Nome/Código">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Autor</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Autor">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Editora</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Editora">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Gênero</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Gênero">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Nível</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Nível">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Data de Aquisição</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Data de Aquisição" class="datepicker">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Obras</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Obras">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">&nbsp;</label>
+                                        <label class="checkbox">
+											<input type="checkbox" name="checkbox">
+											<i></i>Livro Inativo?</label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+    
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Livros</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover smart-form" width="100%">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome do Livro</th>
+                                    <th>Gênero</th>
+                                    <th>Editora</th>
+                                    <th>Curso</th>
+                                    <th>Nível</th>
+                                    <th>Qtde Exemplares</th>
+                                    <th>Ano</th>
+                                    <th>Data de Aquisição</th>
+                                    <th>Situação</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A Cabana</td>
+                                    <td>Gênero do Livro</td>
+                                    <td>Abril</td>
+                                    <td>Inglês</td>
+                                    <td>Basic</td>
+                                    <td>05</td>
+                                    <td>21/12/2010</td>
+                                    <td>22/12/2011</td>
+                                    <td><i class="fa fa-check"></i></td>
+                                    <td>
+                                    	<button data-toggle="modal" data-target="#modal-livro-editar" class="btn btn-xs btn-primary modal-livro-editar">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                        <button data-toggle="modal" data-target="#modal-livro-excluir" class="btn btn-xs btn-danger modal-livro-excluir">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>                        
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+    
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Etiquetas</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover smart-form" width="100%">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome da Obra</th>
+                                    <th>Autor(es)</th>
+                                    <th>Código</th>
+                                    <th>Volume</th>
+                                    <th>Ano</th>
+                                    <th>Edição</th>
+                                    <th>Exemplar</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A Cabana</td>
+                                    <td>Autor do Livro</td>
+                                    <td>25486-9</td>
+                                    <td>II</td>
+                                    <td>21/12/2010</td>
+                                    <td>05</td>
+                                    <td>03</td>
+                                    <td>
+                                    	<button data-toggle="modal" data-target="#modal-etiqueta-imprimir" class="btn btn-xs btn-warning modal-etiqueta-imprimir">
+                                            <i class="fa fa-print"></i> Imprimir
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                        		<div class="row pagination pull-right">
+                                    <section class="col col-md-12">
+	                                    <button data-toggle="modal" data-target="#modal-etiqueta-cadastro" class="btn btn-warning pull-right modal-etiqueta-cadastro">Cadastrar Etiqueta
+	                                    </button>
+	                                </section>
+                                </div>                          
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+    <!-- Modal CADASTRO LIVRO-->
+<div class="modal fade" id="modal-livro-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Modal EDITAR LIVRO-->
+<div class="modal fade" id="modal-livro-editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Modal EXCLUIR LIVRO-->
+<div class="modal fade" id="modal-livro-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Modal CADASTRO ETIQUETA-->
+<div class="modal fade" id="modal-etiqueta-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+    <!-- Modal CADASTRO ETIQUETA-->
+<div class="modal fade" id="modal-etiqueta-imprimir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+	
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	// pagefunction
+	
+	var pagefunction = function() {
+
+        //CADASTRO
+	    $('a[href="#modal-livro-cadastro"]').click(function () {
+	        var a = $(this);
+	        url = 'especificacao/Ajax - Livros Biblioteca - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+	    })
+
+        //EDITAR
+        $('.modal-livro-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Livros Biblioteca - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EXCLUIR
+        $('.modal-livro-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Livros Biblioteca - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //ETIQUETA
+        $('.modal-etiqueta-cadastro').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Livros Biblioteca - Etiqueta.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //ETIQUETA
+        $('.modal-etiqueta-imprimir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Livros Biblioteca - Imprimir Etiqueta.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+	    // START AND FINISH DATE
+	    $('#startdate').datepicker({
+	        dateFormat: 'dd/mm/yy',
+	        prevText: '<i class="fa fa-chevron-left"></i>',
+	        nextText: '<i class="fa fa-chevron-right"></i>',
+	        onSelect: function (selectedDate) {
+	            $('#finishdate').datepicker('option', 'minDate', selectedDate);
+	        }
+	    });
+
+	    $('#finishdate').datepicker({
+	        dateFormat: 'dd/mm/yy',
+	        prevText: '<i class="fa fa-chevron-left"></i>',
+	        nextText: '<i class="fa fa-chevron-right"></i>',
+	        onSelect: function (selectedDate) {
+	            $('#startdate').datepicker('option', 'maxDate', selectedDate);
+	        }
+	    });
+
+	};
+	
+	// end pagefunction
+	
+    // run pagefunction
+
+	pagefunction();
+
+
+</script>

@@ -1,0 +1,560 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Boletos <span>>  Gerar Cobrança</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+                    <h2>Gerar Cobrança</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                    </div>
+                    <!-- end widget edit box -->
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <div class="row">
+                            <form id="wizard-1" novalidate="novalidate">
+                                <div id="bootstrap-wizard-1" class="col-sm-12">
+                                    <div class="form-bootstrapWizard">
+                                        <ul class="bootstrapWizard form-wizard">
+                                            <li class="active" data-target="#step1" style="width:25%">
+                                                <a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Filtros</span> </a>
+                                            </li>
+                                            <li data-target="#step2" style="width:25%">
+                                                <a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Lançamentos</span> </a>
+                                            </li>
+                                            <li data-target="#step3" style="width:25%">
+                                                <a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Condições</span> </a>
+                                            </li>
+                                            <li data-target="#step5" style="width:25%">
+                                                <a href="#tab4" data-toggle="tab"> <span class="step">5</span> <span class="title">Concluir</span> </a>
+                                            </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1">
+                                            <br>
+                                            <h3><strong>Passo 1</strong> - Filtros</h3>
+
+
+                                            <div id="order-form" class="smart-form">
+                                                <fieldset>
+                                                    <div class="row">
+                                                        <section class="col col-4">
+                                                            <label class="label">Vencimento entre</label>
+                                                            <div class="row">
+                                                                <section class="col col-6">
+                                                                    <label class="input">
+                                                                        <input />
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-6">
+                                                                    <label class="input">
+                                                                        <input />
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Categoria</label>
+                                                            <label class="select">
+                                                                <select></select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Forma de Pagamento</label>
+                                                            <label class="select">
+                                                                <select></select><i></i>
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                    <div class="row">
+                                                        <section class="col col-4">
+                                                            <label class="label">Sacado</label>
+                                                            <label class="input">
+                                                                <input />
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Turma</label>
+                                                            <label class="select">
+                                                                <select></select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Situação do Aluno</label>
+                                                            <label class="select">
+                                                                <select></select><i></i>
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                    <div class="row">
+                                                        <section class="col col-4">
+                                                            <label class="label">Responsável</label>
+                                                            <label class="input">
+                                                                <input />
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Situação</label>
+                                                            <label class="select">
+                                                                <select>
+                                                                    <option>Todos</option>
+                                                                    <option selected="selected">Não Gerado</option>
+                                                                    <option>Boleto</option>
+                                                                    <option>CNAB</option>
+                                                                    <option>Carnê</option>
+                                                                </select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-4">
+                                                            <label class="label">Conta Corrente</label>
+                                                            <label class="select">
+                                                                <select>
+                                                                    <option>Todas</option>
+                                                                </select><i></i>
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <br>
+                                            <h3><strong>Passo 2</strong> - Selecione as Parcelas</h3>
+
+                                            <div class="table-responsive">
+
+                                                <table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </th>
+                                                            <th>Nº Parc.</th>
+                                                            <th>Sacado</th>
+                                                            <th>Data Venc.</th>
+                                                            <th class="text-right">Valor</th>
+                                                            <th>Categoria</th>
+                                                            <th>Situação</th>
+                                                            <th>Conta Corrente</th>
+                                                            <th>Nº Boleto</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>6</td>
+                                                            <td>Nome do Sacado</td>
+                                                            <td>01/01/2014</td>
+                                                            <td class="text-right">267,71</td>
+                                                            <td>Parcela</td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>6</td>
+                                                            <td>Nome do Sacado</td>
+                                                            <td>01/01/2014</td>
+                                                            <td class="text-right">267,71</td>
+                                                            <td>Parcela</td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" name="checkbox-inline">
+                                                                    <i></i>
+                                                                </label>
+                                                            </td>
+                                                            <td>6</td>
+                                                            <td>Nome do Sacado</td>
+                                                            <td>01/01/2014</td>
+                                                            <td class="text-right">267,71</td>
+                                                            <td>Parcela</td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                            <td> --- </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab3">
+                                            <br>
+                                            <h3><strong>Passo 3</strong> - Condições</h3>
+
+                                            <div id="order-form" class="smart-form">
+                                                <fieldset>
+                                                    <div class="row">
+                                                        <section class="col col-3">
+                                                            <label class="label">Tipo</label>
+                                                            <label class="select">
+                                                                <select>
+                                                                    <option>Boleto</option>
+                                                                    <option>CNAB</option>
+                                                                    <option>Carnês</option>
+                                                                </select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label">Layout</label>
+                                                            <label class="select">
+                                                                <select></select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label">Conta Corrente</label>
+                                                            <label class="select">
+                                                                <select>
+                                                                    <option> --- Proporcional --- </option>
+                                                                    <option>Bradesco</option>
+                                                                    <option>Santander</option>
+                                                                </select><i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label">&nbsp;</label>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                <i></i>
+                                                                Enviar no e-mail do responsável
+                                                            </label>
+                                                        </section>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <section class="col col-6">
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Não modificar a numeração dos boletos
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Acumular o valor das parcelas selecionadas do mês do sacado
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Acumular o valor das parcelas selecionadas do mês para o mesmo responsável (CPF/CNPJ)
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-6">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Imprimir a partir do boleto Nº
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-6">
+                                                                    <label class="input">
+                                                                        <input />
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-6">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Adicionar taxa ao boleto
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-6">
+                                                                    <label class="input">
+                                                                        <input />
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="checkbox">
+                                                                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                                                        <i></i>
+                                                                        Discriminar no campo "Observações" as parcelas que foram cobradas
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                        </section>
+                                                        <section class="col col-6">
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="label">Mensagem impressas no boleto</label>
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 1" />
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-12">
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 2" />
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-12">
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 3" />
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-12">
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 4" />
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-12">
+                                                                    <label class="label">Local de pagamento impresso no boleto</label>
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 1" />
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-12">
+                                                                    <label class="input">
+                                                                        <input placeholder="Linha 2" />
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+
+                                                </fieldset>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane" id="tab4">
+                                            <br>
+                                            <h3><strong>Passo 5</strong> - Resumo</h3>
+                                            <br>
+                                            <h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Processo concluído</strong></h1>
+                                            <br>
+                                            <br>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <ul class="pager wizard no-margin">
+                                                        <li class="previous disabled">
+                                                            <a href="javascript:void(0);" class="btn btn-lg btn-default"> Anterior </a>
+                                                        </li>
+                                                        <li class="next">
+                                                            <a href="javascript:void(0);" class="btn btn-lg txt-color-darken"> Próximo </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+        </article>
+        <!-- WIDGET END -->
+
+    </div>
+</section>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+
+
+    var pagefunction = function () {
+
+        // load bootstrap wizard
+
+        loadScript("js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js", runBootstrapWizard);
+
+        //Bootstrap Wizard Validations
+
+        function runBootstrapWizard() {
+
+            var $validator = $("#wizard-1").validate({
+
+                rules: {
+                    mydate: {
+                        required: true
+                    },
+                    clockpicker_inicio: {
+                        required: true
+                    },
+                    clockpicker_termino: {
+                        required: true
+                    }
+                },
+
+                messages: {
+                    mydate: "Informe a data da realização da segunda chamada",
+                    clockpicker_inicio: "Campo obrigatório",
+                    clockpicker_termino: "Campo obrigatório"
+                },
+
+                highlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                },
+                errorElement: 'span',
+                errorClass: 'help-block',
+                errorPlacement: function (error, element) {
+                    if (element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }
+            });
+
+            $('#bootstrap-wizard-1').bootstrapWizard({
+
+                'tabClass': 'form-wizard',
+                'onNext': function (tab, navigation, index) {
+                    var $valid = $("#wizard-1").valid();
+                    if (!$valid) {
+                        $validator.focusInvalid();
+                        return false;
+                    } else {
+                        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).addClass('complete');
+                        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).find('.step').html('<i class="fa fa-check"></i>');
+                    }
+                }
+            });
+
+        };
+
+        /*
+		 * CLOCKPICKER
+		 */
+
+        // load clockpicker script
+
+        loadScript("js/plugin/clockpicker/clockpicker.min.js", runClockPicker);
+
+        function runClockPicker() {
+            $('#clockpicker-inicio').clockpicker({
+                placement: 'top',
+                donetext: 'Done'
+            });
+
+            $('#clockpicker-termino').clockpicker({
+                placement: 'top',
+                donetext: 'Done'
+            });
+        }
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

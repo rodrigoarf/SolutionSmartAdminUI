@@ -1,0 +1,507 @@
+﻿<meta charset="utf-8">
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>Registro de Repiques
+            <span>> Consultar Repiques</span>
+        </h1>
+    </div>
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8 text-right">
+        <h2>
+            <small>Resumo do dia ></small>
+            Realizados <span class="label bg-color-blue txt-color-white">20</span> |
+            Pendentes <span class="label bg-color-red txt-color-white">6</span>
+        </h2>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#s1" data-toggle="tab" style="border-left: 0px;">Pendentes</a>
+                        </li>
+                        <li>
+                            <a href="#s2" data-toggle="tab">Consulta</a>
+                        </li>
+                    </ul>
+                    <!-- <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2> -->
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div id="myTabContent1" class="tab-content">
+                            <div class="tab-pane fade in active" id="s1">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th>Próximo Contato</th>
+                                                    <th>Último Contato</th>
+                                                    <th>Telefone(s)</th>
+                                                    <th class="text-center" style="width:43px;">
+                                                        <span class="fa fa-link"></span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Alice Krypt</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Aline Rocha Pinto</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fernanda Silva</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>José Eduardo Clemente</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Marcelo Campos de Jordão</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Viviane Margareth Ruchoct</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row hide">
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="javascript:void(0);">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="s2">
+                                <form role="form">
+                                    <fieldset>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Divulgador(a)</label>
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option value="0">Nome do Divulgador(a)</option>
+                                                        <option value="1">Fulana</option>
+                                                        <option value="2">Ciclana</option>
+                                                        <option value="3">Fulano</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Nome do Prospect</label>
+                                                    <input type="text" placeholder="Fulano" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <label>Último Contato:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <input class="form-control " id="ultimoFrom" name="from" type="text" placeholder="De">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <input class="form-control" id="ultimoTo" name="to" type="text" placeholder="Até">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <label>Próximo Contato:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <input class="form-control " id="proximoFrom" name="from" type="text" placeholder="De">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <input class="form-control" id="proximoTo" name="to" type="text" placeholder="Até">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <button type="submit" class="btn btn-primary pull-right">
+                                                    Filtrar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nome</th>
+                                                    <th>Próximo Contato</th>
+                                                    <th>Último Contato</th>
+                                                    <th>Dias sem Contato</th>
+                                                    <th>Telefone(s)</th>
+                                                    <th class="text-center" style="width:43px;">
+                                                        <span class="fa fa-link"></span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-red txt-color-white">Nunca recebeu contato</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-yellow">30 dias</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-greenLight txt-color-white">15 dias</span></td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000, (15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fulado de Tal</td>
+                                                    <td>24/10/2014 - 15:00</td>
+                                                    <td>01/10/2014 - 15:00</td>
+                                                    <td><span class="label bg-color-green txt-color-white">3 dias</span></td>
+                                                    <td>(15) 9000-1000</td>
+                                                    <td>
+                                                        <a data-toggle="modal" href="#especificacao/Prospect - Cadastro.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Ver Detalhes" data-placement="top"><i class="fa fa-search"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            <ul class="pagination">
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="javascript:void(0);">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<!-- Modal EXCLUSÃO DE PROSPECT-->
+<div class="modal fade" id="modal-prospect-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        /*
+         * DATEPICKER
+         */
+
+        // Date Range Picker
+        $("#ultimoFrom").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onClose: function (selectedDate) {
+                $("#ultimoTo").datepicker("option", "minDate", selectedDate);
+            }
+
+        });
+        $("#ultimoTo").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onClose: function (selectedDate) {
+                $("#ultimoFrom").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+        $("#proximoFrom").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onClose: function (selectedDate) {
+                $("#proximoTo").datepicker("option", "minDate", selectedDate);
+            }
+
+        });
+        $("#proximoTo").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onClose: function (selectedDate) {
+                $("#proximoFrom").datepicker("option", "maxDate", selectedDate);
+            }
+        });
+
+        //EXCLUIR
+        $('.modal-prospect-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Registro de Repiques - Excluir Prospect.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

@@ -1,0 +1,1524 @@
+﻿<meta charset="utf-8">
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>Orçamento
+            <span>> Simulação de Condições Financeiras</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+                <header>
+                    <!-- <span class="widget-icon"><i class="fa fa-edit"></i></span> -->
+                    <!-- <h2>Filtros </h2> -->
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well well-glass clearfix">
+                                    <ul class="bootstrapWizard form-wizard">
+                                        <li class="active" data-target="#step1">
+                                            <a href="#orcamento" data-toggle="tab"> <span class="step">1</span> <span class="title">Sobre o Orçamento</span> </a>
+                                        </li>
+                                        <li data-target="#step2">
+                                            <a href="#estagio" data-toggle="tab"> <span class="step">2</span> <span class="title">Estágios</span> </a>
+                                        </li>
+                                        <li data-target="#step3">
+                                            <a href="#financeiro" data-toggle="tab"> <span class="step">3</span> <span class="title">Condições Financeiras</span> </a>
+                                        </li>
+                                        <li data-target="#step4">
+                                            <a href="#resumo" data-toggle="tab"> <span class="step">4</span> <span class="title">Resumo</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <hr>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="orcamento">
+                                        <div class="col-md-12">
+                                            <h1 class="hide">Sobre o Orçamento</h1>
+                                            <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+                                                <fieldset>
+                                                    <div class="row">
+                                                        <section class="col col-12">
+                                                            <label class="label"><strong>Prospect</strong></label>
+                                                            <label class="input">
+                                                                <input id="textinput" name="textinput" type="text" placeholder="Informe o nome do prospect" class="form-control input-md"
+                                                                       required="">
+                                                            </label>
+                                                        </section>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <section class="col col-6">
+                                                            <label class="label"><strong>Desconto</strong></label>
+                                                            <label class="select">
+                                                                <select id="selectbasic" name="selectbasic" class="form-control">
+                                                                    <option value="1">Nenhum</option>
+                                                                </select>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-6">
+                                                            <label class="label"><strong>Convênio</strong></label>
+                                                            <label>
+                                                                Conforme a escolha do desconto (Sem Convênio / Regional / Nacional)
+                                                            </label>
+                                                        </section>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <section class="col col-6">
+                                                            <label class="label"><strong>Validade do Orçamento</strong></label>
+                                                            <label class="input">
+                                                                <i class="icon-append fa fa-calendar"></i>
+                                                                <input type="text" name="name" id="data_validade">
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <span class="clear"></span>
+                                            <div class="text-center">
+                                                <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                    Próximo Passo <i class="glyphicon glyphicon-circle-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="estagio">
+                                        <div class="col-md-12">
+                                            <h1 class="hide">
+                                                Estágios
+                                            </h1>
+
+                                            <!-- widget div-->
+                                            <div>
+                                                <!-- widget content -->
+                                                <div class="widget-body">
+                                                    <div class="row">
+                                                        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
+                                                            <div class="smart-form">
+                                                                <fieldset>
+                                                                    <legend>
+                                                                        Estágio
+                                                                    </legend>
+                                                                    <div class="row">
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Idioma</label>
+                                                                            <div class="select">
+                                                                                <select class="form-control">
+                                                                                    <option>Inglês</option>
+                                                                                </select>
+                                                                                <i></i>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Nível</label>
+                                                                            <div class="select">
+                                                                                <select class="form-control">
+                                                                                    <option>Basic</option>
+                                                                                </select>
+                                                                                <i></i>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Estágio</label>
+                                                                            <div class="select">
+                                                                                <select class="form-control">
+                                                                                    <option>B1</option>
+                                                                                </select>
+                                                                                <i></i>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Modalidade</label>
+                                                                            <div class="select">
+                                                                                <select class="form-control">
+                                                                                    <option value="0">Superior</option>
+                                                                                    <option value="1">Option 2</option>
+                                                                                </select>
+                                                                                <i></i>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Turma</label>
+                                                                            <div class="select">
+                                                                                <select class="form-control">
+                                                                                    <option value="0">Superior</option>
+                                                                                    <option value="1">Option 2</option>
+                                                                                </select>
+                                                                                <i></i>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="col col-6">
+                                                                            <label for="" class="label">Número de Horas do estágio</label>
+                                                                            <div class="input">
+                                                                                <input type="text" name="name" id="" class="form-control">
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-6">
+                                                                            <label class="label">Início</label>
+                                                                            <div class="input fake">
+                                                                                <div class="form-control" disabled="disabled">
+                                                                                    -- conforme a turma --
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                        <section class="col col-6">
+                                                                            <label class="label">Horário</label>
+                                                                            <div class="input fake">
+                                                                                <div class="form-control" disabled="disabled">
+                                                                                    -- conforme a turma --
+                                                                                </div>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-0">
+                                                            <div class="smart-form">
+                                                                <fieldset>
+                                                                    <legend>Sequência de Estágios</legend>
+                                                                    <div class="row">
+                                                                        <div class="col col-12">
+                                                                            <div class="inline-group">
+                                                                                <label class="checkbox" style="margin-left: 5px;">
+                                                                                    <input type="checkbox">
+                                                                                    <i></i>Incluir sequência de estágios
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="table-responsive">
+                                                                                <table class="table table-striped">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>
+                                                                                                <div class="inline-group">
+                                                                                                    <label class="checkbox small">
+                                                                                                        <input type="checkbox">
+                                                                                                        <i></i>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </th>
+                                                                                            <th>Nível</th>
+                                                                                            <th>Estágio</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div class="inline-group">
+                                                                                                    <label class="checkbox small">
+                                                                                                        <input type="checkbox">
+                                                                                                        <i></i>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>Basic</td>
+                                                                                            <td>B1</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div class="inline-group">
+                                                                                                    <label class="checkbox small">
+                                                                                                        <input type="checkbox">
+                                                                                                        <i></i>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>Basic</td>
+                                                                                            <td>B1</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <div class="inline-group">
+                                                                                                    <label class="checkbox small">
+                                                                                                        <input type="checkbox">
+                                                                                                        <i></i>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                            <td>Basic</td>
+                                                                                            <td>B1</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end widget content -->
+                                            </div>
+                                            <!-- end widget div -->
+
+
+                                            <br />
+                                            <span class="clear"></span>
+                                            <div class="text-center">
+                                                <button id="activate-step-3" class="btn btn-primary btn-lg">
+                                                    Próximo Passo
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="financeiro">
+                                        <div class="jarviswidget">
+                                            <header class="widget-noheader">
+                                                <span class="widget-icon">
+                                                    <i class="fa fa-edit"></i>
+                                                </span>
+                                                <h2>Condições Financeiras</h2>
+                                            </header>
+                                            <!-- widget div-->
+                                            <div>
+                                                <!-- widget content -->
+                                                <div class="widget-body">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="smart-form">
+                                                                <fieldset>
+                                                                    <legend>Valores dos Cursos</legend>
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-hover">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                    </th>
+                                                                                    <th class="hide">
+                                                                                        Curso
+                                                                                    </th>
+                                                                                    <th class="hide">
+                                                                                        Material Didático
+                                                                                    </th>
+                                                                                    <th class="hide">
+                                                                                        Taxa de Matrícula
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        Curso (R$)
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        Material Didático (R$)
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        Taxa de Matrícula (R$)
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        Total
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        Nome do Estágio<br /><br /><br />
+                                                                                        <span class="txt-color-red">Desconto / Abatimento</span>
+                                                                                    </td>
+                                                                                    <td class="hide">
+                                                                                        <div class="select">
+                                                                                            <select name="acao-estagio-curso" id="acao-estagio-curso">
+                                                                                                <option value="1">Cobrar 100%</option>
+                                                                                                <option value="2">Utilizar desconto</option>
+                                                                                                <option value="3">Descontar % já pago</option>
+                                                                                                <option value="4">Não cobrar</option>
+                                                                                                <option value="5">Informar o valor</option>
+                                                                                            </select>
+                                                                                            <i></i>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="hide">
+                                                                                        <div class="select">
+                                                                                            <select name="acao-estagio-md" id="acao-estagio-md">
+                                                                                                <option value="1">Cobrar 100%</option>
+                                                                                                <option value="2">Aproveitar</option>
+                                                                                                <option value="3">Comprar Direto</option>
+                                                                                                <option value="4">Informar o valor</option>
+                                                                                            </select>
+                                                                                            <i></i>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="hide">
+                                                                                        <div class="select">
+                                                                                            <select name="acao-estagio-matricula" id="acao-estagio-matricula">
+                                                                                                <option value="1">Cobrar 100%</option>
+                                                                                                <option value="2">Não cobrar</option>
+                                                                                                <option value="3">Informar o valor</option>
+                                                                                            </select>
+                                                                                            <i></i>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="text-right">
+                                                                                        <div class="input fake">
+                                                                                            <div class="form-control text-right" disabled="disabled">
+                                                                                                1.200,00&nbsp;
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                        <div class="input hide">
+                                                                                            <input value="1.200,00" disabled="disabled" class="text-right" />
+                                                                                        </div>
+                                                                                        <br /><span class="txt-color-red">-200,00</span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input fake">
+                                                                                            <div class="form-control text-right" disabled="disabled">
+                                                                                                600,00&nbsp;
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="input hide">
+                                                                                            <input value="600,00" disabled="disabled" class="text-right" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="text-right">
+                                                                                        <div class="input fake">
+                                                                                            <div class="form-control text-right" disabled="disabled">
+                                                                                                0,00&nbsp;
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="input hide">
+                                                                                            <input value="0,00" disabled="disabled" class="text-right" />
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td class="text-right">
+                                                                                        1,800,00
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                            <tfoot>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        Total
+                                                                                    </th>
+                                                                                    <th class="hide"></th>
+                                                                                    <th class="hide"></th>
+                                                                                    <th class="hide"></th>
+                                                                                    <th class="text-right">
+                                                                                        1.000,00
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        600,00
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        0,00
+                                                                                    </th>
+                                                                                    <th class="text-right">
+                                                                                        1.600,00
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </tfoot>
+                                                                        </table>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+
+                                                        <div class="col-lg-4">
+                                                            <div class="smart-form">
+                                                                <fieldset>
+                                                                    <legend>Resumo dos Valores</legend>
+                                                                    <div class="row">
+                                                                        <section class="col col-12">
+                                                                            <div class="well padding-10">
+                                                                                <h1>
+                                                                                    Curso
+                                                                                    <b class="pull-right">1.200,00</b>
+                                                                                </h1>
+                                                                            </div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-12">
+                                                                            <div class="well padding-10"><h1>Material Didático<b class="pull-right">600,00</b></h1></div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-12">
+                                                                            <div class="well padding-10"><h1>Taxa de Matrícula<b class="pull-right">0,00</b></h1></div>
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-12">
+                                                                            <div class="well bg-color-redLight txt-color-white padding-10"><h1>Total<b class="pull-right">1.600,00</b></h1></div>
+                                                                        </section>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-8">
+                                                            <div class="smart-form">
+                                                                <fieldset>
+                                                                    <legend>Opções para Pagamento</legend>
+                                                                    <ul class="nav nav-tabs">
+                                                                        <li class="active">
+                                                                            <a href="#s1" data-toggle="tab">Única</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#s2" data-toggle="tab">Por serviço</a>
+                                                                        </li>
+                                                                        <li class="hide">
+                                                                            <a href="#s3" data-toggle="tab">Personalizado</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="tab-content">
+                                                                        <div class="tab-pane fade in active" id="s1">
+                                                                            <fieldset>
+                                                                                <div class="row">
+                                                                                    <section class="col col-4">
+                                                                                        <label for="formas">Forma de Pagamento</label>
+                                                                                        <div class="select">
+                                                                                            <select id="formas">
+                                                                                                <option value="1">Boleto</option>
+                                                                                            </select>
+                                                                                            <i></i>
+                                                                                        </div>
+                                                                                    </section>
+                                                                                    <section class="col col-3">
+                                                                                        <label for="parcelas">Número de Parcelas</label>
+                                                                                        <div class="select">
+                                                                                            <select id="select6" name="selectbasic" class="form-control">
+                                                                                                <option value="1">1x</option>
+                                                                                                <option value="1">2x</option>
+                                                                                                <option value="1">3x</option>
+                                                                                                <option value="1">4x</option>
+                                                                                                <option value="1">5x</option>
+                                                                                                <option value="1" selected="selected">6x</option>
+                                                                                            </select>
+                                                                                            <i></i>
+                                                                                        </div>
+                                                                                    </section>
+                                                                                    <section class="col col-2">
+                                                                                        <label for="vencimento">Valor da Parcela</label>
+                                                                                        <div class="label" style="font-size:16px; padding:5px;">
+                                                                                            100,00
+                                                                                        </div>
+                                                                                    </section>
+                                                                                    <section class="col col-3">
+                                                                                        <label for="vencimento">Data do Primeiro Pagamento</label>
+                                                                                        <div class="input">
+                                                                                            <input id="vencimmento" type="text" placeholder="" required="required">
+                                                                                        </div>
+                                                                                    </section>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </div>
+
+                                                                        <div class="tab-pane fade" id="s2">
+                                                                            <fieldset>
+                                                                                <div class="table-responsive">
+                                                                                    <table class="table table-hover">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>
+                                                                                                    Serviço
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Forma de Pagamento
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Número de Parcelas
+                                                                                                </th>
+                                                                                                <th class="text-right">
+                                                                                                    Valor da Parcela
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Data do Primeiro Pagamento
+                                                                                                </th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <div style="font-size:18px;">Curso</div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="formas">
+                                                                                                            <option value="1">Boleto</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="select6" name="selectbasic" class="form-control">
+                                                                                                            <option value="1">1x</option>
+                                                                                                            <option value="1">2x</option>
+                                                                                                            <option value="1">3x</option>
+                                                                                                            <option value="1">4x</option>
+                                                                                                            <option value="1">5x</option>
+                                                                                                            <option value="1" selected="selected">6x</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td class="text-right">
+                                                                                                    <div style="font-size:16px; padding:5px;">
+                                                                                                        100,00
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="input">
+                                                                                                        <input id="vencimmento" type="text" placeholder="" required="required">
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <div style="font-size:18px;">Material Didático</div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="formas">
+                                                                                                            <option value="1">Boleto</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="select6" name="selectbasic" class="form-control">
+                                                                                                            <option value="1">1x</option>
+                                                                                                            <option value="1">2x</option>
+                                                                                                            <option value="1">3x</option>
+                                                                                                            <option value="1">4x</option>
+                                                                                                            <option value="1">5x</option>
+                                                                                                            <option value="1" selected="selected">6x</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td class="text-right">
+                                                                                                    <div style="font-size:16px; padding:5px;">
+                                                                                                        100,00
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="input">
+                                                                                                        <input id="vencimmento" type="text" placeholder="" required="required">
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <div style="font-size:18px;">Taxa de Matrícula</div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="formas">
+                                                                                                            <option value="1">Boleto</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="select">
+                                                                                                        <select id="select6" name="selectbasic" class="form-control">
+                                                                                                            <option value="1">1x</option>
+                                                                                                            <option value="1">2x</option>
+                                                                                                            <option value="1">3x</option>
+                                                                                                            <option value="1">4x</option>
+                                                                                                            <option value="1">5x</option>
+                                                                                                            <option value="1" selected="selected">6x</option>
+                                                                                                        </select>
+                                                                                                        <i></i>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td class="text-right">
+                                                                                                    <div style="font-size:16px; padding:5px;">
+                                                                                                        100,00
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="input">
+                                                                                                        <input id="vencimmento" type="text" placeholder="" required="required">
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </div>
+
+                                                                        <div class="tab-pane fade" id="s3">
+                                                                            <ul class="nav nav-pills" style="margin-top: 15px;">
+                                                                                <li class="active">
+                                                                                    <a href="#s3" data-toggle="tab">Estágio</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#s4" data-toggle="tab">Material Didático</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#s5" data-toggle="tab">Taxa de Matrícula</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="tab-content">
+                                                                                <div class="tab-pane fade in active" id="s3">
+                                                                                    <a class="pull-right modal-pagamento" data-toggle="modal" data-target="#modal-pagamento">
+                                                                                        <span class="fa fa-plus"></span>Adicionar Pagamento
+                                                                                    </a>
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-striped">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Data
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Meio de Pagamento
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Responsável
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Valor
+                                                                                                    </th>
+                                                                                                    <th class="text-center" style="width: 50px;">
+                                                                                                        <span class="fa fa-link"></span>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        01/07/2014
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Dinheiro
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Nome do Aluno
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        100,00
+                                                                                                    </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                                            <i class="fa fa-pencil"></i>
+                                                                                                        </button>
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                                        </button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        01/07/2014
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Dinheiro
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Nome do Aluno
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        100,00
+                                                                                                    </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                                            <i class="fa fa-pencil"></i>
+                                                                                                        </button>
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                                        </button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        01/07/2014
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Dinheiro
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Nome do Aluno
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        100,00
+                                                                                                    </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                                            <i class="fa fa-pencil"></i>
+                                                                                                        </button>
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                                        </button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                            <tfoot>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Total
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        300,00
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </tfoot>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="tab-pane fade" id="s4">
+                                                                                    <a class="pull-right modal-pagamento" data-toggle="modal" data-target="#modal-pagamento">
+                                                                                        <span class="fa fa-plus"></span>Adicionar Pagamento
+                                                                                    </a>
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-striped">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Data
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Meio de Pagamento
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Responsável
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Valor
+                                                                                                    </th>
+                                                                                                    <th class="text-center" style="width: 50px;">
+                                                                                                        <span class="fa fa-link"></span>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        01/07/2014
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Dinheiro
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Nome do Aluno
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        100,00
+                                                                                                    </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                                            <i class="fa fa-pencil"></i>
+                                                                                                        </button>
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                                        </button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        01/07/2014
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Dinheiro
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Nome do Aluno
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        100,00
+                                                                                                    </td>
+                                                                                                    <td class="text-center">
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                                            <i class="fa fa-pencil"></i>
+                                                                                                        </button>
+                                                                                                        <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                                        </button>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                            <tfoot>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Total
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        300,00
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </tfoot>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="tab-pane fade" id="s5">
+                                                                                    <a class="pull-right modal-pagamento" data-toggle="modal" data-target="#modal-pagamento">
+                                                                                        <span class="fa fa-plus"></span>Adicionar Pagamento
+                                                                                    </a>
+                                                                                    <div class="table-responsive">
+                                                                                        <table class="table table-striped">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Data
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Meio de Pagamento
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Responsável
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        Valor
+                                                                                                    </th>
+                                                                                                    <th class="text-center" style="width: 50px;">
+                                                                                                        <span class="fa fa-link"></span>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody></tbody>
+                                                                                            <tfoot>
+                                                                                                <tr>
+                                                                                                    <th>
+                                                                                                        Total
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                        0,00
+                                                                                                    </th>
+                                                                                                    <th>
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </tfoot>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- end widget content -->
+                                            </div>
+                                            <!-- end widget div -->
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                Próximo Passo
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane" id="resumo">
+                                        <!-- Widget ID (each widget will need unique ID)-->
+                                        <div class="jarviswidget">
+                                            <header class="widget-noheader">
+                                                <span class="widget-icon">
+                                                    <i class="fa fa-edit"></i>
+                                                </span>
+                                                <h2>Resumo</h2>
+                                            </header>
+                                            <!-- widget div-->
+                                            <div>
+                                                <!-- widget content -->
+                                                <div class="widget-body">
+                                                    <div class="row">
+                                                        <article class="col-lg-6">
+                                                            <div class="jarviswidget jarviswidget-color-darken" id="">
+                                                                <header>
+                                                                    <span class="widget-icon">
+                                                                        <i class="fa fa-info"></i>
+                                                                    </span>
+                                                                    <h2>Detalhes do Prospect</h2>
+                                                                </header>
+                                                                <!-- widget div-->
+                                                                <div>
+                                                                    <!-- widget content -->
+                                                                    <div class="widget-body">
+                                                                        <div class="row" style="line-height: 2em;">
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Nome
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                Fernanda Silva
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Nome Responsável
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3 text-nowrap">
+                                                                                Marcos Silva
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Data Nascimento
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                27/03/2000
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    E-mail
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                fernanda.silva@uol.com.br
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Telefone Fixo
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                (11) 4063 - 1469
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Celular
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                (11) 9 9988 - 8775
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end widget content -->
+                                                                </div>
+                                                                <!-- end widget div -->
+                                                            </div>
+                                                        </article>
+                                                        <article class="col-lg-6">
+                                                            <!-- Widget ID (each widget will need unique ID)-->
+                                                            <div class="jarviswidget" id="wid-filtro">
+
+                                                                <header>
+                                                                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                                                                    <h2>Dados do Orçamento</h2>
+                                                                </header>
+
+                                                                <!-- widget div-->
+                                                                <div>
+
+                                                                    <!-- widget content -->
+                                                                    <div class="widget-body">
+
+                                                                        <h1 class="text-center hide">
+                                                                            Resumo do Contrato
+                                                                        </h1>
+
+                                                                        <div class="row" style="line-height: 2em;">
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Número
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                12345 / 1
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Data do Orçamento
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                05/01/2014
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row" style="line-height: 2em;">
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3 text-nowrap">
+                                                                                <b>
+                                                                                    Desconto
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                Nenhum
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Convênio
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                Sem Convênio
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row" style="line-height: 2em;">
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Responsável
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                Maria Aparecida Oliveira
+                                                                            </div>
+                                                                            <div class="col-sm-4 col-md-4 col-lg-3">
+                                                                                <b>
+                                                                                    Data de Validade
+                                                                                </b>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                                                                01/01/2014
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end widget content -->
+                                                                </div>
+                                                                <!-- end widget div -->
+                                                            </div>
+                                                            <!-- end widget -->
+                                                        </article>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <!-- NEW COL START -->
+                                                        <article class="col-sm-6 col-md-6 col-lg-6">
+                                                            <!-- Widget ID (each widget will need unique ID)-->
+                                                            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+
+                                                                <header>
+                                                                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                                                                    <h2>Estágio(s) contratados</h2>
+                                                                </header>
+
+                                                                <!-- widget div-->
+                                                                <div>
+                                                                    <!-- widget content -->
+                                                                    <div class="widget-body">
+                                                                        <div class="span12">
+                                                                            <table class="table table-striped custab">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Nível</th>
+                                                                                        <th>Estágio</th>
+                                                                                        <th>Turma</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Teens</td>
+                                                                                        <td>Teens 1</td>
+                                                                                        <td> --- </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <br />
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end widget content -->
+                                                                </div>
+                                                                <!-- end widget div -->
+                                                            </div>
+                                                            <!-- end widget -->
+                                                        </article>
+
+                                                        <article class="col-sm-6 col-md-6 col-lg-6">
+                                                            <!-- Widget ID (each widget will need unique ID)-->
+                                                            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+
+                                                                <header>
+                                                                    <span class="widget-icon"><i class="fa fa-money"></i></span>
+                                                                    <h2>Resumo Financeiro</h2>
+                                                                </header>
+
+                                                                <!-- widget div-->
+                                                                <div>
+                                                                    <!-- widget content -->
+                                                                    <div class="widget-body">
+
+                                                                        <div class="smart-form">
+                                                                            <fieldset>
+                                                                                <div class="row">
+                                                                                    <section class="col col-12">
+                                                                                        <div class="well padding-10">
+                                                                                            <h1>
+                                                                                                Curso
+                                                                                                <b class="pull-right">1.200,00</b>
+                                                                                            </h1>
+                                                                                        </div>
+                                                                                    </section>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <section class="col col-12">
+                                                                                        <div class="well padding-10"><h1>Material Didático<b class="pull-right">600,00</b></h1></div>
+                                                                                    </section>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <section class="col col-12">
+                                                                                        <div class="well padding-10"><h1>Taxa de Matrícula<b class="pull-right">0,00</b></h1></div>
+                                                                                    </section>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <section class="col col-12">
+                                                                                        <div class="well bg-color-redLight txt-color-white padding-10"><h1>Total<b class="pull-right">1.600,00</b></h1></div>
+                                                                                    </section>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                    <!-- end widget content -->
+                                                                </div>
+                                                                <!-- end widget div -->
+                                                            </div>
+                                                            <!-- end widget -->
+                                                        </article>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <!-- NEW COL START -->
+                                                        <article class="col-sm-12 col-md-12 col-lg-12">
+                                                            <!-- Widget ID (each widget will need unique ID)-->
+                                                            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+
+                                                                <header>
+                                                                    <span class="widget-icon"><i class="fa fa-money"></i></span>
+                                                                    <h2>Condição Financeira</h2>
+
+                                                                    <ul id="myTab2" class="nav nav-tabs pull-right">
+                                                                        <li class="active">
+                                                                            <a href="#s10" data-toggle="tab">Curso</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#s20" data-toggle="tab">Material Didático</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#s30" data-toggle="tab">Taxa de Matrícula</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </header>
+
+                                                                <!-- widget div-->
+                                                                <div>
+
+                                                                    <!-- widget content -->
+                                                                    <div class="widget-body">
+                                                                        <div id="myTabContent1" class="tab-content padding-10">
+                                                                            <div class="tab-pane fade in active" id="s10">
+                                                                                <table class="table table-striped custab">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Data</th>
+                                                                                            <th>Parcela</th>
+                                                                                            <th>Meio de Pagamento</th>
+                                                                                            <th class="hide">Responsável</th>
+                                                                                            <th>Valor</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>20/01/2014</td>
+                                                                                            <td>1</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/02/2014</td>
+                                                                                            <td>2</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/03/2014</td>
+                                                                                            <td>3</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/04/2014</td>
+                                                                                            <td>4</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/05/2014</td>
+                                                                                            <td>5</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/06/2014</td>
+                                                                                            <td>6</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>200,00</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div class="tab-pane fade" id="s20">
+                                                                                <table class="table table-striped custab">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Data</th>
+                                                                                            <th>Parcela</th>
+                                                                                            <th>Meio de Pagamento</th>
+                                                                                            <th class="hide">Responsável</th>
+                                                                                            <th>Valor</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>20/01/2014</td>
+                                                                                            <td>1</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/02/2014</td>
+                                                                                            <td>2</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/03/2014</td>
+                                                                                            <td>3</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/04/2014</td>
+                                                                                            <td>4</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/05/2014</td>
+                                                                                            <td>5</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/06/2014</td>
+                                                                                            <td>6</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+
+                                                                            <div class="tab-pane fade" id="s30">
+                                                                                <table class="table table-striped custab">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Data</th>
+                                                                                            <th>Parcela</th>
+                                                                                            <th>Meio de Pagamento</th>
+                                                                                            <th class="hide">Responsável</th>
+                                                                                            <th>Valor</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>20/01/2014</td>
+                                                                                            <td>1</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/02/2014</td>
+                                                                                            <td>2</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>20/03/2014</td>
+                                                                                            <td>3</td>
+                                                                                            <td>Boleto</td>
+                                                                                            <td class="hide">Marcos Silva</td>
+                                                                                            <td>100,00</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end widget content -->
+                                                                </div>
+                                                                <!-- end widget div -->
+                                                            </div>
+                                                            <!-- end widget -->
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <!-- end widget content -->
+                                            </div>
+                                            <!-- end widget div -->
+                                        </div>
+                                        <div class="text-center">
+                                            <a id="" class="btn btn-primary btn-lg" href="#especificacao/UC208 - Simulação de Condições Financeiras - Detalhe.html">
+                                                Concluir
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<!-- Modal RECUPERAR ORÇAMENTO -->
+<div class="modal fade" id="modal-orcamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal ADICONAR PAGAMENTO -->
+<div class="modal fade" id="modal-pagamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        // Date Range Picker
+        $("#data_validade").datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 1,
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>'
+
+        });
+
+        $('.modal-pagamento').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Orçamento - Adicionar Pagamento.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

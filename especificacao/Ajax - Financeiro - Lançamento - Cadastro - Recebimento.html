@@ -1,0 +1,174 @@
+<meta charset="iso-8859-1">
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Recebimento</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="review-form" class="smart-form">
+        <fieldset>
+            <div class="row">
+                <section class="col col-4">
+                    <label class="label">Vencimento</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-calendar"></i>
+                        <input type="text" name="startdate" id="startdate" placeholder="Data">
+                    </label>
+                </section>
+                <section class="col col-8">
+                    <label class="label">Categoria</label>
+                    <label class="select">
+                        <select></select><i></i>
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-8">
+                    <label class="label">Descrição</label>
+                    <label class="input">
+                        <input name="review" id="review" placeholder="Defina um nome para seu recebimento" />
+                    </label>
+                </section>
+                <section class="col col-4">
+                    <label class="label">Valor</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="R$">
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Forma de Pagamento</label>
+                    <label class="select">
+                        <select></select><i></i>
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Conta Bancária</label>
+                    <label class="select">
+                        <select></select><i></i>
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Cliente</label>
+                    <label class="select">
+                        <select></select><i></i>
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Data competência</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-calendar"></i>
+                        <input type="text" name="startdate" id="startdate" placeholder="Data">
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Centro de custo</label>
+                    <label class="select">
+                        <select></select><i></i>
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col col-12">
+                    <label class="textarea">
+                        <i class="icon-append fa fa-comment"></i>
+                        <textarea rows="3" name="review" id="review" placeholder="Observações"></textarea>
+                    </label>
+                </section>
+            </div>
+
+            <div class="row">
+                <section class="col col-12">
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                        <i></i>
+                        Repetir
+                    </label>
+                </section>
+            </div>
+
+            <div class="row" id="div-repetir">
+                <section class="col col-6">
+                    <label class="select">
+                        <select><option>Mensalmente</option></select><i></i>
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <div class="row">
+                        <section class="col col-4">
+                            <label>Ocorrências </label>
+                        </section>
+                        <section class="col col-5">
+                            <label class="input">
+                                <input name="review" id="review" />
+                            </label>
+                        </section>
+                        <section class="col col-3">
+                            <label>Vezes</label>
+                        </section>
+                    </div>
+                </section>
+            </div>
+
+            <div class="row hide">
+                <section class="col col-12">
+                    <label class="checkbox">
+                        <input type="checkbox" name="checkbox-inline" id="chk-baixar">
+                        <i></i>
+                        Recebido
+                    </label>
+                </section>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success" id="btn-transferencia">
+        Salvar
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        $('#chk-repetir').click(function () {
+            $('#div-repetir').toggle();
+        });
+
+        $('#div-repetir').toggle();
+
+        $('#chk-baixar').click(function () {
+            $('#div-baixar').toggle();
+        });
+
+        $('#div-baixar').toggle();
+
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

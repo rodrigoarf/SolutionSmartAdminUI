@@ -1,0 +1,324 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+        <!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Colaboradores <span>>  Consulta dos Colaboradores da escola</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="input">
+                                            <i class="icon-append fa fa-user"></i>
+                                            <input type="text" name="name" placeholder="Nome">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="select">
+                                            <select name="interested">
+                                                <option value="0" selected="" disabled="">Cargo</option>
+                                                <option value="1">professor inglês</option>
+                                                <option value="1">professor espanhol</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Listagem</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome</th>
+                                    <th>Cargo(s)</th>
+                                    <th data-hide="phone">E-mail</th>
+                                    <th data-hide="phone,tablet">Telefone(s)</th>
+                                    <th>Tipo</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jennifer</td>
+                                    <td>Professor Inglês</td>
+                                    <td>jennifer@cna.com.br</td>
+                                    <td>(11) 3053-3819</td>
+                                    <td>Mensalista</td>
+                                    <td class="text-center">
+                                        <a data-toggle="modal" href="#modal-capacidade" rel="tooltip" data-original-title="Capacitação" data-placement="top" class="btn btn-xs btn-info hide"><i class="fa fa-mortar-board"></i></a>
+                                        <a data-toggle="modal" href="#modal-remuneracao" rel="tooltip" data-original-title="Remuneração" data-placement="top" class="btn btn-xs btn-success"><i class="glyphicon glyphicon-usd"></i></a>
+                                        <a href="#especificacao/UC008 - Manutenção de Professor - Alteração.html" rel="tooltip" data-original-title="Disponibilidade de Horário" data-placement="top"  class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-time"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<div class="modal fade" id="modal-capacidade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Capacitação - por nível</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="order-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-12">
+                                <div class="inline-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Basic
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Advanced
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Teen
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Kids
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Fast
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Basic
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Advanced
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Teen
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Kids
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Fast
+                                    </label>
+                                </div>
+                            </section>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="button" class="btn btn-success" id="btn-transferencia">
+                        Salvar
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-remuneracao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Remuneração do Colaborador</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="order-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Tipo da remuneração</label>
+                                <div class="inline-group">
+                                    <label class="radio">
+                                        <input type="radio" name="radio" checked="checked">
+                                        <i></i>Mensalista
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" name="radio">
+                                        <i></i>Horista
+                                    </label>
+                                </div>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Valor</label>
+                                <label class="input">
+                                    <input type="text" name="name">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Aula de Sábado</label>
+                                <label class="input">
+                                    <input type="text" name="name">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Atividade Extra</label>
+                                <label class="input">
+                                    <input type="text" name="name">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Plus Interno</label>
+                                <label class="input">
+                                    <input type="text" name="name">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Plus Externo</label>
+                                <label class="input">
+                                    <input type="text" name="name">
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="button" class="btn btn-success" id="btn-transferencia">
+                        Salvar
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+	
+	pageSetUp();
+	
+	// pagefunction
+	
+	var pagefunction = function() {
+	};
+	
+	// end pagefunction
+	
+    // run pagefunction
+
+	pagefunction();
+</script>

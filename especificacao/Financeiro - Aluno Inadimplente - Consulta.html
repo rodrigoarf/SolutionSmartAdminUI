@@ -1,0 +1,329 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Financeiro <span>>  Consulta de Aluno Inadimplente</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">Professor</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Option 1</option>
+                                                <option value="1">Option 2</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Turma</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Option 1</option>
+                                                <option value="1">Option 2</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-2">
+                                        <label class="label">Situação</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Matriculado</option>
+                                                <option value="2">Destrancado</option>
+                                                <option value="3">Rematriculado</option>
+                                                <option value="4">Trancado</option>
+                                                <option value="5">Transferido</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-2">
+                                        <label class="label">Negativado</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Ambos</option>
+                                                <option value="1">Sim</option>
+                                                <option value="2">Não</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">Curso</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Option 1</option>
+                                                <option value="1">Option 2</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-4">
+                                        <label class="label">Nível</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Option 1</option>
+                                                <option value="1">Option 2</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+
+                                    <section class="col col-4">
+                                        <label class="label">Estágio</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Option 1</option>
+                                                <option value="1">Option 2</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Resultado</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome</th>
+                                    <th>Estágio</th>
+                                    <th>Turma</th>
+                                    <th>Professor</th>
+                                    <th>Situação</th>
+                                    <th>Negativado</th>
+                                    <th>Responsável</th>
+                                    <th width="100">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <b>Nome do Aluno</b><br />
+                                        <span class="txt-color-red"> <i class="glyphicon glyphicon-warning-sign"></i> menor de idade</span>
+                                    </td>
+                                    <td>Inglês > Basic > Basic 2</td>
+                                    <td>Nome da Turma</td>
+                                    <td>Nome do Professor</td>
+                                    <td>Não Rematriculado</td>
+                                    <td><span class="label bg-color-red">Sim</span></td>
+                                    <td>
+                                        <b>O Próprio</b><br />
+                                        (11) 9 9999 - 9999<br />
+                                        email@site.com.br
+                                    </td>
+                                    <td>
+                                        <a href="#especificacao/UC041 - Detalhe do Aluno - Atendimento.html" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Detalhes do Aluno" data-placement="top">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-negativar" class="btn btn-xs btn-danger" rel="tooltip" data-original-title="Negativar aluno" data-placement="top">
+                                            <i class="glyphicon glyphicon-chevron-down"></i>
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-positivar" class="btn btn-xs btn-info" rel="tooltip" data-original-title="Remover flag de negativo" data-placement="top">
+                                            <i class="glyphicon glyphicon-chevron-up"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+
+<div class="modal fade" id="modal-negativar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Negativar [Nome do Aluno]</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+                    <div class="row">
+                        <section class="col col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsum soluta explicabo placeat laborum, quidem asperiores eligendi, sint vero alias, similique exercitationem cumque. Quod unde delectus iusto eveniet eius. Expedita.</p>
+                        </section>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-danger">
+                    Estou ciente, negativar mesmo assim.
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-positivar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Remover Negativar de [Nome do Aluno]</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+                    <div class="row">
+                        <section class="col col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsum soluta explicabo placeat laborum, quidem asperiores eligendi, sint vero alias, similique exercitationem cumque. Quod unde delectus iusto eveniet eius. Expedita.</p>
+                        </section>
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-danger">
+                    Estou ciente, remover mesmo assim.
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+           
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

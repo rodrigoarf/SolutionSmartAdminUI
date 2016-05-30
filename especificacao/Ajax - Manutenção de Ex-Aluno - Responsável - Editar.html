@@ -1,0 +1,240 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Editar Responsável</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+        <fieldset>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Grau de Parentesco</label>
+                    <label class="select">
+                        <select>
+                            <option value="0">Pai</option>
+                            <option value="1">Tio</option>
+                        </select> <i></i> </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">CPF</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="___.___.___-__" class="cpfmask">
+                        </label>
+                </section>
+                
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Nome</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="Nome">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Sexo</label>
+                        <div class="inline-group">
+                        <label class="radio">
+                            <input type="radio" name="radio-inline" checked="checked">
+                            <i></i>Masculino</label>
+                    <label class="radio">
+                            <input type="radio" name="radio-inline">
+                            <i></i>Feminino</label>
+                        </div>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">RG</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="" class="">
+                        </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Profissão</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">E-mail</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="" class="">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Data de Nascimento</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="__/__/____" class="nascmask">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-10">
+                    <label class="label">Endereço</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="Endereço" class="">
+                        </label>
+                </section>
+                <section class="col col-2">
+                    <label class="label">Número</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="" class="">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Complemento</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="Complemento" class="">
+                        </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Bairro</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="Bairro" class="">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Cidade</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="Cidade" class="">
+                        </label>
+                </section>
+                <section class="col col-2">
+                    <label class="label">Estado</label>
+                        <label class="select">
+                        <select>
+                            <option value="0">SP</option>
+                            <option value="1">MG</option>
+                        </select> <i></i> </label>
+                </section>
+                <section class="col col-4">
+                    <label class="label">CEP</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="_____-___" class="cepmask">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-4">
+                    <label class="label">Telefone Fixo</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="(__) ____-____" class="fonemask">
+                        </label>
+                </section>
+                <section class="col col-4">
+                    <label class="label">Telefone Comercial</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="(__) ____-____" class="fonemask">
+                        </label>
+                </section>
+                <section class="col col-4">
+                    <label class="label">Celular</label>
+                        <label class="input">
+                            <input type="text" name="name" placeholder="(__) _ ____-____" class="celmask">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Observações</label>
+                        <label class="textarea">                                        
+                            <textarea rows="4" class="custom-scroll"></textarea> 
+                        </label>
+                </section>
+            </div>
+        </fieldset>
+            
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button data-toggle="modal" type="button" class="btn btn-danger pull-left modal-exaluno-excluir-responsavel">
+        Excluir
+    </button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Salvar
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+    
+    // pagefunction
+    
+    var pagefunction = function() {
+
+
+        //EXCLUIR RESPONSAVEL
+        $('.modal-exaluno-excluir-responsavel').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Ex-Aluno - Responsável - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+  jQuery(function($){
+         $(".nascmask").mask("99/99/9999");
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".celmask").mask("(99) 9 9999-9999");
+         $(".cpfmask").mask("999.999.999-99");
+         $(".cepmask").mask("99999-999");
+
+    })
+
+    };
+    
+    // end pagefunction
+    
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

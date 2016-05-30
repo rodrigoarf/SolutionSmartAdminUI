@@ -1,0 +1,268 @@
+/* #PSEUDO RESETS E ADEQUAÇÕES GLOBAIS# */
+body {overflow-y: scroll !important;}
+
+/* #CLASSES AUXILIARES ou ELEMENTOS ESPECIAIS# */
+
+/** CENTER ME PLEASE **/
+.center-overflow {overflow: hidden;}
+.center-outer {position: relative; left: 50%; float: left;}
+.center-inner {position: relative; left: -50%; float: left;}
+
+
+/* #PRODUÇÃO E ESTRUTURAS# */
+.user {width:45%;}
+.user .ico-acao-aluno{margin-right:5px; font-size:22px; float:right;}
+
+.icones-acao-aula a {margin-right:5px; font-size:24px; text-align:right; }
+
+#tabela-turma-aprovacao td span {font-size:11px;}
+#tabela-turma-aprovacao td a {font-size:18px; }
+
+
+/* #MINBOXES# */
+
+.minibox-coluna h1 {line-height: 170px;}
+.minibox-linha h1 {height: 80px;}
+/*.minibox-linha .col-xs-6.text-center { height: 120px; }*/
+.minibox-progress h1 {line-height: 130px;}
+
+.minibox .widget-body {height: 310px; overflow: hidden;}
+@media (max-width: 768px) {
+  .minibox .widget-body {height: auto; overflow: hidden;}
+}
+.minibox .widget-body.no-padding {height: 323px;}
+
+.minibox .widget-body-toolbar {height: 83px;padding-top: 20px;color: #fff;background: #aaa;overflow: hidden;}
+
+.minibox .text-main {margin-right: 5px; line-height: 90%; font-size: 330%;}
+.minibox .text-sub {line-height: 120%; font-size: 125%;}
+.minibox .btn-lg {padding: 10px;margin-top: 10px;margin-bottom: 20px;}
+.minibox .btn-hg {padding-top: 19px;padding-bottom: 19px;}
+
+.minibox table tr:first-child {height: 45px;}
+.minibox table tr:first-child th {line-height: 2;}
+.minibox table tr:first-child th.col-100 {width: 100px;}
+.minibox table tr:first-child th.col-125 {width: 125px;}
+.minibox table tr:first-child th.col-150 {width: 150px;}
+.minibox table tr td a {margin-left: 10px !important;}
+
+.minibox .info-circle {height: 180px;width: 180px;color: #fff;border-radius: 100px;padding-top: 20px;margin: 17px 0 35px;}
+
+.minibox .green {background: #739e73 !important;}
+.minibox .red {background: #8a181a !important;}
+.minibox .yellow {background: #c79121 !important;}
+
+
+/* #AJUSTES E ADAPTAÇÕES# */
+
+/** GRID do BOOTSTRAP, REGRAS ESPECIAIS PARA OS MINIBOXES **/
+@media (min-width: 1600px) {
+  .col-xl-3 {width: 25%;}
+}
+@media (min-width: 1600px) {
+  .col-xl-6 {width: 50%;}
+}
+
+
+/** HR, VARIAÇÕES **/
+hr {margin: 10px 0;border-top-color: #ddd;}
+hr.dark {border-top-color: #c2c2c2;}
+hr.light {border-top-color: #e7e7e7;}
+hr.thick {margin: 20px 0;}
+hr.thick-top {margin-top: 20px;}
+hr.thick-bot {margin-bottom: 20px;}
+hr.thin {margin: 5px 0;}
+hr.thin-top {margin-top: 5px;}
+hr.thin-bot {margin-bottom: 5px;}
+hr.fit {margin: 1px;}
+hr.fit-top {margin-top: 1px;}
+hr.fit-bot {margin-bottom: 1px;}
+
+
+/** FONTES, CLASSES DE AJUSTE ADICIONADAS OU ALTERADAS **/
+.font-300 {
+  font-size: 300% !important;
+}
+
+
+/** CORES DE FUNDO PADRÃO ALTERADAS OU ADICIONADAS **/
+.bg-color-yellow {
+  background-color: #d6b44e !important;
+}
+.bg-color-grayLight {
+  background-color: #7f7f7f !important;
+}
+
+
+/** DATATABLES, ALINHAMENTOS, ESPAÇAMENTOS E PERSONALIZAÇÕES **/
+.dataTables_wrapper div ul.pagination {
+  margin: 15px 0;
+  white-space: nowrap;
+}
+.dataTables_wrapper table {margin: 0 !important;}
+.dataTables_wrapper table tr td:last-child {text-align: center;}
+.dataTables_wrapper .dt-toolbar,
+.dataTables_wrapper .dt-toolbar-footer {background: #fff;padding: 6px 7px 1px;}
+.dataTables_wrapper .dt-toolbar a {margin-bottom: 5px;}
+
+
+/** FULLCALENDAR - AJUSTE NOS BLOCOS DE EVENTOS **/
+.fc-event-title .fa { /* ADIÇÃO */
+  margin-right: 2px;
+}
+.fc .ui-resizable-handle {
+  border-left: 1px dotted rgba(255, 255, 255, 0.55); /* ADIÇÃO */
+  border-right: 1px dotted rgba(255, 255, 255, 0.55); /* ADIÇÃO */
+  margin-right: 1px;
+}
+.fc-event-hori .ui-resizable-e {
+  right: 0px !important; /* ALTERAÇÃO */
+  width: 2px !important; /* ALTERAÇÃO */
+}
+.fc-corner-left .fc-event-inner {
+  border-left: 6px solid rgba(0, 0, 0, 0.10); /* ALTERAÇÃO */
+}
+
+/** #WIZARD, BOOTSTRAP# **/
+
+/*** AJUSTE PARA USAR 5 PASSOS ***/
+.bootstrapWizard.fivesteps li {
+  width: 20%;
+}
+/*** DESTAQUE NO PASSO ATIVO ***/
+.bootstrapWizard li .step,
+.bootstrapWizard li.active .step {
+  padding: 7px 17px;
+  font-size: 24px;
+  line-height: 18px;
+}
+.bootstrapWizard li.complete .title,
+.bootstrapWizard li.active .title {
+  color: #2B3D53;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/** #WIDGETS# **/
+
+/*** OCULTAR HEADER E TÍTULO ***/
+header.widget-noheader {background: transparent;border-top: none;border-right: none;border-left: none;height: 32px;margin-top: 5px;}
+header.widget-noheader span,
+header.widget-noheader i,
+header.widget-noheader h2 {display: none;}
+
+
+/** #SMART-FORM# **/
+
+/*** AJUSTES NO GRID ***/
+.smart-form .col-12 {
+  width: 100%;
+}
+.smart-form .col {
+  float: left;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.smart-form fieldset {
+  display: block;
+  padding: 15px 0px 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+/*** ALINHAR MENSAGEM DE VALIDAÇÃO EM CHECKBOXES/RADIOS INLINE ***/
+.smart-form .inline-group label+em {float: left;margin-right: 30px;margin-left: -20px;}
+
+/*** VALIDADOR - ADAPTAÇÃO PARA FUNCIONAR NO BOOTSTRAP-FORM ***/
+.state-error input, /* ADIÇÃO */
+.state-error select, /* ADIÇÃO */
+.state-error .select2-choices, /* ADIÇÃO */
+.state-error textarea, /* ADIÇÃO */
+.radio.state-error i, /* ADIÇÃO */
+.checkbox.state-error i, /* ADIÇÃO */
+.toggle.state-error i  /* ADIÇÃO */ {
+  background: #fff0f0 !important; /* ALTERAÇÃO */
+  border-color: #A90329 !important; /* ALTERAÇÃO */
+}
+.state-error + em /* ADIÇÃO */ {
+  display: block;
+  margin-top: 6px;
+  padding: 0 1px;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 15px;
+  color: #D56161 !important; /* ALTERAÇÃO */
+}
+.state-error .input-group-addon /* ADIÇÃO */ {
+  color: #ed1c24 !important; /* ALTERAÇÃO */
+  background: #fff0f0 !important; /* ADIÇÃO */
+  border-color: #A90329 !important; /* ADIÇÃO */
+}
+.state-success input, /* ADIÇÃO */
+.state-success select, /* ADIÇÃO */
+.state-success .select2-choices, /* ADIÇÃO */
+.state-success textarea, /* ADIÇÃO */
+.radio.state-success i, /* ADIÇÃO */
+.checkbox.state-success i, /* ADIÇÃO */
+.toggle.state-success i /* ADIÇÃO */ {
+  background: #f0fff0 !important; /* ALTERAÇÃO */
+  border-color: #7DC27D !important; /* ALTERAÇÃO */
+}
+.state-success .input-group-addon { /* ADIÇÃO */
+  background: #f0fff0 !important;
+  border-color: #7DC27D !important; 
+}
+.state-success input[type="text"]:focus + .input-group-addon {
+  border-color: #0091d9;
+  background-color: #72a0ce;
+  color: #555 !important;
+}
+
+/*** FAKE DISABLED INPUT, AJUSTE ***/
+.input.fake div.form-control {line-height: 30px;text-indent: 10px;}
+
+
+/*** CHECKBOX STYLE, ÍCONE MENOR ***/
+.smart-form .radio.small i,
+.smart-form .checkbox.small i {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  background: #FFF;
+}
+.smart-form .radio.small input + i:after {
+  content: '';
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.smart-form .checkbox.small input + i:after {
+    content: '\f00c';
+    top: -2px;
+    left: -1px;
+    width: 16px;
+    height: 16px;
+    font: normal 14px/18px FontAwesome;
+    text-align: center;
+}
+
+
+.icheckbox {display: block;margin: 20 0 0 -15px;padding: 0;width: 80px;height: 22px;background: url(../img/icheck-ativo-inativo.png) no-repeat;border: none;cursor: pointer;}
+
+.icheckbox {background-position: 0 0;}
+.icheckbox.hover {background-position: 0 0;}
+.icheckbox.checked {background-position: -80px 0;}
+.icheckbox.disabled {background-position: -160px 0;cursor: default;}
+.icheckbox.checked.disabled {background-position: -240px 0;}

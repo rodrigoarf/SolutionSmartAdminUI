@@ -1,0 +1,103 @@
+<meta charset="iso-8859-1">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Cadastro de Livro</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+        <fieldset>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Nome do Livro</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Nome do Livro">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-6">
+                    <label class="label">Gênero</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Gênero">
+                    </label>
+                </section>
+                <section  class="col col-6">
+                    <label class="label">Editora</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Editora">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-6">
+                    <label class="label">Curso</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Curso">
+                    </label>
+                </section>
+                <section  class="col col-6">
+                    <label class="label">Nível</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Nível">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="checkbox">
+                        <input type="checkbox" name="ativo" id="ativo">
+                    <i></i>Livro Inativo?</label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <h2>Exemplares</h2>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-4">
+                    <label class="label">Quantidade de Exemplares</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Quantidade de Exemplares">
+                    </label>
+                </section>
+                <section  class="col col-4">
+                    <label class="label">Ano</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Ano" class="datepicker">
+                    </label>
+                </section>
+                <section  class="col col-4">
+                    <label class="label">Data de Aquisição</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Data de Aquisição" class="datepicker">
+                    </label>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Salvar
+    </button>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function($){
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".cepmask").mask("99999-999");
+
+1 });
+  </script>

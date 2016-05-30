@@ -1,0 +1,350 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Estoque <span>>  Movimentação</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="javascript:window.history.go(-1)" class="btn btn-primary btn-sm pull-right header-btn hidden-mobile"><i class="fa fa-reply"></i> Voltar</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-9 col-md-9 col-lg-9">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <form role="form">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label>Código</label>
+                                                <div class="form-group">
+                                                    <b>001</b>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Item</label>
+                                                <div class="form-group">
+                                                    <b>Nome do Item</b>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Categoria</label>
+                                                <div class="form-group">
+                                                    <b>Nome da Categoria</b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Período</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input class="form-control datepicker" type="text" placeholder="Início">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <input class="form-control datepicker" type="text" placeholder="Término">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </form>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+
+        <article class="col-sm-3 col-md-3 col-lg-3">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Resumo </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <tbody>
+                                <tr>
+                                    <td><h5 class="font-md"><b>Saldo Inicial:</b></h5></td>
+                                    <td><h5>100</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><h5 class="font-md"><b>Movimentação:</b></h5></td>
+                                    <td><h5>-60</h5></td>
+                                </tr>
+                                <tr>
+                                    <td><h5 class="font-md"><b>Saldo Final:</b></h5></td>
+                                    <td><h5>40</h5></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Movimentação no Período</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th data-class="expand">Descrição</th>
+                                    <th data-class="expand">Responsável</th>
+                                    <th>Operação</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>21/12/2000</td>
+                                    <td>Descrição ...</td>
+                                    <td>José Maria</td>
+                                    <td>
+                                        <span class="btn btn-xs btn-success" disabled="disabled">
+                                            <i class="fa fa-chevron-down"></i> Entrada
+                                        </span>
+                                    </td>
+                                    <td>999</td>
+                                </tr>
+                                <tr>
+                                    <td>21/12/2000</td>
+                                    <td>Descrição ...</td>
+                                    <td>José Maria</td>
+                                    <td>
+                                        <span class="btn btn-xs btn-warning" disabled="disabled">
+                                            <i class="fa fa-chevron-up"></i> Saida
+                                        </span>
+                                    </td>
+                                    <td>999</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<!-- Modal BANCO EDITAR-->
+<div class="modal fade" id="modal-banco-editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal BANCO EXCLUIR-->
+<div class="modal fade" id="modal-banco-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal BANCO CADASTRAR-->
+<div class="modal fade" id="modal-banco-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        //EDITAR
+        $('.modal-banco-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Cadastros Administrativos - Banco - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+        //CADASTRO
+        $('a[href="#modal-banco-cadastro"]').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Cadastros Administrativos - Banco - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EXCLUIR
+        $('.modal-banco-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Cadastros Administrativos - Banco - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

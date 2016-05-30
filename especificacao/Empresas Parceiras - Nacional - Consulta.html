@@ -1,0 +1,151 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+        <!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Empresas Parceiras<span>>  Cadastro e Consulta</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#especificacao/Empresas Parceiras - Nacional - Cadastro.html" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Cadastrar Empresa Parceira</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+    
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Consulta Empresas Parceiras</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome</th>
+                                    <th>Contato</th>
+                                    <th data-class="expand">E-mail</th>
+                                    <th>Telefone</th>
+                                    <th>Situação</th>
+                                    <th width="10%">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nome da Escola</td>
+                                    <td>José da Silva Oliveira Pinto</td>
+                                    <td>empresa@email.com.br</td>
+                                    <td>(15) 3232-3232</td>
+                                    <td>Ativo</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn btn-xs btn-success" rel="tooltip" data-original-title="Download do Contrato" data-placement="top">
+                                            <i class="fa fa-file"></i>
+                                        </a>
+                                        <a href="#especificacao/Empresas Parceiras - Nacional - Cadastro.html" class="btn btn-xs btn-primary" rel="tooltip" data-original-title="Alterar Empresa Parceira" data-placement="top">
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-empresa-excluir" class="btn btn-xs btn-danger modal-empresa-excluir" rel="tooltip" data-original-title="Excluir Empresa Parceira" data-placement="top">
+                                            <i class="fa fa-trash-o"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>                              
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+    <!-- Modal EXCLUIR-->
+<div class="modal fade" id="modal-empresa-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+	
+	pageSetUp();
+	
+	// pagefunction
+	
+	var pagefunction = function() {
+
+        //EXCLUIR
+        $('.modal-empresa-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Empresas Parceiras - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+	};
+	
+	// end pagefunction
+	
+    // run pagefunction
+
+	pagefunction();
+
+
+</script>

@@ -1,0 +1,110 @@
+<meta charset="iso-8859-1">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Cadastro de Editora</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+        <fieldset>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Nome da Editora</label>
+                    <label class="input"><i class="icon-prepend fa fa-user"></i>
+                        <input type="text" name="fname" placeholder="Nome Editora">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Endereço</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Endereço">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section  class="col col-6">
+                    <label class="label">Bairro</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Bairro">
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Cidade</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Cidade">
+                    </label>
+                </section>   
+            </div>
+            <div class="row">
+                <section  class="col col-6">
+                    <label class="label">CEP</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="CEP" class="cepmask">
+                    </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">Telefone</label>
+                    <label class="input"><i class="icon-prepend fa fa-phone"></i>
+                        <input type="text" name="fname" placeholder="CEP" class="fonemask">
+                    </label>
+                </section>   
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">E-mail</label>
+                    <label class="input"><i class="icon-prepend fa fa-envelope-o"></i>
+                        <input type="text" name="fname" placeholder="E-mail">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Site</label>
+                    <label class="input"><i class="icon-prepend fa fa-globe"></i>
+                        <input type="text" name="fname" placeholder="Site">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Observações</label>
+                    <label class="textarea"><i class="icon-prepend fa fa-comment"></i>
+                        <textarea rows="4" name="comment"></textarea>
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col">
+                    <label class="checkbox">
+                        <input type="checkbox" name="ativo" id="ativo">
+                    <i></i>Editora Inativa</label>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Salvar
+    </button>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function($){
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".cepmask").mask("99999-999");
+
+1 });
+  </script>

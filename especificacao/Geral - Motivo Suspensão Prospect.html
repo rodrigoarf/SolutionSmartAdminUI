@@ -1,0 +1,200 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Cadastros <span>>  Motivo Suspensão Prospect</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-cadastro" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Novo</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Motivo Suspensão de Prospect</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome</th>
+                                    <th>Situação</th>
+                                    <th width="5%">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Desempregado</td>
+                                    <td>Ativo</td>
+                                    <td>
+                                        <button data-toggle="modal" data-target="#modal-cadastro" class="btn btn-xs btn-primary modal-cadastro">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                        <button data-toggle="modal" data-target="#modal-excluir" class="btn btn-xs btn-danger modal-excluir">
+                                            <i class="fa fa-trash-o"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<!-- Modal CADASTRAR-->
+<div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Cadastro de Motivo de Suspensão de Prospect</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Nome</label>
+                                <label class="input">
+                                    <input type="text" name="fname" placeholder="Descrição">
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success">
+                    Salvar
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal EXCLUIR-->
+<div class="modal fade" id="modal-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Excluir Motivo de Suspensão de Prospect</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+                    <div class="row">
+                        <section class="col col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ipsum soluta explicabo placeat laborum, quidem asperiores eligendi, sint vero alias, similique exercitationem cumque. Quod unde delectus iusto eveniet eius. Expedita?</p>
+                        </section>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-danger">
+                    Estou ciente, excluir mesmo assim.
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

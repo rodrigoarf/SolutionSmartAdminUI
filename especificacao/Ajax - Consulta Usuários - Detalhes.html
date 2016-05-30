@@ -1,0 +1,181 @@
+<style>
+    .ui-datepicker {z-index: 1051 !important;}
+    .bootstrap-timepicker-widget {z-index: 1051 !important;}
+</style>
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Detalhes do Usuário</h4>
+</div>
+<div class="modal-body">
+
+    <form role="form">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input class="form-control" placeholder="Nome" value="José Maria">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input class="form-control" placeholder="E-mail" value="Default@email.com.br">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <textarea class="form-control" placeholder="Descrição"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h1>Permissões</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <ul class="list-unstyled">
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="checkbox" checked="checked">
+                                    <span>Perfil 1</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="checkbox" checked="checked">
+                                    <span>Perfil 2</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" class="checkbox" checked="checked">
+                                    <span>Perfil 3</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h1>Horário</h1>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <table id="datatable_tabletools" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Segunda</th>
+                                    <th>Terça</th>
+                                    <th>Quarta</th>
+                                    <th>Quinta</th>
+                                    <th>Sexta</th>
+                                    <th>Sábado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Início</td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fim</td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-6">
+                                            <input class="form-control text-center timepicker" placeholder="__:__" value="">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+</div>
+
+<script type="text/javascript">
+
+    pageSetUp();
+
+    
+    var pagefunction = function() {
+
+        loadScript("js/plugin/bootstrap-timepicker/bootstrap-timepicker.min.js", runTimePicker);
+    
+        function runTimePicker() {
+            $('.timepicker').timepicker({showMeridian: false, defaultTime: "00:00", minuteStep: 30 });
+        }
+    
+
+    }; 
+    
+    pagefunction();
+
+</script>

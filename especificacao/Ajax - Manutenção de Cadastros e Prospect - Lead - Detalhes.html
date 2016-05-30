@@ -1,0 +1,211 @@
+<meta charset="iso-8859-1">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Dados do Cadastro</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-4">
+            <label class="text"><strong>Nome</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Nome do Cadastro</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Sexo</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Masculino</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Data de Nascimento</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">21/02/1936</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Estado Civil</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Solteiro</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>E-mail</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">email@site.com.br</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Endereço</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Rua um</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Número</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">100</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Complemento</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Apartamento 100</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Bairro</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Nome do Bairro</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Cidade</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Sorocaba</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Estado</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">SP</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>CEP</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">18000-000</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Telefone</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">(15) 3232-3232</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Celular</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">(15) 9 9898-9898</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Nome do Responsável</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">José Nei</label>
+        </div>
+        <span class="clear"></span>
+        <div class="col-md-4">
+            <label class="text"><strong>Nome do Divulgador</strong></label>
+        </div>
+        <div class="col-md-8">
+            <label class="text">Maria Antonia</label>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary pull-left modal-lead-editar" data-dismiss="modal">
+        Alterar
+    </button>
+    <button type="button" class="btn btn-danger pull-left modal-lead-excluir" data-dismiss="modal">
+        Excluir
+    </button>
+    <button type="button" class="btn btn-success pull-left modal-lead-transferir" data-dismiss="modal">
+        Tranferir Divulgador(a)
+    </button>
+    <a href="#especificacao/Prospect - Cadastro.html" class="btn btn-success pull-left">
+        Atendimento
+    </a>
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Fechar
+    </button>
+
+</div>
+
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+
+        //EXCLUIR
+        $('.modal-lead-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Lead - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //TRANSFERIR
+        $('.modal-lead-transferir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Lead - Transferir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EDIÇÃO
+        $('.modal-lead-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Lead - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

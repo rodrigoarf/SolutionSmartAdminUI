@@ -1,0 +1,291 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Boleto<span>>  Leitura de Arquivos de Retorno</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-importar" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Importar Arquivo</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="label">Conta Corrente</label>
+                                        <label class="select">
+                                            <select></select><i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Layout</label>
+                                        <label class="select">
+                                            <select></select><i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="label">Data do Processamento</label>
+                                        <div class="row">
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input placeholder="De" />
+                                                </label>
+
+                                            </section>
+                                            <section class="col col-6">
+                                                <label class="input">
+                                                    <input placeholder="Até" />
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Registro(s) encontrados</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <td>Conta Corrente</td>
+                                    <td>Layout</td>
+                                    <th>Nome do Arquivo</th>
+                                    <th>Data Proc.</th>
+                                    <th>Nº Reg.</th>
+                                    <th>Atual.</th>
+                                    <th>Encontrados Não Atual.</th>
+                                    <th>Valor Atual.</th>
+                                    <th>Rejeitados</th>
+                                    <th>Não Enc.</th>
+                                    <th class="text-center">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Nome da Conta Corrente</td>
+                                    <td>Nome do Layout</td>
+                                    <td>CN09054A.RET</td>
+                                    <td>01/01/2014</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td class="text-right">
+                                        1.000,00
+                                    </td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td class="text-center">
+                                        <div class="td-acao">
+                                            <a data-toggle="modal" href="#modal-detalhe" rel="tooltip" data-original-title="Detalhes dos registros não encontrados" data-placement="top" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-search"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<div class="modal fade" id="modal-detalhe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Registros não encontrados</h4>
+            </div>
+            <div class="modal-body">
+                
+                <table id="datatable_tabletools" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nº Boleto</th>
+                            <th>Data Pgto</th>
+                            <th class="text-right">Valor Pago</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1234567890</td>
+                            <td>01/01/2000</td>
+                            <td class="text-right">1.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890</td>
+                            <td>01/01/2000</td>
+                            <td class="text-right">1.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>1234567890</td>
+                            <td>01/01/2000</td>
+                            <td class="text-right">1.000,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-importar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Leitura de Retorno</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Conta Corrente</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Layout</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Arquivo</label>
+                                <label for="file" class="input input-file">
+                                    <div class="button"><input type="file" name="file" onchange="this.parentNode.nextSibling.value = this.value">Browse</div><input type="text" placeholder="Selecione o arquivo" readonly="">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox-inline" id="chk-repetir">
+                                    <i></i>
+                                    Imprimir relatório de baixas ao finalizar
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Ler o arquivo
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

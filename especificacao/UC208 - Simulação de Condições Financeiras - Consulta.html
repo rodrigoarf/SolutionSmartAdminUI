@@ -1,0 +1,417 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Orçamento <span>>  Consulta</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a href="#especificacao/UC208 - Simulação de Condições Financeiras.html" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Novo <b>Orçamento</b></a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-2">
+                                        <label class="label">Número do Orçamento</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Número">
+                                        </label>
+                                    </section>
+                                    <section class="col col-5">
+                                        <label class="label">Nome</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Nome">
+                                        </label>
+                                    </section>
+                                    <section class="col col-5">
+                                        <label class="label">Divulgador</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Nome do Divulgador</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-3">
+                                        <label class="label">Idioma</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Default</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Nível</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Default</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Estágio</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Default</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="label">Situação</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Default</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Listagem</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table class="table table-datatable table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th data-class="expand">Data</th>
+                                    <th data-class="expand">Nome</th>
+                                    <th>Idioma</th>
+                                    <th data-class="expand">Estágio</th>
+                                    <th>Divulgador(a)</th>
+                                    <th>Situação</th>
+                                    <th class="text-center" style="width: 50px;">
+                                        <span class="fa fa-link"></span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12345</td>
+                                    <td>01/01/2014</td>
+                                    <td>Nome do Aluno cadastrado</td>
+                                    <td>Inglês</td>
+                                    <td>B1</td>
+                                    <td>Nome do Divulgador</td>
+                                    <td><span class="label label-success">Válido</span></td>
+                                    <td>
+                                        <a class="btn btn-xs btn-success" href="#especificacao/UC208 - Simulação de Condições Financeiras - Detalhe.html">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                        <button class="btn btn-xs btn-info">
+                                            <i class="fa fa-print"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12345</td>
+                                    <td>01/01/2014</td>
+                                    <td>Nome do Aluno cadastrado</td>
+                                    <td>Inglês</td>
+                                    <td>B1</td>
+                                    <td>Nome do Divulgador</td>
+                                    <td><span class="label label-danger">Inválido</span></td>
+                                    <td>
+                                        <a class="btn btn-xs btn-success" href="#especificacao/UC208 - Simulação de Condições Financeiras - Detalhe.html">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                        <button class="btn btn-xs btn-info">
+                                            <i class="fa fa-print"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+
+<div class="modal fade" id="modal-prospect-editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-prospect-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-prospect-detalhes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-prospect-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-prospect-transferir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-envio-sms" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-envio-email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+    </div>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        $("#spinner").spinner();
+
+        //EDITAR
+        $('.modal-prospect-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Prospect - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+        //CADASTRO
+        $('a[href="#modal-prospect-cadastro"]').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Prospect - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EXCLUIR
+        $('.modal-prospect-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Prospect - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //DETALHES
+        $('.modal-prospect-detalhes').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Prospect - Detalhes.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //TRANSFERIR
+        $('.modal-lead-transferir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Cadastros e Prospect - Prospect - Transferir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //SMS
+        $('.modal-envio-sms').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Detalhe do Aluno - SMS.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //E-mail
+        $('.modal-envio-email').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Detalhe do Aluno - Email.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+
+        /* DATATABLE ;*/
+            var responsiveHelper_dt_basic = undefined;
+            var responsiveHelper_datatable_fixed_column = undefined;
+            var responsiveHelper_datatable_col_reorder = undefined;
+            var responsiveHelper_datatable_tabletools = undefined;
+            
+            var breakpointDefinition = {
+                tablet : 1024,
+                phone : 500
+            };
+
+            $('.table-datatable').dataTable({
+                "sDom":
+                    "<'dt-toolbar'<'pull-right'l>r>"+
+                    "t"+
+                    "<'dt-toolbar-footer'<'center-overflow'<'center-outer'<'center-inner'p>>>>",
+                "autoWidth" : true,
+                "oLanguage": {
+                  "oPaginate": {
+                    "sPrevious": "<span class='fa fa-chevron-left'></span>",
+                    "sNext": "<span class='fa fa-chevron-right'></span>"
+                  }
+                }
+            });
+
+        /* END DATATABLE */
+
+
+        // START AND FINISH DATE
+        $('#startdate').datepicker({
+            dateFormat: 'dd/mm/yy',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (selectedDate) {
+                $('#finishdate').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('#finishdate').datepicker({
+            dateFormat: 'dd/mm/yy',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (selectedDate) {
+                $('#startdate').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    // load related plugins
+    
+    loadScript("js/plugin/datatables/jquery.dataTables.min.js", function(){
+        loadScript("js/plugin/datatables/dataTables.colVis.min.js", function(){
+            loadScript("js/plugin/datatables/dataTables.tableTools.min.js", function(){
+                loadScript("js/plugin/datatables/dataTables.bootstrap.min.js", function(){
+                    loadScript("js/plugin/datatable-responsive/datatables.responsive.min.js", pagefunction)
+                });
+            });
+        });
+    });
+
+</script>

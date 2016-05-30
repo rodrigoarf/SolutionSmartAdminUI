@@ -1,0 +1,130 @@
+<meta charset="iso-8859-1">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Detalhe de Fornecedor/Cliente</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+        <fieldset>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label"><strong>Nome</strong></label>
+                    <label class="label">Nome do Cliente/Fornecedor</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Razão Social</strong></label>
+                    <label class="label">Razão Social do Cliente/Fornecedor</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Pessoa</strong></label>
+                    <label class="label">Fisica ou Jurídica</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>CPF/CNPJ</strong></label>
+                    <label class="label">999.999.999-99</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Cliente</strong></label>
+                    <label class="label">Cliente/Fornecedor</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Endereço</strong></label>
+                    <label class="label">Rua Endereço Fulano, 999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>CEP</strong></label>
+                    <label class="label">99999-999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Cidade</strong></label>
+                    <label class="label">Sorocaba/SP</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Bairro</strong></label>
+                    <label class="label">Centro</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Telefone</strong></label>
+                    <label class="label">(99) 9999-9999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Fax</strong></label>
+                    <label class="label">99999999999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Celular</strong></label>
+                    <label class="label">(99) 9 9999-9999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>SMS?</strong></label>
+                    <label class="label">Sim</label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col-12">
+                    <h2>Dados Bancários</h2>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label"><strong>Banco</strong></label>
+                    <label class="label">Banco do Brasil</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Agência</strong></label>
+                    <label class="label">9999</label>
+                </section>
+                <section class="col col-6">
+                    <label class="label"><strong>Conta</strong></label>
+                    <label class="label">9999999-9</label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col-12">
+                    <h2>Tipo</h2>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Fornecedor</label>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" data-toggle="modal" data-target="#modal-fornecedor-editar" class="btn btn-primary modal-fornecedor-editar" data-dismiss="modal">
+        Editar
+    </button>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script type="text/javascript">
+
+    var pagefunction = function () {
+
+        //EDITAR
+        $('.modal-fornecedor-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Cadastros Administrativos - Fornecedor - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+    };
+
+    jQuery(function ($) {
+        $(".fonemask").mask("(99) 9999-9999");
+        $(".celmask").mask("(99) 9 9999-9999");
+        $(".cepmask").mask("99999-999");
+
+        1
+    });
+</script>

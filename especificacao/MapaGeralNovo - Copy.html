@@ -1,0 +1,488 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<style>
+    /*
+    Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+    Code licensed under the BSD License:
+    http://developer.yahoo.net/yui/license.txt
+    version: 2.5.1
+    */
+    html {
+        color: #000;
+        background: #FFF;
+    }
+
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    fieldset, img {
+        border: 0;
+    }
+
+    address, caption, cite, code, dfn, em, strong, th, var {
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    caption, th {
+        text-align: left;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+        font-weight: normal;
+    }
+
+    q:before, q:after {
+        content: '';
+    }
+
+    abbr, acronym {
+        border: 0;
+        font-variant: normal;
+    }
+
+    sup {
+        vertical-align: text-top;
+    }
+
+    sub {
+        vertical-align: text-bottom;
+    }
+
+    input, textarea, select {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    input, textarea, select {
+        * font-size: 100%;
+    }
+
+    legend {
+        color: #000;
+    }
+</style>
+<style>
+    .wc-container {
+        font-size: 10px;
+        font-family: arial, helvetica;
+    }
+
+    .wc-nav {
+        padding: 1em;
+        text-align: right;
+    }
+
+        .wc-nav button {
+            margin: 0 0.5em;
+        }
+
+
+    .wc-container table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+        .wc-container table td {
+            margin: 0;
+            padding: 0;
+        }
+
+    .wc-header {
+        background: #eee;
+        border-top: 1px solid #aaa;
+        border-bottom: 1px solid #aaa;
+        width: 100%;
+    }
+
+        .wc-header .wc-time-column-header {
+            width: 6%;
+        }
+
+        .wc-header .wc-scrollbar-shim {
+            width: 16px;
+        }
+
+        .wc-header .wc-day-column-header {
+            text-align: center;
+            padding: 0.4em;
+        }
+
+        .wc-header td {
+            background-color: #eee;
+        }
+
+    .wc-grid-timeslot-header {
+        width: 6%;
+        background: #eee;
+    }
+
+
+
+    .wc-scrollable-grid {
+        overflow: auto;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        position: relative;
+        background-color: #fff;
+        width: 100%;
+    }
+
+
+    table.wc-time-slots {
+        width: 100%;
+        table-layout: fixed;
+        cursor: default;
+    }
+
+    .wc-day-column {
+        width: 13.5%;
+        border-left: 1px solid #ddd;
+        overflow: visible;
+        vertical-align: top;
+    }
+
+    .wc-day-column-inner {
+        width: 100%;
+        position: relative;
+    }
+
+    .wc-time-slot-wrapper {
+        position: relative;
+        height: 1px;
+        top: 1px;
+    }
+
+    .wc-time-slots {
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .wc-time-header-cell {
+        padding: 5px;
+        height: 80px; /* reference height */
+    }
+
+
+    .wc-time-slot {
+        border-bottom: 1px dotted #ddd;
+    }
+
+    .wc-hour-header {
+        text-align: right;
+    }
+
+    .wc-hour-end, .wc-hour-header {
+        border-bottom: 1px solid #ccc;
+        color: #555;
+    }
+
+    .wc-business-hours {
+        background-color: #E6EEF1;
+        border-bottom: 1px solid #ccc;
+        color: #333;
+        font-size: 1.4em;
+    }
+
+        .wc-business-hours .wc-am-pm {
+            font-size: 0.6em;
+        }
+
+    .wc-day-header-cell {
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+
+
+    .wc-time-slot-header .wc-header-cell {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .wc-header .wc-today {
+        font-weight: bold;
+    }
+
+    .wc-time-slots .wc-today {
+        background-color: #ffffcc;
+    }
+
+
+    .wc-cal-event {
+        background-color: #68a1e5;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        position: absolute;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+        color: #fff;
+        width: 100%;
+        height: 20px;
+        /*display: none;*/
+    }
+
+
+        .wc-cal-event div {
+            padding: 0 5px;
+        }
+
+        .wc-cal-event .wc-time {
+            background-color: #2b72d0;
+            border: 1px solid #1b62c0;
+            color: #fff;
+            padding: 0;
+            font-weight: bold;
+        }
+
+    .wc-container .ui-draggable .wc-time {
+        cursor: move;
+    }
+
+    .wc-cal-event .wc-title {
+        position: relative;
+    }
+
+    .wc-container .ui-resizable-s {
+        height: 10px;
+        bottom: -8px;
+    }
+
+
+    .wc-container .ui-draggable-dragging {
+        z-index: 1000;
+    }
+</style>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script language="javascript">
+
+    $(document).ready(function () {
+
+        var $calendarContainer = $('.wc-container');
+
+        $calendarContainer.find(".wc-time-slot").height(20 - 1); //account for border
+        $calendarContainer.find(".wc-time-header-cell").css({ height: (20 * 1) - 11, padding: 5 });
+
+        var calendarHeight = $(window).height() - $("h1").outerHeight() - 1;
+        var headerHeight = $calendarContainer.find(".wc-header").outerHeight();
+        var navHeight = $calendarContainer.find(".wc-nav").outerHeight();
+        $calendarContainer.find(".wc-scrollable-grid").height(calendarHeight - navHeight - headerHeight);
+
+        $('.wc-seg').toggle();
+        //$('.wc-ter').toggle();
+        $('.wc-qua').toggle();
+        $('.wc-qui').toggle();
+        $('.wc-sex').toggle();
+
+        //renderEvent('', '.day-1');
+    });
+
+
+    function renderEvent(calEvent, $weekDay) {
+        //var self = this;
+        //var options = this.options;
+        /*
+        if (calEvent.start.getTime() > calEvent.end.getTime()) {
+            return; // can't render a negative height
+        }
+        */
+
+        var eventHtml, $calEvent, $modifiedEvent;
+
+        eventHtml = "<div class=\"wc-cal-event ui-corner-all\">\
+                <div class=\"wc-time ui-corner-all\"></div>\
+                <div class=\"wc-title\">aaa</div></div>";
+
+        $calEvent = $(eventHtml);
+        //$modifiedEvent = options.eventRender(calEvent, $calEvent);
+        //$calEvent = $modifiedEvent ? $modifiedEvent.appendTo($weekDay) : $calEvent.appendTo($weekDay);
+        $calEvent = $calEvent.appendTo($weekDay);
+        $calEvent.css({ lineHeight: (20 - 2) + "px", fontSize: (20 / 2) + "px" });
+
+        //self._refreshEventDetails(calEvent, $calEvent);
+        //self._positionEvent($weekDay, $calEvent);
+        //$calEvent.show();
+        /*
+        if (!options.readonly && options.resizable(calEvent, $calEvent)) {
+            self._addResizableToCalEvent(calEvent, $calEvent, $weekDay)
+        }
+        if (!options.readonly && options.draggable(calEvent, $calEvent)) {
+            self._addDraggableToCalEvent(calEvent, $calEvent);
+        }
+
+        options.eventAfterRender(calEvent, $calEvent);
+        */
+
+        return $calEvent;
+
+    }
+
+</script>
+
+<body>
+    <h1></h1>
+
+
+    <div class="wc-container">
+
+        <table class="wc-header">
+            <tbody>
+                <tr>
+                    <td class="wc-time-column-header"></td>
+                    <td class="wc-time-column-header"></td>
+                    <td class="wc-day-column-header wc-day-1">06</td>
+                    <td class="wc-day-column-header wc-day-2">07</td>
+                    <td class="wc-day-column-header wc-day-3">08</td>
+                    <td class="wc-day-column-header wc-day-4">09</td>
+                    <td class="wc-day-column-header wc-day-5">10</td>
+
+                    <td class="wc-day-column-header wc-day-6">11</td>
+                    <td class="wc-day-column-header wc-day-7">12</td>
+                    <td class="wc-day-column-header wc-day-8">13</td>
+                    <td class="wc-day-column-header wc-day-9">14</td>
+                    <td class="wc-day-column-header wc-day-10">15</td>
+                    <td class="wc-day-column-header wc-day-11">16</td>
+                    <td class="wc-day-column-header wc-day-12">17</td>
+                    <td class="wc-day-column-header wc-day-13">18</td>
+                    <td class="wc-day-column-header wc-day-14">19</td>
+                    <td class="wc-day-column-header wc-day-15">20</td>
+                    <td class="wc-day-column-header wc-day-16">21</td>
+                    <td class="wc-day-column-header wc-day-17">22</td>
+                    <td class="wc-day-column-header wc-day-18">23</td>
+                    <td class="wc-scrollbar-shim"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="wc-scrollable-grid">
+            <table class="wc-time-slots">
+                <tbody>
+                    <tr>
+                        <td class="wc-grid-timeslot-header"></td>
+                        <td class="wc-grid-timeslot-header"></td>
+                        <td colspan="18">
+                            <div class="wc-time-slot-wrapper">
+                                <div class="wc-time-slots">
+
+                                    <div class="wc-time-slot wc-seg"></div>
+                                    <div class="wc-time-slot wc-ter"></div>
+                                    <div class="wc-time-slot wc-qua"></div>
+                                    <div class="wc-time-slot wc-qui"></div>
+                                    <div class="wc-time-slot wc-sex"></div>
+                                    <div class="wc-time-slot wc-sab wc-hour-end"></div>
+
+                                    <div class="wc-time-slot wc-seg"></div>
+                                    <div class="wc-time-slot wc-ter"></div>
+                                    <div class="wc-time-slot wc-qua"></div>
+                                    <div class="wc-time-slot wc-qui"></div>
+                                    <div class="wc-time-slot wc-sex"></div>
+                                    <div class="wc-time-slot wc-sab wc-hour-end"></div>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="wc-grid-timeslot-header wc-business-hours" style="border-right: 1px solid #ccc;">
+                            Nome da Sala
+                        </td>
+                        <td class="wc-grid-timeslot-header">
+                            <div class="wc-hour-header wc-business-hours wc-seg"><div class="wc-time-header-cell">SEG</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-ter"><div class="wc-time-header-cell">TER</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-qua"><div class="wc-time-header-cell">QUA</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-qui"><div class="wc-time-header-cell">QUI</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-sex"><div class="wc-time-header-cell">SEX</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-sab"><div class="wc-time-header-cell">SÁB</div></div>
+                        </td>
+                        <td class="wc-day-column day-1"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-2"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-3"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-4"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-5"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-6"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-7"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-8"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-9"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-10"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-11"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-12"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-13"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-14"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-15"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-16"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-17"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-18"><div class="wc-day-column-inner"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td class="wc-grid-timeslot-header wc-business-hours" style="border-right: 1px solid #ccc;">
+                            Nome da Sala
+                        </td>
+                        <td class="wc-grid-timeslot-header">
+                            <div class="wc-hour-header wc-business-hours wc-seg"><div class="wc-time-header-cell">SEG</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-ter"><div class="wc-time-header-cell">TER</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-qua"><div class="wc-time-header-cell">QUA</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-qui"><div class="wc-time-header-cell">QUI</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-sex"><div class="wc-time-header-cell">SEX</div></div>
+                            <div class="wc-hour-header wc-business-hours wc-sab"><div class="wc-time-header-cell">SÁB</div></div>
+
+                        </td>
+                        <td class="wc-day-column day-1"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-2"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-3"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-4"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-5"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-6"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-7"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-8"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-9"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-10"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-11"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-12"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-13"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-14"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-15"><div class="wc-day-column-inner"></div></td>
+
+                        <td class="wc-day-column day-16"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-17"><div class="wc-day-column-inner"></div></td>
+                        <td class="wc-day-column day-18"><div class="wc-day-column-inner"></div></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>

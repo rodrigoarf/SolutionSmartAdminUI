@@ -1,0 +1,107 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Reservar Sala</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+        <fieldset>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Salas Disponíveis</label>
+                    <label class="select">
+                        <select>
+                            <option value="0">Sala 1</option>
+                            <option value="1">Sala 2</option>
+                        </select> <i></i> </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Tipo de Atividade - CRUD</label>
+                    <label class="select">
+                        <select>
+                            <option value="0">Atividade 1</option>
+                            <option value="1">Atividade 2</option>
+                        </select> <i></i> </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Início</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="Dia" class="datepicker">
+                        </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">&nbsp;</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="Hora" class="spinner">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-6">
+                    <label class="label">Término</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="Dia" class="datepicker">
+                        </label>
+                </section>
+                <section class="col col-6">
+                    <label class="label">&nbsp;</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="Hora" class="spinner">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-2">
+                    <label class="label">Nº de Pessoas</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="" class="">
+                        </label>
+                </section>
+                <section class="col col-10">
+                    <label class="label">Responsável pela Atividade</label>
+                        <label class="input">
+                        <input type="text" name="name" placeholder="Responsável" class="">
+                        </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Descrição</label>
+                        <label class="textarea">
+                            <textarea rows="3" class="custom-scroll"></textarea> 
+                        </label>
+                </section>
+            </div>
+        </fieldset>
+            
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Reservar
+    </button>
+</div>
+
+<script type="text/javascript">
+
+  jQuery(function($){
+         $(".nascmask").mask("99/99/9999");
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".celmask").mask("(99) 9 9999-9999");
+         $(".cpfmask").mask("999.999.999-99");
+         $(".cepmask").mask("99999-999");
+
+    })
+
+  </script>

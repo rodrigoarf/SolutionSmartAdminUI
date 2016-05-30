@@ -1,0 +1,70 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Edição de Bolsa/Convênio</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+        <fieldset>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Descrição</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Descrição">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Tipo Bolsa/Convênio</label>
+                    <label class="select">
+                    <select>
+                        <option value="0">Escola Costa Aguiar 15%</option>
+                        <option value="1">Pontualidade 30%</option>
+                        <option value="1">Pontualidade 30%</option>
+                    </select> <i></i> </label>
+                </section>
+            </div>
+            <div class="row">
+                <section   class="col col-12">
+                    <label class="label">Cliente/Fornecedor</label>
+                    <label class="select">
+                    <select>
+                        <option value="0">Avon</option>
+                        <option value="1">Tam</option>
+                    </select> <i></i> </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col">
+                    <label class="checkbox">
+                        <input type="checkbox" name="ativo" id="ativo">
+                    <i></i>Bolsa/Convênio Inativo?</label>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-primary">
+        Salvar
+    </button>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function($){
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".cepmask").mask("99999-999");
+
+1 });
+  </script>

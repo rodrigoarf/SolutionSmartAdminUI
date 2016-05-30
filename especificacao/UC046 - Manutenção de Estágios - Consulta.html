@@ -1,0 +1,335 @@
+<meta charset="iso-8859-1">
+
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Estágio <span>>  Manutenção dos Estágios</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-cadastro" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Novo Estágio</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-4">
+                                        <label class="select">
+                                            <select name="interested">
+                                                <option value="0" selected="" disabled="">Curso</option>
+                                                <option value="1">inglês</option>
+                                                <option value="1">espanhol</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="select">
+                                            <select name="budget">
+                                                <option value="0" selected="" disabled="">Tipo do Curso</option>
+                                                <option value="1">Todos</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-4">
+                                        <label class="select">
+                                            <select name="budget">
+                                                <option value="0" selected="" disabled="">Nível</option>
+                                                <option value="1">Todos</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Listagem</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <table id="datatable_tabletools" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Nome</th>
+                                    <th>
+                                        Sigla
+                                    </th>
+                                    <th>
+                                        Público-alvo
+                                    </th>
+                                    <th>
+                                        Média
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th width="5%" class="text-center">
+                                        Ações
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Basic 1</td>
+                                    <td>B1</td>
+                                    <td>Maior que 13 anos</td>
+                                    <td>70</td>
+                                    <td>Ativo</td>
+                                    <td class="text-center">
+                                        <nobr>
+                                            <a class='btn btn-info btn-xs' href="#especificacao/UC046 - Manutenção de Estágios - Detalhe.html">Detalhe</a>
+                                            <a class='btn btn-info btn-xs' data-toggle="modal" data-target="#modal-cadastro"><span class="glyphicon glyphicon-edit"></span>Alterar</a>
+                                            <a href="#" class="btn btn-danger btn-xs">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                                Excluir
+                                            </a>
+                                        </nobr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Cadastro de Estágio</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Curso</label>
+                                <label class="select">
+                                    <select>
+                                        <option value="0">Inglês</option>
+                                        <option value="1">Espanhol</option>
+                                    </select> <i></i>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Tipo</label>
+                                <label class="select">
+                                    <select>
+                                        <option value="0">Infantil</option>
+                                        <option value="1">Adulto</option>
+                                        <option value="1">Fast</option>
+                                    </select> <i></i>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Nível</label>
+                                <label class="select">
+                                    <select>
+                                        <option value="0">Inglês</option>
+                                        <option value="1">Espanhol</option>
+                                    </select> <i></i>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Sigla</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Nome</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Tipo da Avaliação</label>
+                                <label class="select">
+                                    <select>
+                                        <option value="0">Nota</option>
+                                        <option value="1">Conceito</option>
+                                    </select> <i></i>
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Média para Aprovação</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Modalidade</label>
+                                <div class="inline-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Extensivo
+                                    </label>
+
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Intensivo
+                                    </label>
+
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <i></i>Plus
+                                    </label>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Duração</label>
+                                <label class="input"><input type="text" class="form-control" placeholder="Padrão" required /></label>
+                            </section>
+                            <section class="col col-4">
+                                <label class="label">1 a 4 alunos</label>
+                                <label class="input"><input type="text" class="form-control" placeholder="1-4 alunos" required /></label>
+                            </section>
+                            <section class="col col-4">
+                                <label class="label">5 a 7 alunos</label>
+                                <label class="input"><input type="text" class="form-control" placeholder="5-7 alunos" required /></label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Público-alvo (idade)</label>
+                                <div class="row">
+                                    <div class="col col-6"><label class="input"><input type="text" class="form-control" placeholder="Mínimo" required /></label></div>
+                                    <div class="col col-6"><label class="input"><input type="text" class="form-control" placeholder="Máximo" required /></label></div>
+                                </div>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success">
+                    Salvar
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+    var pagefunction = function () {
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+    pagefunction();
+</script>

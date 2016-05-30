@@ -1,0 +1,417 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Financeiro<span>>  Caixa Funcionário</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+                <header>
+                    <h2>Pesquisar por</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-3">
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Fornecedor</option>
+                                                <option value="0">Número do Documento</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="input">
+                                            <input type="text" name="name">
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Próximos 7 dias</option>
+                                                <option value="0">Próximos 30 dias</option>
+                                                <option value="0">Somente os vencidos</option>
+                                                <option value="0">Todos</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-3">
+                                        <button type="submit" class="btn btn-primary">
+                                            Filtrar
+                                        </button>
+                                    </section>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid-lista">
+    <div class="row">
+        <article class="col-lg-12">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header class="text-center">
+                    <h2>Movimentos</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table class="table table-striped table-hover smart-form has-tickbox">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-inline">
+                                            <i></i>
+                                        </label>
+                                    </th>
+                                    <th>Vencimento</th>
+                                    <th data-class="expand">Descrição</th>
+                                    <th class="text-right">Valor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox-inline">
+                                            <i></i>
+                                        </label>
+                                    </td>
+                                    <td>01/09/2014</td>
+                                    <td>Descrição do lançamento</td>
+                                    <td class="text-right">1.000,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <article class="col-lg-6">
+        <!-- Widget ID (each widget will need unique ID)-->
+        <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+            <header class="text-center">
+                <h2>Condição de Pagamento</h2>
+            </header>
+
+            <!-- widget div-->
+            <div>
+                <!-- widget content -->
+                <div class="widget-body">
+                    <form action="" id="review-form" class="smart-form padding-10">
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <label class="select">
+                                        <select class="input-lg" id="select-forma-pagamento">
+                                            <option value="0">Selecione</option>
+                                            <option value="1">Dinheiro</option>
+                                            <option value="2">Cheque</option>
+                                            <option value="3">Cartão de Crédito</option>
+                                            <option value="4">Cartão de Débito</option>
+                                        </select><i></i>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="row div-dinheiro div-forma-pgto">
+                                <section class="col col-6">
+                                    <label class="label">Valor Recebido</label>
+                                    <label class="input">
+                                        <input name="review" id="review" />
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="row div-cheque div-forma-pgto">
+                                <section class="col col-3">
+                                    <label class="label">Conta Corrente</label>
+                                    <label class="select">
+                                        <select>
+                                            <option>Caixa</option>
+                                            <option>Bradesco</option>
+                                            <option>Itaú</option>
+                                        </select><i></i>
+                                    </label>
+                                </section>
+                                <section class="col col-4">
+                                    <label class="label">Número</label>
+                                    <label class="input">
+                                        <input />
+                                    </label>
+                                </section>
+                                <section class="col col-3">
+                                    <label class="label">Vencimento</label>
+                                    <label class="input">
+                                        <input />
+                                    </label>
+                                </section>
+                                <section class="col col-2">
+                                    <label class="label">Valor</label>
+                                    <label class="input">
+                                        <input />
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="row div-cartao div-forma-pgto">
+                                <section class="col col-4">
+                                    <label class="label">Cartão</label>
+                                    <label class="select">
+                                        <select>
+                                            <option>Caixa</option>
+                                            <option>Bradesco</option>
+                                            <option>Itaú</option>
+                                        </select><i></i>
+                                    </label>
+                                </section>
+                                <section class="col col-4">
+                                    <label class="label">Recibo</label>
+                                    <label class="input">
+                                        <input />
+                                    </label>
+                                </section>
+                                <section class="col col-4">
+                                    <label class="label">Valor</label>
+                                    <label class="input">
+                                        <input />
+                                    </label>
+                                </section>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <section class="col col-lg-6">
+        <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+            <header class="text-center">
+                <h2>Resumo</h2>
+            </header>
+
+            <!-- widget div-->
+            <div>
+                <!-- widget content -->
+                <div class="widget-body">
+
+
+                    <div class="smart-form">
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well bg-color-redLight txt-color-white padding-10"><h1>Total a Pagar<b class="pull-right">1.800,00</b></h1></div>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well padding-10"><h1>Dinheiro<b class="pull-right">1.200,00</b></h1></div>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well padding-10"><h1>Cheque  <a class="btn btn-xs btn-info" id="btn-transferencia" href="#especificacao/Financeiro - Caixa - Trabalho.html"><i class="glyphicon glyphicon-th-list"></i></a> <b class="pull-right">600,00</b></h1></div>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well padding-10"><h1>Cartão de Débito <a class="btn btn-xs btn-info" id="btn-transferencia" href="#especificacao/Financeiro - Caixa - Trabalho.html"><i class="glyphicon glyphicon-th-list"></i></a><b class="pull-right">0,00</b></h1></div>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well padding-10"><h1>Cartão de Crédito <a class="btn btn-xs btn-info" id="btn-transferencia" href="#especificacao/Financeiro - Caixa - Trabalho.html"><i class="glyphicon glyphicon-th-list"></i></a><b class="pull-right">0,00</b></h1></div>
+                                </section>
+                            </div>
+                            <div class="row">
+                                <section class="col col-12">
+                                    <div class="well bg-color-redLight txt-color-white padding-10"><h1>Saldo<b class="pull-right">0,00</b></h1></div>
+                                </section>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="text-center">
+        <a class="btn btn-lg btn-danger modal-cadastro" data-toggle="modal" href="#modal-cadastro" rel="tooltip" data-original-title="Nova Despesa" data-placement="top">
+            <i class="fa fa-plus"></i> Nova Despesa
+        </a>
+        <a class="btn btn-lg btn-info" id="btn-transferencia" href="#especificacao/Financeiro - Caixa - Trabalho.html">
+            <i class="fa fa-plus"></i> Adicionar Pagamento
+        </a>
+        <a class="btn btn-lg btn-success" id="btn-transferencia" href="#especificacao/Financeiro - Caixa - Trabalho.html">
+            <i class="fa fa-save"></i> Salvar
+        </a>
+        <a class="btn btn-lg btn-info" href="#">
+            <i class="fa fa-print"></i> Imprimir Recibo
+        </a>
+    </div>
+</section>
+
+<div class="modal fade" id="modal-cheque" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:600px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Cadastro de Cheque</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-4">
+                                <label class="label">Conta Corrente</label>
+                                <label class="select">
+                                    <select>
+                                        <option>104 - Caixa</option>
+                                        <option>237 - Bradesco</option>
+                                        <option>341 - Itaú</option>
+                                    </select><i></i>
+                                </label>
+                            </section>
+                            <section class="col col-3">
+                                <label class="label">Número</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                            <section class="col col-3">
+                                <label class="label">Vencimento</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                            <section class="col col-2">
+                                <label class="label">Valor</label>
+                                <label class="input">
+                                    <input />
+                                </label>
+                            </section>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        $('#select-forma-pagamento').change(function () {
+
+            $('.div-forma-pgto').hide();
+
+            var a = $(this).val();
+            if (a == 1) // Dinheiro
+            {
+                $('.div-dinheiro').show();
+            }
+            else if (a == 2)// Cheque
+            {
+                $('.div-cheque').show();
+            }
+            else if (a == 3)// Cartão de Crédito
+            {
+                $('.div-cartao').show();
+            }
+            else if (a == 4)// Cartão de Débito
+            {
+                $('.div-cartao').show();
+            }
+            else if (a == 5)// Multiplo
+            {
+                $('.div-pgto-multiplo').show();
+            }
+
+
+        });
+
+        $('.div-forma-pgto').hide();
+
+        $('.modal-cadastro').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Financeiro - Lançamento - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>
+

@@ -1,0 +1,1248 @@
+﻿<meta charset="utf-8">
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>Rematrícula
+            <span>> Cadastro de Contrato</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+                <header>
+                    <!-- <span class="widget-icon"><i class="fa fa-edit"></i></span> -->
+                    <!-- <h2>Filtros </h2> -->
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well well-glass clearfix">
+                                    <ul class="bootstrapWizard fivesteps form-wizard">
+                                        <li class="active" data-target="#step1">
+                                            <a href="#atualizacao" data-toggle="tab"> <span class="step">1</span> <span class="title">Dados do Aluno</span> </a>
+                                        </li>
+                                        <li data-target="#step2">
+                                            <a href="#sobre" data-toggle="tab"> <span class="step">2</span> <span class="title">Sobre o Contrato</span> </a>
+                                        </li>
+                                        <li data-target="#step3">
+                                            <a href="#estagios" data-toggle="tab"> <span class="step">3</span> <span class="title">Estágio</span> </a>
+                                        </li>
+                                        <li data-target="#step4">
+                                            <a href="#financeiro" data-toggle="tab"> <span class="step">4</span> <span class="title">Condições Financeiras</span> </a>
+                                        </li>
+                                        <li data-target="#step5">
+                                            <a href="#resumo" data-toggle="tab"> <span class="step">5</span> <span class="title">Resumo</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <hr>
+                        <br />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="atualizacao">
+                                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <label class="label">Nome do Aluno</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Nome do Aluno">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-4">
+                                                        <label class="label">Sexo</label>
+                                                        <div class="inline-group">
+                                                            <label class="radio">
+                                                                <input type="radio" name="radio-inline" checked="checked">
+                                                                <i></i>Masculino
+                                                            </label>
+                                                            <label class="radio">
+                                                                <input type="radio" name="radio-inline">
+                                                                <i></i>Feminino
+                                                            </label>
+                                                        </div>
+                                                    </section>
+                                                    <section class="col col-4">
+                                                        <label class="label">CPF</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="___.___.___-__" class="cpfmask">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-4">
+                                                        <label class="label">RG</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="" class="">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-6">
+                                                        <label class="label">Empresa/Escola</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="" class="">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-6">
+                                                        <label class="label">Escolaridade</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="0">Superior</option>
+                                                                <option value="1">Option 2</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <label class="label">E-mail</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="" class="">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-4">
+                                                        <label class="label">Data de Nascimento</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="__/__/____" class="nascmask">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-8">
+                                                        <label class="label">Estado Civil</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="0">Solteiro</option>
+                                                                <option value="1">Casado</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-2">
+                                                        <label class="label">CEP</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="_____-___" class="cepmask">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-6">
+                                                        <label class="label">Endereço</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Endereço" class="">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-2">
+                                                        <label class="label">Número</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="" class="">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-2">
+                                                        <label class="label">Complemento</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Complemento" class="">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-4">
+                                                        <label class="label">Bairro</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Bairro" class="">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-6">
+                                                        <label class="label">Cidade</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Cidade" class="">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-2">
+                                                        <label class="label">Estado</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="0">SP</option>
+                                                                <option value="1">MG</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-6">
+                                                        <label class="label">Telefone</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="(__) ____-____" class="fonemask">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-6">
+                                                        <label class="label">Celular</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="(__) _ ____-____" class="fonemask">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-6">
+                                                        <label class="label">Nome do Responsável</label>
+                                                        <label class="input">
+                                                            <input type="text" name="name" placeholder="Nome do Responsável">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-6">
+                                                        <label class="label">Empresa Parceira</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="SP">São Paulo</option>
+                                                                <option value="MG">Minas Gerais</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-6">
+                                                        <label class="label">Meio de Contato</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="SP">São Paulo</option>
+                                                                <option value="MG">Minas Gerais</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+
+                                                    <section class="col col-6">
+                                                        <label class="label">Mídia</label>
+                                                        <label class="select">
+                                                            <select>
+                                                                <option value="SP">São Paulo</option>
+                                                                <option value="MG">Minas Gerais</option>
+                                                            </select> <i></i>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <label class="label">Observações</label>
+                                                        <label class="textarea">
+                                                            <textarea rows="4" class="custom-scroll"></textarea>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-6">
+                                                        <div class="inline-group">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="radio-inline">
+                                                                <i></i>Não receber e-mail
+                                                            </label>
+                                                        </div>
+                                                    </section>
+
+                                                    <section class="col col-6">
+                                                        <div class="inline-group">
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="radio-inline">
+                                                                <i></i>Não receber SMS
+                                                            </label>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        <section id="widget-grid" class="">
+
+                                            <!-- START ROW -->
+                                            <div class="row">
+
+                                                <!-- NEW COL START -->
+                                                <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+                                                    <!-- Widget ID (each widget will need unique ID)-->
+                                                    <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                                                        <header>
+                                                            <span class="widget-icon"><i class="fa fa-table"></i></span>
+                                                            <h2>Cadastrar Responsável</h2>
+                                                        </header>
+
+                                                        <!-- widget div-->
+                                                        <div>
+                                                            <!-- widget content -->
+                                                            <div class="widget-body no-padding">
+                                                                <div class="widget-body-toolbar">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3 col-sm-7 col-md-7 col-lg-12 text-right">
+                                                                            <a data-toggle="modal" href="#modal-aluno-responsavel" class="btn btn-primary btn-xs  pull-right header-btn"><i class="fa fa-plus"></i> Cadastrar Responsável</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th data-class="expand">Nome</th>
+                                                                            <th>E-mail</th>
+                                                                            <th>Telefone</th>
+                                                                            <th>Data de Nascimento</th>
+                                                                            <th>Divulgador(a)</th>
+                                                                            <th class="text-center" width="5%">Ações</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Nome do Responsável</td>
+                                                                            <td>email@empresa.com.br</td>
+                                                                            <td>(15) 3232-3232</td>
+                                                                            <td>01/01/2000</td>
+                                                                            <td>Nome do Divulgador(a)</td>
+                                                                            <td class="text-center">
+                                                                                <button data-toggle="modal" data-target="#modal-aluno-editar-responsavel" class="btn btn-xs btn-success modal-aluno-editar-responsavel">
+                                                                                    <i class="fa fa-pencil"></i>
+                                                                                </button>
+                                                                                <button data-toggle="modal" data-target="#modal-aluno-excluir-responsavel" class="btn btn-xs btn-danger modal-aluno-excluir-responsavel">
+                                                                                    <i class="fa fa-trash-o"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                            </div>
+                                                            <!-- end widget content -->
+                                                        </div>
+                                                        <!-- end widget div -->
+                                                    </div>
+                                                    <!-- end widget -->
+                                                </article>
+
+                                            </div>
+                                        </section>
+
+                                        <span class="clear"></span>
+                                        <div class="text-center">
+                                            <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                Próximo Passo
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="tab-pane" id="sobre">
+                                        <div class="col-md-12">
+                                            <h1 class="hide">Sobre o Contrato</h1>
+                                            <form class="form-horizontal">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label><strong>Responsável Financeiro</strong></label>
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                                <option value="1">[Aluno]</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <span class="clear"></span>
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label><strong>Responsável Pedagógico</strong></label>
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                                <option value="1">[ Aluno ]</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <span class="clear"></span>
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label><strong>Empresa</strong></label>
+                                                            <select id="select7" name="selectbasic" class="form-control">
+                                                                <option value="1">Nenhuma</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <span class="clear"></span>
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <label><strong>Desconto</strong></label>
+                                                            <select id="selectbasic" name="selectbasic" class="form-control">
+                                                                <option value="1">Nenhum</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <span class="clear"></span>
+                                            <div class="text-center">
+                                                <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                    Próximo Passo
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="estagios">
+                                        <div class="col-md-12">
+                                            <h1 class="hide">
+                                                Estágio
+                                            </h1>
+
+                                            <div id="order-form" class="smart-form" novalidate="novalidate">
+                                                <fieldset>
+                                                    <div class="row">
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Curso</b></label>
+                                                            <label>
+                                                                Inglês
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Nível</b></label>
+                                                            <label>
+                                                                Basic
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Estágio</b></label>
+                                                            <label>
+                                                                B2
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Modalidade</b></label>
+                                                            <label>
+                                                                Extensivo
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                    <div class="row">
+                                                        <section class="col col-6">
+                                                            <label class="label"><b>Turma</b></label>
+                                                            <label class="select">
+                                                                <select>
+                                                                    <option value="0">Superior</option>
+                                                                    <option value="1">Option 2</option>
+                                                                </select> <i></i>
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Início</b></label>
+                                                            <label>
+                                                                -- conforme a turma --
+                                                            </label>
+                                                        </section>
+                                                        <section class="col col-3">
+                                                            <label class="label"><b>Horário</b></label>
+                                                            <label>
+                                                                -- conforme a turma --
+                                                            </label>
+                                                        </section>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+
+                                            <br />
+                                            <span class="clear"></span>
+                                            <div class="text-center">
+                                                <button id="activate-step-3" class="btn btn-primary btn-lg">
+                                                    Próximo Passo
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="financeiro">
+                                        <div class="col-md-12">
+                                            <h1 class="text-center hide">
+                                                Condições Financeiras
+                                            </h1>
+                                            <br /><br />
+                                            <div class="row">
+                                                <div class="col col-lg-6">
+                                                    <div class="well"><h1>Estágio <small> > Inglês > Basic > Basic 1</small><b class="pull-right">1.500,00</b></h1></div>
+                                                </div>
+                                                <div class="col col-lg-6">
+                                                    <div class="well"><h1>Material Didático <b class="pull-right">500,00</b></h1></div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col col-lg-6">
+                                                    <div class="well"><h1>Desconto Convênio<b class="pull-right">1.500,00</b></h1></div>
+                                                </div>
+                                                <div class="col col-lg-6">
+                                                    <div class="well"><h1>Sub-Total <b class="pull-right">500,00</b></h1></div>
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="row">
+                                                <div class="col col-lg-6">
+                                                    <div class="well smart-form">
+                                                        <div class="row">
+                                                            <section class="col col-6">
+                                                                <h1>Desconto</h1>
+                                                            </section>
+                                                            <section class="col col-6">
+                                                                <label class="input">
+                                                                    <input id="text3" name="textinput" type="text" placeholder="" required="">
+                                                                </label>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col col-lg-6">
+                                                    <div class="well bg-color-redLight txt-color-white"><h1>Total<b class="pull-right">1.000,00</b></h1></div>
+                                                </div>
+                                            </div>
+
+                                            <br />
+                                            <ul id="myTab1" class="nav nav-tabs bordered">
+                                                <li class="active">
+                                                    <a href="#s1" data-toggle="tab">Padrão</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#s2" data-toggle="tab">Personalizado</a>
+                                                </li>
+                                            </ul>
+
+                                            <div id="myTabContent1" class="tab-content padding-10">
+                                                <div class="tab-pane fade in active" id="s1">
+                                                    <div id="order-form" class="smart-form" novalidate="novalidate">
+                                                        <fieldset>
+                                                            <div class="row">
+                                                                <section class="col col-4">
+                                                                    <label class="label">Forma de Pagamento</label>
+                                                                    <label class="select">
+                                                                        <select id="select6" name="selectbasic" class="form-control">
+                                                                            <option value="1">Boleto</option>
+                                                                        </select>
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-2">
+                                                                    <label class="label"><b>Número de Parcelas</b></label>
+                                                                    <label class="input">
+                                                                        <input id="text3" name="textinput" type="text" placeholder="" required="">
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-5">
+                                                                    <label class="label"><b>Empresa</b></label>
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <div class="input">
+                                                                                <div class="input-group">
+                                                                                    <input id="appendedtext" name="appendedtext" class="form-control" placeholder=""
+                                                                                           type="text">
+                                                                                    <span class="input-group-addon">%</span>
+                                                                                </div>
+                                                                                <p class="help-block">
+                                                                                    Percentual do valor do estágio que será pago pela empresa
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="s2">
+
+                                                    <ul id="myTab2" class="nav nav-tabs bordered">
+                                                        <li class="active">
+                                                            <a href="#s3" data-toggle="tab">Estágio</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#s4" data-toggle="tab">Material Didático</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div id="myTabContent2" class="tab-content padding-10">
+                                                        <div class="tab-pane fade in active" id="s3">
+                                                            <a class="btn btn-primary btn-xs pull-right modal-pagamento"
+                                                               data-toggle="modal" data-target="#modal-pagamento">
+                                                                <b>+</b> Adicionar Pagamento
+                                                            </a>
+                                                            <br />
+                                                            <table class="table table-striped custab">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>
+                                                                            Data
+                                                                        </th>
+                                                                        <th>
+                                                                            Meio de Pagamento
+                                                                        </th>
+                                                                        <th>
+                                                                            Responsável
+                                                                        </th>
+                                                                        <th>
+                                                                            Valor
+                                                                        </th>
+                                                                        <th class="text-center">
+                                                                            Ações
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            01/07/2014
+                                                                        </td>
+                                                                        <td>
+                                                                            Dinheiro
+                                                                        </td>
+                                                                        <td>
+                                                                            Nome do Aluno
+                                                                        </td>
+                                                                        <td>
+                                                                            100,00
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                <i class="fa fa-pencil"></i>
+                                                                            </button>
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                <i class="fa fa-trash-o"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            01/07/2014
+                                                                        </td>
+                                                                        <td>
+                                                                            Dinheiro
+                                                                        </td>
+                                                                        <td>
+                                                                            Nome do Aluno
+                                                                        </td>
+                                                                        <td>
+                                                                            100,00
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                <i class="fa fa-pencil"></i>
+                                                                            </button>
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                <i class="fa fa-trash-o"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            01/07/2014
+                                                                        </td>
+                                                                        <td>
+                                                                            Dinheiro
+                                                                        </td>
+                                                                        <td>
+                                                                            Nome do Aluno
+                                                                        </td>
+                                                                        <td>
+                                                                            100,00
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                <i class="fa fa-pencil"></i>
+                                                                            </button>
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                <i class="fa fa-trash-o"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>
+                                                                            Total
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                        <th>
+                                                                            300,00
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+
+                                                        <div class="tab-pane fade in" id="s4">
+                                                            <a class="btn btn-primary btn-xs pull-right modal-pagamento"
+                                                               data-toggle="modal" data-target="#modal-pagamento">
+                                                                <b>+</b> Adicionar Pagamento
+                                                            </a>
+                                                            <br />
+                                                            <table class="table table-striped custab">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>
+                                                                            Data
+                                                                        </th>
+                                                                        <th>
+                                                                            Meio de Pagamento
+                                                                        </th>
+                                                                        <th>
+                                                                            Responsável
+                                                                        </th>
+                                                                        <th>
+                                                                            Valor
+                                                                        </th>
+                                                                        <th class="text-center">
+                                                                            Ações
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            01/07/2014
+                                                                        </td>
+                                                                        <td>
+                                                                            Dinheiro
+                                                                        </td>
+                                                                        <td>
+                                                                            Nome do Aluno
+                                                                        </td>
+                                                                        <td>
+                                                                            100,00
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                <i class="fa fa-pencil"></i>
+                                                                            </button>
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                <i class="fa fa-trash-o"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            01/07/2014
+                                                                        </td>
+                                                                        <td>
+                                                                            Dinheiro
+                                                                        </td>
+                                                                        <td>
+                                                                            Nome do Aluno
+                                                                        </td>
+                                                                        <td>
+                                                                            100,00
+                                                                        </td>
+                                                                        <td class="text-center">
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-editar" class="btn btn-xs btn-primary modal-cargos-editar">
+                                                                                <i class="fa fa-pencil"></i>
+                                                                            </button>
+                                                                            <button data-toggle="modal" data-target="#modal-cargos-excluir" class="btn btn-xs btn-danger modal-cargos-excluir">
+                                                                                <i class="fa fa-trash-o"></i>
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <th>
+                                                                            Total
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                        <th>
+                                                                            300,00
+                                                                        </th>
+                                                                        <th>
+                                                                        </th>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <span class="clear"></span>
+                                            <br />
+                                            <div class="text-center">
+                                                <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                    Próximo Passo
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="resumo">
+                                        <div class="col-md-12">
+                                            <h1 class="text-center hide">
+                                                Resumo do Contrato
+                                            </h1>
+                                            <form class="form-horizontal">
+                                                <fieldset>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Aluno
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Nome do Aluno
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="selectbasic">
+                                                            Responsável Financeiro
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            [Aluno]
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="selectbasic">
+                                                            Responsável Pedagógico
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            [ Aluno ]
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="selectbasic">
+                                                            Empresa
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Nenhuma
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Data do Contrato
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            08/07/2014
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Número
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            12345 / 1
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="selectbasic">
+                                                            Desconto
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Nenhum
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Convênio
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Sem Convênio
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Situação
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Novo
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Tipo
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Matrícula
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-4 control-label" for="textinput">
+                                                            Responsável
+                                                        </label>
+                                                        <div class="col-md-4">
+                                                            Nome do Usuário logado
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <div class="span12">
+
+                                                <div class="row">
+                                                    <div class="col col-lg-6">
+                                                        <div class="well"><h1>Estágio <small> > Inglês > Basic > Basic 1</small><b class="pull-right">1.500,00</b></h1></div>
+                                                    </div>
+                                                    <div class="col col-lg-6">
+                                                        <div class="well"><h1>Material Didático <b class="pull-right">500,00</b></h1></div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col col-lg-6">
+                                                        <div class="well"><h1>Desconto Convênio<b class="pull-right">1.500,00</b></h1></div>
+                                                    </div>
+                                                    <div class="col col-lg-6">
+                                                        <div class="well"><h1>Sub-Total <b class="pull-right">500,00</b></h1></div>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col col-lg-6">
+                                                        <div class="well"><h1>Desconto <b class="pull-right">500,00</b></h1></div>
+                                                    </div>
+                                                    <div class="col col-lg-6">
+                                                        <div class="well bg-color-redLight txt-color-white"><h1>Total<b class="pull-right">500,00</b></h1></div>
+                                                    </div>
+                                                </div>
+                                                <br />
+
+                                                <ul id="myTab2" class="nav nav-tabs bordered">
+                                                    <li class="active">
+                                                        <a href="#s10" data-toggle="tab">Estágio</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#s20" data-toggle="tab">Material Didático</a>
+                                                    </li>
+                                                </ul>
+
+                                                <div id="myTabContent1" class="tab-content padding-10">
+                                                    <div class="tab-pane fade in active" id="s10">
+                                                        <table class="table table-striped custab">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        Data
+                                                                    </th>
+                                                                    <th>
+                                                                        Meio de Pagamento
+                                                                    </th>
+                                                                    <th>
+                                                                        Valor
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        01/07/2014
+                                                                    </td>
+                                                                    <td>
+                                                                        Dinheiro
+                                                                    </td>
+                                                                    <td>
+                                                                        100,00
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        01/07/2014
+                                                                    </td>
+                                                                    <td>
+                                                                        Dinheiro
+                                                                    </td>
+                                                                    <td>
+                                                                        100,00
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th>
+                                                                        Total
+                                                                    </th>
+                                                                    <th>
+                                                                    </th>
+                                                                    <th>
+                                                                        300,00
+                                                                    </th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="s20">
+                                                        <table class="table table-striped custab">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>
+                                                                        Data
+                                                                    </th>
+                                                                    <th>
+                                                                        Meio de Pagamento
+                                                                    </th>
+                                                                    <th>
+                                                                        Valor
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        01/07/2014
+                                                                    </td>
+                                                                    <td>
+                                                                        Dinheiro
+                                                                    </td>
+                                                                    <td>
+                                                                        100,00
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        01/07/2014
+                                                                    </td>
+                                                                    <td>
+                                                                        Dinheiro
+                                                                    </td>
+                                                                    <td>
+                                                                        100,00
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        01/07/2014
+                                                                    </td>
+                                                                    <td>
+                                                                        Dinheiro
+                                                                    </td>
+                                                                    <td>
+                                                                        100,00
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <th>
+                                                                        Total
+                                                                    </th>
+                                                                    <th>
+                                                                    </th>
+                                                                    <th>
+                                                                        300,00
+                                                                    </th>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <br />
+
+                                            </div>
+                                            <div class="row clearfix">
+                                                <div class="col-md-12 column">
+                                                    <div class="alert alert-dismissable alert-danger">
+                                                        <h4>
+                                                            Quantidade de Aulas
+                                                        </h4>
+                                                        A turma selecionada já esta em andamento e a quantidade de aulas realizadas é superior
+                                                        a máxima permitida, <a href="ajax/modal-content/model-content-2.html" data-toggle="modal" data-target="#remoteModal" class="alert-link">clique aqui</a> para autorizar.
+                                                    </div>
+                                                    <div class="alert alert-dismissable alert-danger">
+                                                        <h4>
+                                                            Turma sem vaga
+                                                        </h4>
+                                                        A turma selecionada não possui vagas disponíveis, <a href="ajax/modal-content/model-content-2.html" data-toggle="modal" data-target="#remoteModal" class="alert-link">clique aqui</a> para autorizar.
+                                                    </div>
+                                                    <div class="alert alert-dismissable alert-danger">
+                                                        <h4>
+                                                            Faixa Etária
+                                                        </h4>
+                                                        O aluno matrículado não possui idade adequada para a turma selecionada, <a href="ajax/modal-content/model-content-2.html" data-toggle="modal" data-target="#remoteModal" class="alert-link">clique aqui</a> para
+                                                        autorizar.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="clear"></span>
+                                            <div class="text-center">
+                                                <a id="" class="btn btn-primary btn-lg" href="#especificacao/UC024 - Matrícula - Detalhe.html">
+                                                    Concluir
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<!-- Modal RECUPERAR ORÇAMENTO -->
+<div class="modal fade" id="modal-orcamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal ADICONAR PAGAMENTO -->
+<div class="modal fade" id="modal-pagamento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal EDITAR RESPONSÁVEL-->
+<div class="modal fade" id="modal-aluno-editar-responsavel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal ADICIONAR RESPONSÁVEL-->
+<div class="modal fade" id="modal-aluno-responsavel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal EXCLUIR RESPONSÁVEL-->
+<div class="modal fade" id="modal-aluno-excluir-responsavel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- MODAL PLACE HOLDER -->
+<div class="modal fade" id="remoteModal" tabindex="-1" role="dialog" aria-labelledby="remoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"></div>
+    </div>
+</div>
+<!-- END MODAL -->
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+     *
+     * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+     *
+     * // activate tooltips
+     * $("[rel=tooltip]").tooltip();
+     *
+     * // activate popovers
+     * $("[rel=popover]").popover();
+     *
+     * // activate popovers with hover states
+     * $("[rel=popover-hover]").popover({ trigger: "hover" });
+     *
+     * // activate inline charts
+     * runAllCharts();
+     *
+     * // setup widgets
+     * setup_widgets_desktop();
+     *
+     * // run form elements
+     * runAllForms();
+     *
+     ********************************
+     *
+     * pageSetUp() is needed whenever you load a page.
+     * It initializes and checks for all basic elements of the page
+     * and makes rendering easier.
+     *
+     */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        $('.modal-orcamento').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Recuperar Orçamento.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+        $('.modal-pagamento').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Adicionar Pagamento.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //RESPONSAVEL
+        $('a[href="#modal-aluno-responsavel"]').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Aluno - Responsável - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EDITAR RESPONSAVEL
+        $('.modal-aluno-editar-responsavel').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Aluno - Responsável - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EXCLUIR RESPONSAVEL
+        $('.modal-aluno-excluir-responsavel').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção de Aluno - Responsável - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+
+        jQuery(function ($) {
+            $(".nascmask").mask("99/99/9999");
+            $(".fonemask").mask("(99) 9999-9999");
+            $(".celmask").mask("(99) 9 9999-9999");
+            $(".cpfmask").mask("999.999.999-99");
+            $(".cepmask").mask("99999-999");
+
+        })
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>

@@ -1,0 +1,442 @@
+﻿<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+   <!-- col -->
+   <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+      <h1 class="page-title txt-color-blueDark">
+         <!-- PAGE HEADER -->
+         <i class="fa-fw fa fa-home"></i>
+         Cadastro de Usuário
+      </h1>
+   </div>
+   <!-- end col -->
+   <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+      <!-- Button trigger modal -->
+      <a href="javascript:history.go(-1)" class="btn btn-primary btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-reply"></i> Voltar</a>
+   </div>
+</div>
+<!-- end row -->
+<div class="jarviswidget jarviswidget-sortable" id="wid-id-1" data-widget-collapsed="true" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+   <header role="heading">
+      <span class="widget-icon"><i class="fa fa-edit"></i></span>
+      <h2>Cadastro</h2>
+      <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+   </header>
+   <!-- widget div-->
+   <div role="content">
+      <!-- widget edit box -->
+      <div class="jarviswidget-editbox">
+         <!-- This area used as dropdown edit box -->
+      </div>
+      <!-- end widget edit box -->
+      <!-- widget content -->
+      <div class="widget-body no-padding">
+         <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+            <header>
+               <h2>Dados de Cadastro </h2>
+            </header>
+            <fieldset>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Primeiro nome</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Primeiro nome">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Último nome</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Último nome">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">CPF</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="___.___.___-__" class="cpfmask">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">CEP</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="_____-___" class="cepmask">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-6">
+                     <label class="label">Endereço</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Endereço">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Número</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Número">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Complemento</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Complemento">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-6">
+                     <label class="label">Bairro</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Bairro">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Cidade</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="Cidade">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Estado</label>
+                     <label class="select">
+                        <select name="ID_UF">
+                           <option value="">Selecione...</option>
+                           <option value="SP">São Paulo</option>
+                        </select>
+                        <i></i> 
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Telefone</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="(__) ____-____" class="fonemask">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Celular</label>
+                     <label class="input">
+                     <input type="text" name="name" placeholder="(__) ____-____" class="celmask">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">E-mail</label>
+                     <label class="input">
+                     <i class="icon-prepend fa fa-envelope-o"></i>
+                     <input type="text" name="name" placeholder="E-mail">
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Data de Nascimento</label>
+                     <label class="input">
+                     <i class="icon-append fa fa-calendar"></i>
+                     <input type="text" name="name" placeholder="__/__/____" class="nascmask">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-6">
+                     <label class="label">Cargo</label>
+                     <label class="select">
+                        <select name="ID_CARGO">
+                           <option value="">Selecione</option>
+                           <option value="1">Operador de Marketing</option>
+                           <option value="2">Analista de Sistemas</option>
+                           <option value="3">Desenvolvedor de Software</option>
+                           <option value="4">Atendente de Telemarketing</option>
+                           <option value="5">Gerente de RH</option>
+                        </select>
+                        <i></i>
+                     </label>
+                  </section>
+                  <section class="col col-3">
+                    <label class="label">Estado Civil</label>
+                    <label class="select">
+                        <select name="CIVIL">
+                            <option value="">Selecione...</option>
+                            <option value="0">Solteiro</option>
+                            <option value="1">Casado</option>
+                            <option value="2">Divorciado</option>
+                        </select> <i></i>
+                    </label>
+                  </section>
+                  <section class="col col-3">
+                     <label class="label">Sexo</label>
+                     <div class="inline-group">
+                        <label class="radio">
+                        <input type="radio" name="radio-inline">
+                        <i></i>Masculino
+                        </label>
+                        <label class="radio">
+                        <input type="radio" name="radio-inline" checked="">
+                        <i></i>Feminino
+                        </label>
+                     </div>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-12">
+                     <label class="label">Observações</label>
+                     <label class="textarea">
+                     <i class="icon-prepend fa fa-comment"></i>
+                     <textarea rows="4" name="comment"></textarea>
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-12">
+                     <label class="label">Disponibilidade de Horário</label>
+                     <table style="margin-bottom:5px;" id="Table1" class="table table-bordered table-hover smart-form has-tickbox col col-md-12">
+                        <thead>
+                           <tr>
+                              <th></th>
+                              <th>Domingo</th>
+                              <th>Segunda-Feira</th>
+                              <th>Terça-Feira</th>
+                              <th>Quarta-Feira</th>
+                              <th>Quinta-Feira</th>
+                              <th>Sexta-Feira</th>
+                              <th>Sábado</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Manhã</td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline" checked="checked">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline" checked="checked">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline" checked="checked">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Tarde</td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Noite</td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Integral</td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                              <td>
+                                 <label class="checkbox">
+                                 <input type="checkbox" name="checkbox-inline">
+                                 <i></i>
+                                 </label>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <div class="note">
+                        <strong>Nota:</strong> Período integral é somente de segunda à sexta-feira exceto sábados e domingos.
+                     </div>
+                  </section>
+               </div>
+            </fieldset>
+            <header>
+               <h2>Dados de Acesso</h2>
+            </header>
+            <fieldset>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Usuário</label>
+                     <label class="input">
+                     <i class="icon-append fa fa-user"></i>
+                     <input type="text" name="USUARIO" placeholder="Usuário">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Senha</label>
+                     <label class="input">
+                     <i class="icon-append fa fa-lock"></i>
+                     <input type="password" name="SENHA" placeholder="Senha">
+                     </label>
+                  </section>
+                  <section class="col col-7">
+						<label class="label">Tipo de Usuário</label>
+						<div class="inline-group">
+							<label class="radio">
+								<input type="radio" name="radio-inline" checked="checked">
+								<i></i>Usuário Operador</label>
+							<label class="radio">
+								<input type="radio" name="radio-inline">
+								<i></i>Usuário Admin.</label>
+						</div>
+				   </section>
+               </div>
+            </fieldset>
+            <footer>
+               <button type="submit" class="btn btn-primary">
+               Salvar
+               </button>
+            </footer>
+         </form>
+      </div>
+      <!-- end widget content -->
+   </div>
+   <!-- end widget div -->
+</div>
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(".fonemask").mask("(99) 9999-9999");
+        $(".celmask").mask("(99) 9999-9999");
+        $(".cepmask").mask("99999-999");
+        $(".cpfmask").mask("999.999.999-99");
+    });
+</script>

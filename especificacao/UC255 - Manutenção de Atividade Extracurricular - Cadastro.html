@@ -1,0 +1,556 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Manutenção de Atividade Extracurricular <span>>  Cadastro de Atividade Extracurricular</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Resultado</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+
+                        <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-md-12">
+                                        <ul class="bootstrapWizard form-wizard">
+                                            <li class="active" data-target="#step1">
+                                                <a href="#atividade" data-toggle="tab"> <span class="step">1</span> <span class="title">Sobre a Atividade</span> </a>
+                                            </li>
+                                            <li data-target="#step2">
+                                                <a href="#disponibilidade" data-toggle="tab"> <span class="step">2</span> <span class="title">Disponibilidade</span> </a>
+                                            </li>
+                                            <li data-target="#step3">
+                                                <a href="#alunos" data-toggle="tab"> <span class="step">3</span> <span class="title">Alunos</span> </a>
+                                            </li>
+                                            <li data-target="#step4">
+                                                <a href="#resumo" data-toggle="tab"> <span class="step">4</span> <span class="title">Resumo</span> </a>
+                                            </li>
+                                        </ul>
+                                        <!--ARRUMAR \/-->
+                                        <br /><br /><br /><br />
+                                        <!--ARRUMAR /\-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="atividade">
+                                                <section class="col col-6">
+                                                    <label class="label">Nome</label>
+                                                    <label class="input">
+                                                        <input type="text" name="fname" placeholder="Nome">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="label">Tipo da Atividade</label>
+                                                    <label class="select">
+                                                        <select>
+                                                            <option value="0">Option 1</option>
+                                                            <option value="1">Option 2</option>
+                                                        </select> <i></i>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-12">
+                                                    <label class="label">Descrição</label>
+                                                    <label class="textarea">
+                                                        <textarea rows="4" class="custom-scroll"></textarea>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="label">Curso</label>
+                                                    <label class="select">
+                                                        <select>
+                                                            <option value="0">Option 1</option>
+                                                            <option value="1">Option 2</option>
+                                                        </select> <i></i>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-2">
+                                                    <label class="label">Participantes Previstos</label>
+                                                    <label class="input">
+                                                        <input type="text" name="fname" placeholder="Participantes Previstos">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-2">
+                                                    <label class="label">Data</label>
+                                                    <div class="input-group">
+                                                        <input type="text" name="mydate" placeholder="Selecione um dia" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                    </div>
+                                                </section>
+                                                <section class="col col-2">
+                                                    <label class="label">Período</label>
+                                                    <label class="input">
+                                                        <input type="text" name="fname" placeholder="De">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-2">
+                                                    <label class="label">Até</label>
+                                                    <label class="input">
+                                                        <input type="text" name="fname" placeholder="Até">
+                                                    </label>
+                                                </section>
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <br />
+                                                        <div class="text-center">
+                                                            <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                                Próximo Passo
+                                                            </button>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="disponibilidade">
+                                                <section class="col col-6">
+                                                    <h2>Sala</h2>
+                                                    <table id="datatable_tabletools" class="table table-bordered table-hover smart-form has-tickbox col col-md-12">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Sala</th>
+                                                                <th>Qtde Máx de Alunos</th>
+                                                                <th>Recursos</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="radio">
+                                                                        <input type="radio" name="radio1"><i></i>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Nome da Sala</td>
+                                                                <td>50</td>
+                                                                <td>Data Show / Lousa Interativa / TV / Som</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="radio">
+                                                                        <input type="radio" name="radio1"><i></i>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Nome da Sala</td>
+                                                                <td>50</td>
+                                                                <td>Data Show / Lousa Interativa / TV / Som</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="radio">
+                                                                        <input type="radio" name="radio1"><i></i>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Nome da Sala</td>
+                                                                <td>50</td>
+                                                                <td>Data Show / Lousa Interativa / TV / Som</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+
+                                                <section class="col col-6">
+                                                    <h2>Professor</h2>
+                                                    <table id="datatable_tabletools" class="table table-bordered table-hover smart-form has-tickbox col col-md-12">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>&nbsp;</th>
+                                                                <th>Nome</th>
+                                                                <th>Cargos</th>
+                                                                <th>Contratação</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="radio">
+                                                                        <input type="radio" name="radio2"><i></i>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Nome do Professor</td>
+                                                                <td>Prof de Inglês / Coordenador Pedagógico</td>
+                                                                <td>Mensalista</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label class="radio">
+                                                                        <input type="radio" name="radio2"><i></i>
+                                                                    </label>
+                                                                </td>
+                                                                <td>Nome do Professor</td>
+                                                                <td>Prof de Inglês / Coordenador Pedagógico</td>
+                                                                <td>Mensalista</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <section class="col col-12">
+                                                        <br /><br />
+                                                        <label class="checkbox">
+                                                            <input type="checkbox" name="checkbox-inline">
+                                                            <i></i> Remunerar Professor?
+                                                        </label>
+                                                    </section>
+
+                                                </section>
+
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <br />
+                                                        <div class="text-center">
+                                                            <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                                Próximo Passo
+                                                            </button>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-pane" id="alunos">
+                                                <section class="col col-12">
+                                                    <h2>Alunos</h2>
+                                                </section>
+                                                <section class="col col-12">
+                                                    <ul class="nav nav-tabs bg-color-grayLight">
+                                                        <li class="active">
+                                                            <a data-toggle="tab" href="#nivel">Por Nível</a>
+                                                        </li>
+                                                        <li>
+                                                            <a data-toggle="tab" href="#convidados">Convidados</a>
+                                                        </li>
+                                                    </ul>
+                                                    <hr />
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="nivel">
+                                                            <br />
+                                                            <div class="row">
+                                                                <section class="col col-4">
+                                                                    <label class="label">Tipo do Curso</label>
+                                                                    <label class="select">
+                                                                        <select>
+                                                                            <option value="0">Option 1</option>
+                                                                            <option value="1">Option 2</option>
+                                                                        </select> <i></i>
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-4">
+                                                                    <label class="label">Nível</label>
+                                                                    <label class="select">
+                                                                        <select>
+                                                                            <option value="0">Todos</option>
+                                                                            <option value="1">Second Option</option>
+                                                                        </select> <i></i>
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-4">
+                                                                    <label class="label">Estágio</label>
+                                                                    <label class="select">
+                                                                        <select>
+                                                                            <option value="0">Todos</option>
+                                                                            <option value="1">Second Option</option>
+                                                                        </select> <i></i>
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-4">
+                                                                    <label class="label">Modalidade</label>
+                                                                    <label class="select">
+                                                                        <select>
+                                                                            <option value="0">Todos</option>
+                                                                            <option value="1">Second Option</option>
+                                                                        </select> <i></i>
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-8">
+                                                                    <label class="label">Turma</label>
+                                                                    <label class="select">
+                                                                        <select>
+                                                                            <option value="0">Todos</option>
+                                                                            <option value="1">Second Option</option>
+                                                                        </select> <i></i>
+                                                                    </label>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="convidados">
+                                                            <section class="col-12">
+                                                                <br />
+                                                                <label class="label">Adicionar Aluno</label>
+                                                                <div class="input-group">
+                                                                    <label class="input col-12">
+                                                                        <input type="text" name="name" placeholder="Nome do Aluno" class="">
+                                                                    </label>
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-sm btn-primary">
+                                                                            <i class="fa fa-plus"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </section>
+                                                            <section class="col-12">
+                                                                <table id="datatable_tabletools" class="table table-bordered table-hover smart-form col-md-12">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Data</th>
+                                                                            <th>E-mail</th>
+                                                                            <th>Telefone(s)</th>
+                                                                            <th width="5%">Ações</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Nome do Aluno</td>
+                                                                            <td>email@gmail.com</td>
+                                                                            <td>(15) 3232-3232</td>
+                                                                            <td>
+                                                                                <button data-toggle="modal" data-target="#" class="btn btn-xs btn-danger">
+                                                                                    <i class="fa fa-trash-o"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Nome do Aluno</td>
+                                                                            <td>email@gmail.com</td>
+                                                                            <td>(15) 3232-3232</td>
+                                                                            <td>
+                                                                                <button data-toggle="modal" data-target="#" class="btn btn-xs btn-danger">
+                                                                                    <i class="fa fa-trash-o"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Nome do Aluno</td>
+                                                                            <td>email@gmail.com</td>
+                                                                            <td>(15) 3232-3232</td>
+                                                                            <td>
+                                                                                <button data-toggle="modal" data-target="#" class="btn btn-xs btn-danger">
+                                                                                    <i class="fa fa-trash-o"></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </section>
+
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <br />
+                                                        <div class="text-center">
+                                                            <button id="activate-step-2" class="btn btn-primary btn-lg">
+                                                                Próximo Passo
+                                                            </button>
+                                                        </div>
+                                                    </section>
+                                                </div>
+
+                                            </div>
+                                            <div class="tab-pane" id="resumo">
+                                                <br />
+                                                <section class="col col-12">
+                                                    <h2>Sobre a Atividade</h2>
+                                                </section>
+                                                <section class="col col-12">
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Nome da Atividade</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Nome da Atividade</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Tipo da Atividade</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Tipo da Atividade</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Descrição</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Curso</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Inglês</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Participantes Previstos</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">40</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Data</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">14/14/2000 - 14:00 às 18:00</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Sala</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">New York - 50 Lugares</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Professor</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">João Silva - Mensalista</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Professor Remunerado?</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Não</label>
+                                                    </div>
+                                                </section>
+                                                <section class="col col-12">
+                                                    <h2>Participantes</h2>
+                                                </section>
+                                                <section class="col col-12">
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Tipo do Curso</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Infantil</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Nível</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Basic</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Estágio</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Todos</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Modalidade</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Extensivo</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="text"><strong>Turma</strong></label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <label class="text">Todas</label>
+                                                    </div>
+                                                </section>
+                                                ou
+                                                <section class="col-12">
+                                                    <table id="datatable_tabletools" class="table table-bordered table-hover smart-form col-md-12">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Data</th>
+                                                                <th>E-mail</th>
+                                                                <th>Telefone(s)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nome do Aluno</td>
+                                                                <td>email@gmail.com</td>
+                                                                <td>(15) 3232-3232</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Nome do Aluno</td>
+                                                                <td>email@gmail.com</td>
+                                                                <td>(15) 3232-3232</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Nome do Aluno</td>
+                                                                <td>email@gmail.com</td>
+                                                                <td>(15) 3232-3232</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </section>
+                                            
+                                                <div class="row">
+                                                    <section class="col col-12">
+                                                        <br />
+                                                        <div class="text-center">
+                                                            <a id="activate-step-2" class="btn btn-primary btn-lg" href="#especificacao/UC255 - Manutenção de Atividade Extracurricular - Detalhe.html">
+                                                                Concluir
+                                                            </a>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+
+                                    </section>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

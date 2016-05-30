@@ -1,0 +1,320 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Segunda Chamada <span>>  Consulta de Segunda Chamada</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <a href="#especificacao/UC051 - Agendamento de Segunda Chamada - Cadastro.html" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Novo Segunda Chamada</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+
+
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="select">
+                                            <select name="interested">
+                                                <option value="0" selected="" disabled="disabled">Semestre</option>
+                                                <option value="1">1º / 2014</option>
+                                                <option value="1">2º / 2014</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="select">
+                                            <select name="budget">
+                                                <option value="0" selected="" disabled="disabled">Situação</option>
+                                                <option value="1">Todos</option>
+                                            </select>
+                                            <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row hidden">
+                                    <section class="col col-6">
+                                        <label class="input">
+                                            <i class="icon-append fa fa-user"></i>
+                                            <input type="text" name="name" placeholder="Professor(a)">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="input">
+                                            <i class="icon-append fa fa-user"></i>
+                                            <input type="text" name="company" placeholder="Aluno">
+                                        </label>
+                                    </section>
+                                </div>
+
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="input">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="startdate" id="startdate" placeholder="Data inicial">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="input">
+                                            <i class="icon-append fa fa-calendar"></i>
+                                            <input type="text" name="finishdate" id="finishdate" placeholder="Data final">
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Listagem</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover" width="100%">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Data</th>
+                                    <th>Semestre</th>
+                                    <th>Turma(s)</th>
+                                    <th>Professor(es)</th>
+                                    <th>Aluno(s)</th>
+                                    <th>Situação</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>03/04/14 10:00</td>
+                                    <td>1º / 2014</td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="2 turma(s)">2</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="1 professor(es)">1</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="11 aluno(s)">11</a></td>
+                                    <td>
+                                        <label class="label label-success">Realizado</label>
+                                    </td>
+                                    <td>
+                                        <a class='btn btn-info btn-xs' href="#especificacao/UC051 - Agendamento de Segunda Chamada - Detalhe.html"><span class="glyphicon glyphicon-edit"></span> Detalhes</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>03/04/14 10:00</td>
+                                    <td>1º / 2014</td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="2 turma(s)">2</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="1 professor(es)">1</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="11 aluno(s)">11</a></td>
+                                    <td>
+                                        <label class="label label-info">Agendado</label>
+                                    </td>
+                                    <td>
+                                        <a class='btn btn-info btn-xs' href="#especificacao/UC051 - Agendamento de Segunda Chamada - Detalhe.html"><span class="glyphicon glyphicon-edit"></span> Detalhes</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>03/04/14 10:00</td>
+                                    <td>1º / 2014</td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="2 turma(s)">2</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="1 professor(es)">1</a></td>
+                                    <td><a href="javascript:void(0);" class="badge bg-color-darken" rel="tooltip" data-placement="top" data-original-title="11 aluno(s)">11</a></td>
+                                    <td>
+                                        <label class="label label-danger">Cancelado</label>
+                                    </td>
+                                    <td>
+                                        <a class='btn btn-info btn-xs' href="#especificacao/UC051 - Agendamento de Segunda Chamada - Detalhe.html"><span class="glyphicon glyphicon-edit"></span> Detalhes</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+
+        $('a[href="#modal-cadastro"]').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Nivelamento de Conhecimento - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        // START AND FINISH DATE
+        $('#startdate').datepicker({
+            dateFormat: 'dd/mm/yy',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (selectedDate) {
+                $('#finishdate').datepicker('option', 'minDate', selectedDate);
+            }
+        });
+
+        $('#finishdate').datepicker({
+            dateFormat: 'dd/mm/yy',
+            prevText: '<i class="fa fa-chevron-left"></i>',
+            nextText: '<i class="fa fa-chevron-right"></i>',
+            onSelect: function (selectedDate) {
+                $('#startdate').datepicker('option', 'maxDate', selectedDate);
+            }
+        });
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

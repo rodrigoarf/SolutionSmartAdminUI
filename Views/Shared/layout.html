@@ -1,0 +1,713 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title> CNA Box</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- #CSS Links -->
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/css/smartadmin-skins.min.css">
+
+    <!-- CNA Box Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/css/cnabox.css">
+
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="../../Content/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../Content/img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- #GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <!-- #APP SCREEN / ICONS -->
+    <!-- Specifying a Webpage Icon for Web Clip
+         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link rel="apple-touch-icon" href="../../Content/img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../Content/img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../Content/img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../Content/img/splash/touch-icon-ipad-retina.png">
+
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Startup image for web apps -->
+    <link rel="apple-touch-startup-image" href="../../Content/img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="../../Content/img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="../../Content/img/splash/iphone.png" media="screen and (max-device-width: 320px)">
+
+</head>
+
+<!--
+
+TABLE OF CONTENTS.
+
+Use search to find needed section.
+
+===================================================================
+
+|  01. #CSS Links                |  all CSS links and file paths  |
+|  02. #FAVICONS                 |  Favicon links and file paths  |
+|  03. #GOOGLE FONT              |  Google font link              |
+|  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
+|  05. #BODY                     |  body tag                      |
+|  06. #HEADER                   |  header tag                    |
+|  07. #PROJECTS                 |  project lists                 |
+|  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+|  09. #MOBILE                   |  mobile view dropdown          |
+|  10. #SEARCH                   |  search field                  |
+|  11. #NAVIGATION               |  left panel & navigation       |
+|  12. #MAIN PANEL               |  main panel                    |
+|  13. #MAIN CONTENT             |  content holder                |
+|  14. #PAGE FOOTER              |  page footer                   |
+|  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
+|  16. #PLUGINS                  |  all scripts and plugins       |
+
+===================================================================
+
+-->
+<!-- #BODY -->
+<!-- Possible Classes
+
+    * 'smart-skin-{SKIN#}'
+    * 'smart-rtl'         - Switch theme mode to RTL (will be avilable from version SmartAdmin 1.5)
+    * 'menu-on-top'       - Switch to top navigation (no DOM change required)
+    * 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
+    * 'fixed-header'      - Fixes the header
+    * 'fixed-navigation'  - Fixes the main menu
+    * 'fixed-ribbon'      - Fixes breadcrumb
+    * 'fixed-footer'      - Fixes footer
+    * 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
+-->
+<!--Como estava: class=hidden-menu fixed-header"-->     
+<body class="fixed-header desktop-detected">
+
+    <!-- #HEADER -->
+    <header id="header">
+        <div id="logo-group">
+
+            <span id="logo"> <img src="../../Content/img/logo.png" alt="Cna Box"> </span>
+
+            <!-- Note: The activity badge color changes when clicked and resets the number to 0
+                 Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications -->
+            <span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
+
+            <!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
+            <div class="ajax-dropdown">
+
+                <!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label class="btn btn-default">
+                        <input type="radio" name="activity" id="especificacao/Ajax - Alertas.html">
+                        Alertas (14)
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="activity" id="especificacao/Ajax - Agenda.html">
+                        Compromissos (3)
+                    </label>
+                    <label class="btn btn-default hidden">
+                        <input type="radio" name="activity" id="ajax/notify/tasks.html">
+                        Tarefas (4)
+                    </label>
+                </div>
+
+                <!-- notification content -->
+                <div class="ajax-notifications custom-scroll">
+
+                    <div class="alert alert-transparent">
+                        <h4>Escolha uma opção acima</h4>
+                        Esta página em branco ajuda a proteger a sua privacidade, clique em um dos botões acima para retornar o conteúdo desejado.
+                    </div>
+
+                    <i class="fa fa-lock fa-4x fa-border"></i>
+
+                </div>
+                <!-- end notification content -->
+                <!-- footer: refresh area -->
+                <span>
+                    Última atualização em: 12/12/2013 9:43AM
+                    <button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Carregando..." class="btn btn-xs btn-default pull-right"><i class="fa fa-refresh"></i></button>
+                </span>
+                <!-- end footer -->
+
+            </div>
+            <!-- END AJAX-DROPDOWN -->
+        </div>
+
+        <!-- escolas dropdown -->
+        <div class="project-context troca-escola hidden-xs">
+
+            <span class="label">Trocar Escola:</span>
+            <span class="project-selector dropdown-toggle escola-atual" data-toggle="dropdown">CNA Vila Mariana <i class="fa fa-angle-down"></i></span>
+
+            <!-- Suggestion: populate this list with fetch and push technique -->
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="javascript:void(0);" class="escola">CNA Cambuci</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="escola">CNA Administração Nacional</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-power-off"></i> Cancelar</a>
+                </li>
+            </ul>
+            <!-- end dropdown-menu-->
+
+        </div>
+        <!-- end escolas dropdown -->
+        <!-- #TOGGLE LAYOUT BUTTONS -->
+        <!-- pulled right: nav area -->
+        <div class="pull-right">
+
+            <!-- collapse menu button -->
+            <div id="hide-menu" class="btn-header pull-right">
+                <span> <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+            </div>
+            <!-- end collapse menu -->
+            <!-- logout button -->
+            <div id="logout" class="btn-header transparent pull-right">
+                <span><a href="login.html" title="Deslogar" data-action="userLogout" data-logout-msg="Deseja encerrar a utiliza��o do CNA Box ?"><i class="fa fa-sign-out"></i></a></span>
+            </div>
+            <!-- end logout button -->
+            <!-- fullscreen button -->
+            <div id="fullscreen" class="btn-header transparent pull-right">
+                <span><a href="javascript:void(0);" data-action="launchFullscreen" title="Tela Cheia"><i class="fa fa-arrows-alt"></i></a></span>
+            </div>
+            <!-- end fullscreen button -->
+            <!-- #Voice Command: Start Speech -->
+            <div id="speech-btn" class="btn-header transparent pull-right hidden-sm hidden-xs hidden">
+                <div>
+                    <a href="javascript:void(0)" title="Voice Command" data-action="voiceCommand"><i class="fa fa-microphone"></i></a>
+                    <div class="popover bottom">
+                        <div class="arrow"></div>
+                        <div class="popover-content">
+                            <h4 class="vc-title">Voice command activated <br><small>Please speak clearly into the mic</small></h4>
+                            <h4 class="vc-title-error text-center">
+                                <i class="fa fa-microphone-slash"></i> Voice command failed
+                                <br><small class="txt-color-red">Must <strong>"Allow"</strong> Microphone</small>
+                                <br><small class="txt-color-red">Must have <strong>Internet Connection</strong></small>
+                            </h4>
+                            <a href="javascript:void(0);" class="btn btn-success" onclick="commands.help()">See Commands</a>
+                            <a href="javascript:void(0);" class="btn bg-color-purple txt-color-white" onclick="$('#speech-btn .popover').fadeOut(50);">Close Popup</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end voice command -->
+        </div>
+        <!-- end pulled right: nav area -->
+
+    </header>
+    <!-- END HEADER -->
+    <!-- #NAVIGATION -->
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+
+        <!-- User info -->
+        <div class="login-info">
+            <span>
+                <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+                <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                    <img src="../../Content/img/avatars/male.png" alt="me" class="online" />
+                    <span>
+                        Marcelo Daniel
+                    </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+
+            </span>
+        </div>
+
+        <!-- end user info -->
+        <!-- NAVIGATION : This navigation is also responsive
+        To make this navigation dynamic please make sure to link the node
+        (the reference to the nav > ul) after page load. Or the navigation
+        will not initialize.
+        -->
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="../../Views/Dashboard/minibox.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home txt-color-orange"></i> <span class="menu-item-parent txt-color-orange">Dashboard</span></a>
+                </li>
+                <li>
+	                <a href="#"><i class="fa fa-lg fa-fw fa-table txt-color-blue"></i><span class="menu-item-parent txt-color-blue">Acesso</span></a>
+	                <ul>
+		                <li><a href="../../Views/Usuario/Index.html">Usuários</a></li>
+		                <li><a href="../../Views/Grupo/Index.html">Grupos de Usuários</a></li>
+		                <li><a href="../../Views/Menu/Index.html">Menus de Acesso</a></li>
+	                </ul>
+                </li>
+                <li>
+	                <a href="#"><i class="fa fa-lg fa-fw fa-table txt-color-blue"></i><span class="menu-item-parent txt-color-blue">Logs e Exceptions</span></a>
+	                <ul>
+		                <li><a href="../../Views/LogErro/Index.html">Logs de Erros</a></li>
+		                <li><a href="../../Views/LogAcesso/Index.html">Logs de Acessos</a></li>
+	                </ul>
+                </li>
+                <li>
+                    <a href="../../especificacao/UC022 - Agenda.html"><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Agenda</span></a>
+                </li>
+                <li>
+                    <a href="../../especificacao/UC023 - Alertas.html"><i class="fa fa-lg fa-fw fa-inbox"></i> <span class="menu-item-parent">Mensagens</span><span class="badge pull-right inbox-badge">14</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-fw fa-group"></i> <span class="menu-item-parent">Comercial</span></a>
+                    <ul>
+                        <li>
+                            <a href="#">Ações Comerciais</a>
+                            <ul>
+                                <li>
+                                    <a href="../../especificacao/UC019 - Ações Comerciais - Consulta.html">Manutenção</a>
+                                </li>
+                                <li>
+                                    <a href="../../especificacao/UC018 - Empresas Parceiras - Escola - Consulta.html">Empresas Parceiras</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Atendimento - Consulta.html">Atendimento</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastros e Prospects</a>
+                            <ul>
+                                <li>
+                                    <a href="../../especificacao/UC010 - Manutenção de Cadastros e Prospect - Lead - Consulta.html">Cadastro</a>
+                                </li>
+                                <li>
+                                    <a href="../../especificacao/UC010 - Manutenção de Cadastros e Prospect - Prospect - Consulta.html">Prospect</a>
+                                </li>
+                                <li>
+                                    <a href="../../especificacao/UC013 - Suspensão de Prospect.html">Aprovar Suspensão</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC012 - Registro de Repiques - Consulta.html">Repiques</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC208 - Simulação de Condições Financeiras - Consulta.html">Orçamento</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC024 - Matrícula - Cadastro.html">Matrícula</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC029 - Aprovação de Comissões Geradas.html">Aprovação de Comissões</a>
+                        </li>
+                        <li>
+                            <a href="#">Indicadores</a>
+                            <ul>
+                                <li>
+                                    <a href="../../especificacao/UC087 - Acompanhamento de Repiques.html">Repique</a>
+                                </li>
+                                <li>
+                                    <a href="../../especificacao/UC086 - Indicadores da Equipe de Divulgação.html">Equipe de Divulgação</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../../especificacao/Política de Preços (Escola) - Consulta.html">Política de Preços</a></li>
+                        <li><a href="../../especificacao/UC014 - Parametros Comercial.html">Parâmetros</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o txt-color-blue"></i> <span class="menu-item-parent">Acesso</span></a>
+                    <ul>
+                        <li>
+                            <a href="#">Acesso</a>
+                            <ul>
+                                <li><a href="../../especificacao/UC006 - Manutenção de Sala.html">Usuários</a></li>
+                                <li><a href="../../especificacao/UC007 - Manutenção dos Períodos.html">Períodos de Aula</a></li>
+                                <li><a href="../../especificacao/UC008 - Manutenção de Professor - Consulta.html">Professor</a></li>
+                                <li><a href="../../especificacao/UC009 - Manutenção de Calendário - Consulta de Feriado.html">Calendário Local</a></li>
+                                <li><a href="../../especificacao/Manutenção de Calendário - Eventos da Escola.html">Eventos</a></li>
+                                <li><a href="../../especificacao/Manutenção de Descontos.html">Descontos</a></li>
+                                <li><a href="../../especificacao/UC030 - Configuração de Parâmetros Administrativos - Consulta.html">Parâmetros</a></li>
+                            </ul>
+                        </li>
+                        <!--<li>
+                            <a href="#">Material Didático</a>
+                            <ul>
+                                <li><a href="../../especificacao/UC303 – Estoque Mínimo Material Didático (Escola) - Consulta.html">Mínimo</a></li>
+                                <li><a href="../../especificacao/UC053 - Planejamento de Compra de Material Didático.html">Planejamento de Compra</a></li>
+                                <li><a href="../../especificacao/UC054 - Acompanhamento do Pedido de Compra de Material Didático - Consulta.html">Acompanhamento dos Pedidos</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Metas</a>
+                            <ul>
+                                <li><a href="../../especificacao/Manutenção de Comissões - Listagem.html">Comissões</a></li>
+                                <li><a href="../../especificacao/Manutenção de Premiações - Listagem.html">Premiações</a></li>
+                                <li><a href="../../especificacao/Manutenção de Bônus - Listagem.html">Bônus</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Estoque</a>
+                            <ul>
+                                <li><a href="../../especificacao/UC156 - Registrar Inventário de Estoque.html">Inventário</a></li>
+                                <li><a href="../../especificacao/Estoque - Controle.html">Consulta</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC174 - Reserva de Salas - Consulta.html">Reserva de Sala</a>
+                        </li>
+                        <li>
+                            <a href="#">Rechamada</a>
+                            <ul>
+                                <li><a href="../../especificacao/UC148 - Rechamadas Pendentes.html">Pendentes</a></li>
+                                <li><a href="../../especificacao/Relatório - Principais motivos de ausência.html">Motivos de ausência</a></li>
+                                <li><a href="../../especificacao/Relatório - Alunos Faltantes.html">Alunos faltantes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC177 - Manutenção dos Registros de Ponto.html">Registro de Ponto</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Relatório de Remunerações.html">Remunerações</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Consulta de Contratos.html">Contratos</a>
+                        </li>
+                        <li>
+                            <a href="#">Rematrícula</a>
+                            <ul>
+                                <li>
+                                    <a href="../../especificacao/UC173 - Acompanhamento de rematrículas Pendentes.html">Acompanhamento</a>
+                                </li>
+                                <li>
+                                    <a href="../../especificacao/UC151 - Rematrícula - Consulta.html">Consulta</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/UC152 - Receber Aluno Transferido - Consulta.html">Alunos Transferidos</a>
+                        </li>-->
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Pedagógico</span></a>
+                    <ul>
+                        <li><a href="../../especificacao/UC039 - Manutenção de Aluno - Consulta.html">Alunos</a></li>
+                        <li><a href="../../especificacao/UC040 - Manutenção de Ex-Aluno - Consulta.html">Ex-Alunos</a></li>
+                        <li><a href="../../especificacao/UC001 - Mapa Geral.html">Mapa Geral</a></li>
+                        <li><a href="../../especificacao/UC051 - Agendamento de Segunda Chamada - Consulta.html">Segunda Chamada</a></li>
+                        <li><a href="../../especificacao/UC255 - Manutenção de Atividade Extracurricular - Consulta.html">Atividade Extra</a></li>
+                        <li><a href="../../especificacao/UC034 - Configuração dos Parâmetros Pedagógicos.html">Parâmetros</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-fw fa-money"></i> <span class="menu-item-parent">Financeiro</span></a>
+                    <ul>
+                        <li>
+                            <a href="#">Cadastros</a>
+                            <ul>
+                                <li><a href="../../especificacao/UC278 - Cadastros Administrativos Financeiro - Contas.html">Contas Bancárias</a></li>
+                                <li><a href="../../especificacao/Cadastros Administrativos Financeiro - Contas - Boleto.html">Boletos</a></li>
+                                <li><a href="../../especificacao/UC278 - Cadastros Administrativos Financeiro - Caixa Pessoal.html">Caixa Pessoal</a></li>
+                                <li><a href="../../especificacao/UC278 - Cadastros Administrativos Financeiro - Fornecedor.html">Fornecedor / Prestador de Serviço</a></li>
+                                <li><a href="../../especificacao/Parametros Financeiros.html">Parametrização</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Movimentação</a>
+                            <ul>
+                                <li><a href="../../especificacao/Financeiro - Contas Pagar.html">Contas a Pagar</a></li>
+                                <li><a href="../../especificacao/Financeiro - Contas Receber.html">Contas a Receber</a></li>
+                                <li><a href="../../especificacao/Financeiro - Extrato.html">Extrato</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Caixa</a>
+                            <ul>
+                                <li><a href="../../especificacao/Financeiro - Caixa - Resumo.html">Resumo</a></li>
+                                <li><a href="../../especificacao/Financeiro - Caixa - Trabalho.html">Trabalho</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Financeiro - Antecipação de Recebiveis - Consulta.html">Antecipação de Recebíveis</a>
+                        </li>
+                        <li>
+                            <a href="#">Boletos</a>
+                            <ul>
+                                <li><a href="../../especificacao/Financeiro - Boleto - Gerar.html">Geração de Cobrança</a></li>
+                                <li><a href="../../especificacao/Financeiro - Boleto - Consulta.html">Consulta</a></li>
+                                <li><a href="../../especificacao/Financeiro - Boleto - Arquivo Retorno.html">Leitura do Retorno</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Financeiro - Cheques - Consulta.html">Cheques</a>
+                        </li>
+                        <li>
+                            <a href="../../especificacao/Financeiro - Cartão - Consulta.html">Controle de Créditos</a>
+                        </li>
+                        <li>
+                            <a href="#">Emissão de NF</a>
+                        </li>
+                        <li>
+                            <a href="#">Relatórios</a>
+                            <ul>
+                                <li><a href="#">Fluxo de Caixa</a></li>
+                                <li><a href="#">Contas a Pagar</a></li>
+                                <li><a href="#">Contas a Receber</a></li>
+                                <li><a href="../../especificacao/Financeiro - Aluno Inadimplente - Consulta.html">Alunos inadimplentes</a></li>
+                                <li><a href="#">Rentabilidade</a></li>
+                                <li><a href="#">Indicadores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-lg fa-fw fa-cube"></i> <span class="menu-item-parent">Portal do Franqueador</span></a>
+                    <ul>
+                        <li>
+                            <a href="#">Cadastros</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Motivos</a>
+                                    <ul>
+                                        <li><a href="../../especificacao/Geral - Motivo Suspensão Prospect.html">Suspensão Prospect</a></li>
+                                        <li><a href="#">Repique Não Efetivo</a></li>
+                                        <li><a href="#">Repique Agendamento Pessoal</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Pedagógico - Cancelamento.html">Cancelamento</a></li>
+                                        <li><a href="#">Trancamento</a></li>
+                                        <li><a href="#">Transferência de Aluno</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Pedagógico - Faltas.html">Falta</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Financeiro - Cheques.html">Motivo de Devolução de Cheques</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Pessoa</a>
+                                    <ul>
+                                        <li><a href="#">Estado Civil</a></li>
+                                        <li><a href="#">Escolaridade</a></li>
+                                        <li><a href="../../especificacao/Geral - Cadastro de Tipo de Responsável.html">Grau de Parentesco</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Contato - Mídia.html">Mídia</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Contato - Campanhas.html">Campanha</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Estoque</a>
+                                    <ul>
+                                        <li><a href="../../especificacao/Geral - Cadastro de Tipo de Produto.html">Categoria</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Estoque - Unidade Medida.html">Unidade de Medida</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Pedagógico</a>
+                                    <ul>
+                                        <li><a href="#">Modalidade</a></li>
+                                        <li><a href="#">Curso (Idioma)</a></li>
+                                        <li><a href="#">Nível</a></li>
+                                        <li><a href="../../especificacao/UC046 - Manutenção de Estágios - Consulta.html">Estágios</a></li>
+                                        <li><a href="../../especificacao/UC278 - Cadastros Administrativos Pedagógico - Atividades Extra.html">Tipo de Atividade Extracurricular</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Financeiro</a>
+                                    <ul>
+                                        <li><a href="#">Forma de Pagamento</a></li>
+                                        <li><a href="../../especificacao/Cadastros Administrativos Financeiro - Categorias.html">Plano de Contas</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Administrativo</a>
+                                    <ul>
+                                        <li><a href="#">Tipo de Atividade</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="../../especificacao/Politica de Preços Franqueador - Consulta.html">Política de Preços</a></li>
+                                <li><a href="../../especificacao/Empresas Parceiras - Nacional - Consulta.html">Empresas Parceiras</a></li>
+                                <li><a href="../../especificacao/Manutenção de Calendário - Avisos da Administração.html">Avisos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+    <!-- #MAIN PANEL -->
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <!-- breadcrumb -->
+            <ol class="breadcrumb">
+                <!-- This is auto generated -->
+            </ol>
+            <!-- end breadcrumb -->
+            <!-- You can also add more buttons to the
+            ribbon for further usability
+
+            Example below:
+
+            <span class="ribbon-button-alignment pull-right" style="margin-right:25px">
+                <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa fa-grid"></i> Change Grid</span>
+                <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa fa-plus"></i> Add</span>
+                <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa fa-search"></i> <span class="hidden-mobile">Search</span></span>
+            </span> -->
+        </div>
+        <!-- END RIBBON -->
+        <!-- #MAIN CONTENT -->
+        <div id="content">
+
+        </div>
+
+        <!-- END #MAIN CONTENT -->
+
+    </div>
+    <!-- END #MAIN PANEL -->
+    <!-- #PAGE FOOTER -->
+    <div class="page-footer">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <span class="txt-color-white">CNA Box - 2014</span>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- END FOOTER -->
+    <!-- #SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+         Note: These tiles are completely responsive, you can add as many as you like -->
+    <div id="shortcut">
+        <ul>
+            <li>
+                <a href="#especificacao/UC023 - Alertas.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Alertas <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="#especificacao/UC022 - Agenda.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Agenda</span> </span> </a>
+            </li>
+            <li class="hidden">
+                <a href="#ajax/gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Geo Fusion</span> </span> </a>
+            </li>
+            <li class="hidden">
+                <a href="#ajax/invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Repiques <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+            </li>
+            <li class="hidden">
+                <a href="#ajax/gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+            </li>
+            <li class="hidden">
+                <a href="#ajax/profile.html" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>Meus Dados </span> </span> </a>
+            </li>
+        </ul>
+    </div>
+    <!-- END SHORTCUT AREA -->
+    <!--================================================== -->
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)
+    <script data-pace-options='{ "restartOnRequestAfter": true }' href="../../Content/js/plugin/pace/pace.min.js"></script>-->
+    <!-- #PLUGINS -->
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+        if (!window.jQuery) {
+            document.write('<script href="../../Content/js/libs/jquery-2.0.2.min.js"><\/script>');
+        }
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+        if (!window.jQuery.ui) {
+            document.write('<script href="../../Content/js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+        }
+    </script>
+
+    <!-- IMPORTANT: APP CONFIG -->
+    <script src="../../Content/js/app.config.js"></script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
+    <script src="../../Content/js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="../../Content/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="../../Content/js/notification/SmartNotification.min.js"></script>
+
+    <!-- JARVIS WIDGETS -->
+    <script src="../../Content/js/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- EASY PIE CHARTS -->
+    <script src="../../Content/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+    <!-- SPARKLINES -->
+    <script src="../../Content/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="../../Content/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="../../Content/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="../../Content/js/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="../../Content/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="../../Content/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+    <!-- FastClick: For mobile devices: you can disable this in app.js -->
+    <script src="../../Content/js/plugin/fastclick/fastclick.min.js"></script>
+    
+    <!-- Icheck - para as opções de status (ativo / inativo) -->
+    <script src="../../Content/js/plugin/jquery.icheck/jquery.icheck.js"></script>
+
+    <!--[if IE 8]>
+        <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+    <![endif]-->
+    <!-- MAIN APP JS FILE -->
+    <script src="../../Content/js/app.min.js"></script>
+
+    <!-- ENHANCEMENT PLUGINS : NOT A REQUIREMENT -->
+    <!-- Voice command : plugin -->
+    <script src="../../Content/js/speech/voicecommand.min.js"></script>
+
+
+
+    <!-- Your GOOGLE ANALYTICS CODE Below -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".dropdown-menu li a.escola").click(function () {
+                var selText = $(this).text();
+                $(this).parents('.troca-escola').find('.dropdown-toggle').html(selText + ' <i class="fa fa-angle-down"></i>');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

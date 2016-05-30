@@ -1,0 +1,92 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+        <!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Configuração dos Parâmetros Pedagógicos <span></span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-lead-cadastro" class="btn btn-success btn-lg pull-right header-btn hidden-mobile hide"><i class="fa fa-plus"></i></a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Parâmetros Pedagógicos </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Duração da Aula</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Minutos">
+                                        </label>
+                                    </section>
+                                    <section class="col col-6">
+                                        <label class="label">Limite Máximo de Aulas Excedentes</label>
+                                        <label class="input">
+                                            <input type="text" name="name" placeholder="Aulas">
+                                        </label>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-12">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox" checked="checked">
+                                            <i></i>Envio de SMS automático para rechamada?</label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="checkbox">
+                                            <i></i>Envio de SMS para avisar que o conteúdo das aulas foi encaminhado?</label>
+                                    </section>
+                                </div>                                  
+                            </fieldset>
+                            <footer>
+                                <button data-toggle="modal" data-target="#" class="btn btn-lg btn-success">
+                                    Salvar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>

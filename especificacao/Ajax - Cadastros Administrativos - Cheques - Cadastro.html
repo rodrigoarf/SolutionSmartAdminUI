@@ -1,0 +1,61 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Cadastro de Motivo de Devolução de Cheque</h4>
+</div>
+<div class="modal-body">
+
+    <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+
+        <fieldset>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Cheque</label>
+                    <label class="input">
+                        <input type="text" name="fname" placeholder="Cheque">
+                    </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="label">Motivo de Devolução do Cheque</label>
+                    <label class="select">
+                    <select>
+                        <option value="0">Código 0 - Não especificado</option>
+                        <option value="1">Código 11 - Cheque sem fundo</option>
+                        <option value="2">Código 12 - Cheque sem fundo</option>
+                        <option value="3">Código 13 - Conta encerrada</option>
+                    </select> <i></i> </label>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col col-12">
+                    <label class="checkbox">
+                        <input type="checkbox" name="ativo" id="ativo">
+                    <i></i>Cheque Inativo?</label>
+                </section>
+            </div>
+        </fieldset>
+    </form>
+
+  
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">
+        Cancelar
+    </button>
+    <button type="button" class="btn btn-success">
+        Salvar
+    </button>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function($){
+         $(".fonemask").mask("(99) 9999-9999");
+         $(".cepmask").mask("99999-999");
+
+1 });
+  </script>

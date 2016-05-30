@@ -1,0 +1,84 @@
+﻿<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+   <!-- col -->
+   <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+      <h1 class="page-title txt-color-blueDark">
+         <!-- PAGE HEADER -->
+         <i class="fa-fw fa fa-home"></i>
+         Cadastro de Usuário
+      </h1>
+   </div>
+   <!-- end col -->
+   <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+      <!-- Button trigger modal -->
+      <a href="javascript:history.go(-1)" class="btn btn-primary btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-reply"></i> Voltar</a>
+   </div>
+</div>
+<!-- end row -->
+<div class="jarviswidget jarviswidget-sortable" id="wid-id-1" data-widget-collapsed="true" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" role="widget">
+   <header role="heading">
+      <span class="widget-icon"><i class="fa fa-edit"></i></span>
+      <h2>Cadastro</h2>
+      <span class="jarviswidget-loader" style="display: none;"><i class="fa fa-refresh fa-spin"></i></span>
+   </header>
+   <!-- widget div-->
+   <div role="content">
+      <!-- widget edit box -->
+      <div class="jarviswidget-editbox">
+         <!-- This area used as dropdown edit box -->
+      </div>
+      <!-- end widget edit box -->
+      <!-- widget content -->
+      <div class="widget-body no-padding">
+         <form action="" id="checkout-form" class="smart-form" novalidate="novalidate">
+            <header>
+               <h2>Dados de Menu </h2>
+            </header>
+            <fieldset>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Nome do menu</label>
+                     <label class="input">
+                     <input type="text" name="NOME" placeholder="Nome do Menu">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Controller</label>
+                     <label class="input">
+                     <input type="text" name="CONTROLLER" placeholder="Controller do menu">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Action</label>
+                     <label class="input">
+                     <input type="text" name="ACTION" placeholder="Action do menu">
+                     </label>
+                  </section>
+               </div>
+               <div class="row-fluid">
+                  <section class="col col-3">
+                     <label class="label">Icone do menu</label>
+                     <label class="input">
+                     <input type="text" name="ICON" placeholder="Icone do menu">
+                     </label>
+                  </section>
+               </div>
+
+            </fieldset>
+            <footer>
+               <button type="submit" class="btn btn-primary">
+               Salvar
+               </button>
+            </footer>
+         </form>
+      </div>
+      <!-- end widget content -->
+   </div>
+   <!-- end widget div -->
+</div>
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>

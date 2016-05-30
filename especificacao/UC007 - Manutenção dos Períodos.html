@@ -1,0 +1,344 @@
+<meta charset="iso-8859-1">
+
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Períodos de Aula<span>>  Cadasto dos períodos de trabalho da escola</span>
+        </h1>
+    </div>
+    <!-- end col -->
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-8">
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" href="#modal-periodo-cadastro" class="btn btn-success btn-lg pull-right header-btn hidden-mobile"><i class="fa fa-plus"></i> Cadastrar de Período</a>
+    </div>
+</div>
+<!-- end row -->
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-3">
+                                        <label class="label">Dia</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Default</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="hidden">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget" id="wid-filtro">
+
+
+                <header>
+                    <span class="widget-icon"><i class="fa fa-edit"></i></span>
+                    <h2>Filtros </h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div id="order-form" class="smart-form" novalidate="novalidate">
+                            <fieldset>
+                                <div class="row">
+                                    <section class="col col-6">
+                                        <label class="label">Dia</label>
+                                        <label class="select">
+                                            <select>
+                                                <option value="0">Segunda</option>
+                                                <option value="1">Terça</option>
+                                                <option value="2">Quarta</option>
+                                                <option value="3">Quinta</option>
+                                                <option value="4">Sexta</option>
+                                                <option value="4">Sábado</option>
+                                            </select> <i></i>
+                                        </label>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <footer>
+                                <button type="submit" class="btn btn-primary">
+                                    Filtrar
+                                </button>
+                            </footer>
+                        </div>
+
+                    </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+        </article>
+    </div>
+</section>
+
+<section id="widget-grid" class="">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-12">
+
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista"
+                 data-widget-colorbutton="false"
+                 data-widget-editbutton="false"
+                 data-widget-togglebutton="false"
+                 data-widget-deletebutton="false"
+                 data-widget-fullscreenbutton="false"
+                 data-widget-custombutton="false"
+                 data-widget-collapsed="false"
+                 data-widget-sortable="false">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Períodos</h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table id="datatable_tabletools" class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-class="expand">Dias da Semana</th>
+                                    <th>Início da Aula</th>
+                                    <th>Fim da Aula</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Segunda e Quarta</td>
+                                    <td>8:30</td>
+                                    <td>9:25</td>
+                                    <td>
+                                        <a data-toggle="modal" href="#modal-periodo-editar" class="btn btn-xs btn-primary modal-periodo-editar " rel="tooltip" data-original-title="Alterar" data-placement="top"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" href="#modal-periodo-excluir" class="btn btn-xs btn-danger modal-periodo-excluir" rel="tooltip" data-original-title="Excluir" data-placement="top"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Segunda e Quarta</td>
+                                    <td>8:30</td>
+                                    <td>9:25</td>
+                                    <td>
+                                        <a data-toggle="modal" href="#modal-periodo-editar" class="btn btn-xs btn-primary modal-periodo-editar " rel="tooltip" data-original-title="Alterar" data-placement="top"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" href="#modal-periodo-excluir" class="btn btn-xs btn-danger modal-periodo-excluir" rel="tooltip" data-original-title="Excluir" data-placement="top"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Segunda e Quarta</td>
+                                    <td>8:30</td>
+                                    <td>9:25</td>
+                                    <td>
+                                        <a data-toggle="modal" href="#modal-periodo-editar" class="btn btn-xs btn-primary modal-periodo-editar " rel="tooltip" data-original-title="Alterar" data-placement="top"><i class="fa fa-pencil"></i></a>
+                                        <a data-toggle="modal" href="#modal-periodo-excluir" class="btn btn-xs btn-danger modal-periodo-excluir" rel="tooltip" data-original-title="Excluir" data-placement="top"><i class="fa fa-trash-o"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-left"></i></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-chevron-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+    </div>
+</section>
+
+
+<!-- Modal CADASTRO DE SALA-->
+<div class="modal fade" id="modal-periodo-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal EDIÇÃO DE SALA-->
+<div class="modal fade" id="modal-periodo-editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- Modal EXCLUSÃO DE SALA-->
+<div class="modal fade" id="modal-periodo-excluir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Ajax -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    /* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+
+        //CADASTRO
+        $('a[href="#modal-periodo-cadastro"]').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção dos Períodos - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EDITAR
+        $('.modal-periodo-editar').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção dos Períodos - Editar.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        //EXCLUIR
+        $('.modal-periodo-excluir').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Manutenção dos Períodos - Excluir.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+
+
+</script>

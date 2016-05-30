@@ -1,0 +1,167 @@
+<h2 class="email-open-header">
+	Responder Para > Re: Relatório de Testes de Nivelamento <span class="label txt-color-white">Entrada</span>
+</h2>
+
+<form enctype="multipart/form-data" action="dummy.php" method="POST" class="form-horizontal">
+
+	<div class="inbox-info-bar no-padding">
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-1"><strong>Para</strong></label>
+				<div class="col-md-11">
+					<select multiple style="width:100%" class="select2" data-select-search="true">
+						<option value="sunny.orlaf">sadi.orlaf</option>
+						<option value="rachael.hawi">rachael.hawi</option>
+						<option value="michael.safiel">michael.safiel</option>
+						<option value="alex.jones">alex.jones</option>
+						<option value="oruf.matalla">oruf.matalla</option>
+						<option value="hr">hr</option>
+						<option value="TI" selected="selected">TI</option>
+					</select>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div class="inbox-info-bar no-padding">
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-md-1"><strong>Assunto</strong></label>
+				<div class="col-md-11">
+					<input class="form-control" placeholder="Assunto da mensagem" type="text">
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="inbox-message no-padding">
+	
+		<div id="emailbody">
+			
+			<br>Obrigado,<br><strong>Jão Paul</strong>	
+			
+			
+			<div class="email-reply-text">
+				<p>
+					Sadi Orlaf <span class="text-primary">&lt;sadi.orlaf&gt;</span> para mim em 12 de Março de 2013 às 12:10
+				</p>
+				
+				<div>
+					
+					<p>
+						Hey James,
+					</p>
+					<p>
+						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					</p>	
+					
+					<p>
+						Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. <i class="fa fa-smile-o"></i> 
+					</p>
+					
+					<br>
+					<br>
+					Grata,<br> 
+					<strong>Sadi Orlaf</strong>
+				</div>
+
+			</div>
+
+		</div>	
+	</div>
+	
+	<div class="inbox-compose-footer">
+
+		<button class="btn btn-danger" type="button">
+			Descartar
+		</button>
+			
+		<button class="btn btn-info" type="button">
+			Salvar Rascunho
+		</button>
+
+		<button data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &nbsp; Enviado..." class="btn btn-primary pull-right" type="button" id="send">
+			Enviar <i class="fa fa-arrow-circle-right fa-lg"></i>
+		</button>
+
+	</div>
+
+</form>
+
+<script type="text/javascript">
+	
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	//pageSetUp();
+	
+	//Here we only run
+	runAllForms();
+	
+	// PAGE RELATED SCRIPTS
+	
+	$(".table-wrap [rel=tooltip]").tooltip();
+	
+	/*
+	 * SUMMERNOTE EDITOR
+	 */
+	loadScript("js/plugin/summernote/summernote.min.js", iniEmailBody);
+
+	function iniEmailBody() {
+		$('#emailbody').summernote({
+			height : '100%',
+			focus : true,
+			tabsize : 2
+		});
+	}
+	
+	$(".show-next").click(function(){
+		$this = $(this);
+		$this.hide();
+		$this.parent().parent().parent().parent().parent().next().removeClass("hidden");
+	})
+	
+	$("#send").click(function(){
+
+	    var $btn = $(this);
+	    $btn.button('loading');
+		
+		// wait for animation to finish and execute send script
+		setTimeout(function (){
+			//Insert send script here
+
+			
+			// Load inbox once send is complete
+			loadURL("ajax/email/email-list.html", $('#inbox-content > .table-wrap'))
+            
+         }, 1000); // how long do you want the delay to be? 
+	});
+		
+</script>

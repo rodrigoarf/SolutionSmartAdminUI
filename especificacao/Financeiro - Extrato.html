@@ -1,0 +1,545 @@
+<meta charset="iso-8859-1">
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark">
+            <!-- PAGE HEADER -->
+            <i class="fa-fw fa fa-home"></i>
+            Financeiro<span>>  Extrato</span>
+        </h1>
+    </div>
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<section id="widget-grid-lista">
+
+    <!-- START ROW -->
+    <div class="row">
+
+        <!-- NEW COL START -->
+        <article class="col-sm-12 col-md-12 col-lg-8">
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget jarviswidget-color-blueDark" id="wid-lista">
+                <header class="text-center">
+                    <h2>Registros</h2>
+
+                    <div class="widget-toolbar">
+
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:void(0);"> <i class="fa fa-chevron-circle-left"></i> </a>
+                            </li>
+                            <li class="active">
+                                <a>01/01/2014 - 31/01/2014</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);"> <i class="fa fa-chevron-circle-right"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Categoria</th>
+                                    <th data-class="expand">Lançamento</th>
+                                    <th class="text-right">Valor</th>
+                                    <th class="text-center">Situação</th>
+                                    <th class="text-right">Saldo</th>
+                                    <th class="text-center" width="160">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr-movimento">
+                                    <td>01/09/2014</td>
+                                    <td>Categoria</td>
+                                    <td>Descrição do lançamento</td>
+                                    <td class="text-right"><b class="txt-color-green">1.000,00</b></td>
+                                    <td class="text-center"><i class="fa fa-check txt-color-green"></i></td>
+                                    <td class="text-right">1.000,00</td>
+                                    <td class="text-center">
+                                        <div class="td-acao">
+                                            <a data-toggle="modal" href="#modal-cadastro-recebimento" rel="tooltip" data-original-title="Editar" data-placement="top" class="btn btn-xs btn-default modal-cadastro-recebimento"><i class="glyphicon glyphicon-edit"></i></a>
+                                            <a data-toggle="modal" href="#modal-baixa" rel="tooltip" data-original-title="Marcar como recebido" data-placement="top" class="btn btn-xs btn-default modal-baixa"><i class="fa fa-check"></i></a>
+                                            <a data-toggle="modal" href="#modal-historico" rel="tooltip" data-original-title="Marcar como não recebido" data-placement="top" class="btn btn-xs btn-default"><i class="fa fa-ban"></i></a>
+                                            <a data-toggle="modal" href="#modal-conceitos" rel="tooltip" data-original-title="Imprimir Boleto" data-placement="top" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-barcode"></i></a>
+                                            <a data-toggle="modal" href="#modal-transferir" rel="tooltip" data-original-title="Excluir" data-placement="top" class="btn btn-xs btn-default txt-color-red"><i class="glyphicon glyphicon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="tr-movimento">
+                                    <td>01/09/2014</td>
+                                    <td>Categoria</td>
+                                    <td>Descrição do lançamento</td>
+                                    <td class="text-right"><b class="txt-color-red">-1.000,00</b></td>
+                                    <td class="text-center"><i class="fa fa-check txt-color-green"></i></td>
+                                    <td class="text-right">1.000,00</td>
+                                    <td class="text-center">
+                                        <div class="td-acao">
+                                            <a data-toggle="modal" href="#modal-cadastro" rel="tooltip" data-original-title="Editar" data-placement="top" class="btn btn-xs btn-default modal-cadastro"><i class="glyphicon glyphicon-edit"></i></a>
+                                            <a data-toggle="modal" href="#modal-baixa" rel="tooltip" data-original-title="Marcar como recebido" data-placement="top" class="btn btn-xs btn-default modal-baixa"><i class="fa fa-check"></i></a>
+                                            <a data-toggle="modal" href="#modal-historico" rel="tooltip" data-original-title="Marcar como não recebido" data-placement="top" class="btn btn-xs btn-default"><i class="fa fa-ban"></i></a>
+                                            <a data-toggle="modal" href="#modal-conceitos" rel="tooltip" data-original-title="Imprimir Boleto" data-placement="top" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-barcode"></i></a>
+                                            <a data-toggle="modal" href="#modal-transferir" rel="tooltip" data-original-title="Excluir" data-placement="top" class="btn btn-xs btn-default txt-color-red"><i class="glyphicon glyphicon-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <footer>
+                            <div class="text-center">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:void(0);">Mostrar mais</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+            <!-- end widget -->
+        </article>
+
+        <article class="col-sm-12 col-md-12 col-lg-4">
+            <div class="row text-center">
+                <a data-toggle="modal" href="#modal-cadastro-recebimento" class="btn dropdown-toggle btn-success modal-cadastro-recebimento">Novo Recebimento</a>
+                <a data-toggle="modal" href="#modal-cadastro" class="btn dropdown-toggle btn-danger modal-cadastro">Novo Pagamento</a>
+                <a data-toggle="modal" href="#modal-transferencia" class="btn dropdown-toggle btn-info">Nova Transferência</a>
+            </div>
+
+            <div class="btn-group">
+
+                <button class="btn dropdown-toggle btn-lg btn-info hide" data-toggle="dropdown">
+                    Adicionar <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a data-toggle="modal" href="#modal-cadastro" class="modal-cadastro">Pagamento</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#modal-cadastro-recebimento" class="modal-cadastro">Recebimento</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#modal-transferencia">Transferência</a>
+                    </li>
+                </ul>
+            </div>
+
+            <br class="clear" />
+            <br class="clear" />
+
+            <div class="jarviswidget" id="wid-resumo">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Filtros</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                        <div class="panel-group smart-accordion-default" id="accordion-avaliacao">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title bg-color-grayLight txt-color-white"><a data-toggle="collapse" data-parent="#accordion-avaliacao" href="#periodo"> <i class="fa fa-lg fa-angle-down pull-right"></i> <i class="fa fa-lg fa-angle-up pull-right"></i> <b>01/01/2014 - 30/01/2014</b></a></h4>
+                                </div>
+                                <div id="periodo" class="panel-collapse collapse">
+                                    <div class="panel-body no-padding">
+
+                                        <fieldset class="smart-form padding-10">
+                                            <div class="row">
+                                                <section class="col col-12">
+                                                    <label class="label">Período</label>
+                                                    <label class="select">
+                                                        <select id="select-periodo">
+                                                            <option>Hoje</option>
+                                                            <option>Esta Semana</option>
+                                                            <option>Este Mês</option>
+                                                            <option>Últimos 30 dias</option>
+                                                            <option>Mostrar Todos</option>
+                                                            <option>Escolha o Período</option>
+                                                        </select><i></i>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+
+                                        <div class="row smart-form" id="div-periodo">
+                                            <section class="col col-4">
+                                                <label class="label">De</label>
+                                                <label class="input">
+                                                    <input />
+                                                </label>
+                                            </section>
+                                            <section class="col col-4">
+                                                <label class="label">Até</label>
+                                                <label class="input">
+                                                    <input />
+                                                </label>
+                                            </section>
+                                            <section class="col col-4">
+                                                <label class="label">&nbsp;</label>
+                                                <a class="btn btn-success" id="add-event">Aplicar</a>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title bg-color-grayLight txt-color-white"><a data-toggle="collapse" data-parent="#accordion-avaliacao" href="#avaliacao1"> <i class="fa fa-lg fa-angle-down pull-right"></i> <i class="fa fa-lg fa-angle-up pull-right"></i> <b>Conta Corrente</b></a></h4>
+                                </div>
+                                <div id="avaliacao1" class="panel-collapse collapse">
+                                    <div class="panel-body no-padding">
+                                        <div class="table-responsive">
+                                            <table class="table smart-form has-tickbox">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Todas
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Nome da Conta Corrente
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row padding-10 text-right">
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-success" type="button" id="add-event">
+                                                        Aplicar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default ">
+                                <div class="panel-heading bg-color-grayLight txt-color-white">
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion-avaliacao" href="#avaliacao6"> <i class="fa fa-lg fa-angle-down pull-right"></i> <i class="fa fa-lg fa-angle-up pull-right"></i> <b>Situação dos Lançamentos</b> </a></h4>
+                                </div>
+                                <div id="avaliacao6" class="panel-collapse collapse">
+                                    <div class="panel-body no-padding">
+                                        <div class="table-responsive">
+                                            <table class="table smart-form has-tickbox">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Todos
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Vencidos
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Contas a Pagar / Receber
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <label class="checkbox">
+                                                                <input type="checkbox" name="checkbox-inline">
+                                                                <i></i>
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            Pagos / Recebidos
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row padding-10 text-right">
+                                                <div class="col-md-12">
+                                                    <button class="btn btn-success" type="button" id="add-event">
+                                                        Aplicar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end widget content -->
+
+
+
+                </div>
+
+                <!-- end widget div -->
+            </div>
+
+            <div class="jarviswidget" id="wid-resumo">
+                <header>
+                    <span class="widget-icon"><i class="fa fa-table"></i></span>
+                    <h2>Resumo</h2>
+                </header>
+
+                <!-- widget div-->
+                <div>
+                    <!-- widget content -->
+                    <div class="widget-body">
+                        <fieldset>
+                            <legend>Total do período <small style="font-size:11px;">(01 Set 2014 - 30 Set 2014)</small></legend>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    Total de Recebimentos <small class="txt-color-lightGray">(R$)</small>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <span class="txt-color-green">100.000,00</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    Total de Pagamentos (R$)
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <span class="txt-color-red">-50.000,00</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    Total do Período (R$)
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <b>50.000,00</b>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    Número de Lançamentos
+                                </div>
+                                <div class="col-lg-3 text-right">
+                                    100
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                    </div>
+                    <!-- end widget content -->
+                </div>
+                <!-- end widget div -->
+            </div>
+
+        </article>
+
+    </div>
+</section>
+
+
+<div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-cadastro-recebimento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-baixa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-transferencia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:600px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Transferência entre contas</h4>
+            </div>
+            <div class="modal-body">
+
+                <form action="" id="review-form" class="smart-form">
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Conta de Origem</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Conta de Destino</label>
+                                <label class="select">
+                                    <select></select><i></i>
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col col-12">
+                                <label class="label">Descrição</label>
+                                <label class="input">
+                                    <input name="review" id="review" />
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Data da transferência</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-calendar"></i>
+                                    <input type="text" name="startdate" id="startdate" placeholder="Data">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Valor</label>
+                                <label class="input">
+                                    <input type="text" name="fname" placeholder="R$">
+                                </label>
+                            </section>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="button" class="btn btn-success" id="btn-transferencia">
+                    Salvar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/plugin/jquery-form/jquery-form.min.js"></script>
+<script type="text/javascript">
+
+    pageSetUp();
+
+    // pagefunction
+
+    var pagefunction = function () {
+
+        //MODAL
+        $('.modal-cadastro').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Financeiro - Lançamento - Cadastro.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        $('.modal-cadastro-recebimento').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Financeiro - Lançamento - Cadastro - Recebimento.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        $('.modal-baixa').click(function () {
+            var a = $(this);
+            url = 'especificacao/Ajax - Financeiro - Lançamento - Baixa.html', container = $(".modal-content"), loadURL(url, container), a = null
+        })
+
+        $('#select-periodo').change(function () {
+            $('#div-periodo').toggle();
+        });
+
+        $('#div-periodo').toggle();
+
+        $('.td-acao').hide();
+
+        $('.tr-movimento').mouseover(function () {
+            $(this).find('.td-acao').show();
+        });
+
+        $('.tr-movimento').mouseout(function () {
+            $(this).find('.td-acao').hide();
+        });
+
+        /*
+        $('#chk-repetir').click(function () {
+            $('#div-repetir').toggle();
+        });
+
+        $('#div-repetir').toggle();
+
+        $('#chk-baixar').click(function () {
+            $('#div-baixar').toggle();
+        });
+
+        $('#div-baixar').toggle();
+        */
+
+    };
+
+    // end pagefunction
+
+    // run pagefunction
+
+    pagefunction();
+</script>
+
